@@ -1,0 +1,6 @@
+.animated-hero {
+  background-image: url('../../assets/images/stars.jpg');
+  background-position: center center;
+  background-size: cover;
+  filter: brightness(25%);
+}

@@ -1,0 +1,10 @@
+.flexbox {
+  display: flex;
+
+  &__half-screen {
+    flex-basis: 50%;
+  }
+  &__no-shrinking {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,25 @@
+.avatar {
+  position: relative;
+
+  &__image {
+    width: 160px;
+    clip-path: circle();
+    display: block;
+    margin: 0 auto 2em;
+  }
+  
+  &__headline {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: $mainBlack;
+    font-weight: 400;
+    margin-bottom: .4em;
+  
+      &--thin {
+        font-weight: 300;
+      }
+      &--small {
+        font-size: 1.7rem;
+      }
+  }
+}
