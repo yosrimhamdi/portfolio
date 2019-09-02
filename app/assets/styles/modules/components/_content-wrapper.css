@@ -1,3 +1,9 @@
 .content-wrapper {
+  width: 150vw;
   height: 100vh;
+  position: relative;
+
+  &__fixed-position {
+    position: fixed;
+  }
 }
