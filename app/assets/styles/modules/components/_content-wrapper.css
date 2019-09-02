@@ -2,6 +2,7 @@
   width: 150vw;
   height: 100vh;
   position: relative;
+  left: -50vw;
 
   &__fixed-position {
     position: fixed;

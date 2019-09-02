@@ -1,5 +1,16 @@
-$mainGreen: #5ebae4;
-$mainGrey: #888585;
+$mainColor: #5ebae4;
+$accent-1: #5E77E4;
+$accent-2: #885EE4;
+$accent-3: #CB5EE4;
+$accent-4: #E45EBA;
+$accent-5: #E45E77;
+$mainGrey: #6d6a6a;
 $mainBlack: #3c3838;
 $bgBlack: #383737;
 $bgGrey: #F3F4F8;
+$gradient-1 : linear-gradient(to bottom right, $mainColor, $accent-1);
+$gradient-2 : linear-gradient(to bottom right, $mainColor, $accent-2);
+$gradient-3 : linear-gradient(to bottom right, $mainColor, $accent-3);
+$gradient-5 : linear-gradient(to bottom right, $mainColor, $accent-5);
+$imageOverlay: rgba(34, 37, 56, 0.623);
+$shadowColor: rgba(0,0,0,.1);

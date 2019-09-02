@@ -1,3 +1,10 @@
 .flexbox {
   display: flex;
+
+  &--align-base {
+    align-items: baseline;
+  }
+  &__margin-l-auto {
+    margin-left: auto;
+  }
 }

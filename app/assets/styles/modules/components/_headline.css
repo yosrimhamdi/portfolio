@@ -1,0 +1,67 @@
+.headline {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  color: $mainBlack;
+  font-weight: 400;
+  margin-bottom: 2em;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  
+  &::before{
+    content: attr(data-inner-text);
+    @mixin xy-centered;
+    width: 700%;
+    font-weight: 800;
+    font-size: 5rem;
+    text-align: center;
+    color: rgba($mainBlack, .07);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -29px;
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: $mainBlack;
+  }
+
+  &--white {
+    color: white;
+  }
+  &--thin {
+    font-weight: 300;
+  }
+  &--bold {
+    font-weight: 600;
+  }
+  &--tiny {
+    font-size: 1rem;
+  }
+  &--small {
+    font-size: 1.7rem;
+  }
+  &--italic {
+    font-style: italic;
+  }
+  &--margin-b-small {
+    margin-bottom: .4em;
+  }
+  &--simple {
+    text-transform: inherit;
+  }
+  &--align-left {
+    text-align: left;
+  }
+  &--last-align-center {
+    text-align-last: center;
+  }
+  &--no-b-line {
+    &::after {
+      content: none;
+    }
+  }
+}

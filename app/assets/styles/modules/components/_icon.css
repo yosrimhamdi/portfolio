@@ -1,0 +1,20 @@
+.icon {
+  position: relative;
+  color: $mainColor;
+
+  &--big {
+    font-size: 1.5rem;
+  }
+  &--move-down {
+    top: 10px;
+  }
+  &--right-padding {
+    padding-right: .6em;
+  }
+  &--white {
+    color: white;
+  }
+  &--huge {
+    font-size: 2.5rem;
+  }
+}

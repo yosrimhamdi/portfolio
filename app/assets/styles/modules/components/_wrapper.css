@@ -1,4 +1,6 @@
 .wrapper {
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 90%;
+  margin: auto;
+  padding-right: 12px;
+  padding-left: 12px;
 }

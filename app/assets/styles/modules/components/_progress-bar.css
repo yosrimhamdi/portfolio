@@ -1,0 +1,51 @@
+.progress-bar {
+  margin-bottom: 1em;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__bar {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(235, 235, 235);
+    position: relative;
+    border-radius: 8px;
+    overflow-x: hidden;
+
+    &::after {
+      content: '';
+      position: relative;
+/*       left: -100%; */
+      display: block;
+      height: 100%;
+      background-color: $mainColor;
+      border-radius: inherit;
+    }
+    &--80::after {
+      width: 80%;
+    }
+    &--90::after {
+      width: 90%;
+    }
+    &--75::after {
+      width: 75%;
+    }
+    &--98::after {
+      width: 98%;
+    }
+    &--90::after {
+      width: 90%;
+    }
+  }
+  &__details {
+    margin-bottom: .1em
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $mainBlack;
+  }
+  &__percentage {
+    font-weight: bolder;
+    color: $mainBlack;
+  }
+}

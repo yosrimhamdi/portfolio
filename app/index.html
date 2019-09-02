@@ -13,11 +13,11 @@
     <div class="content-wrapper__fixed-position">
       <div class="flexbox">
         <section class="animated-hero half-screen"></section>
-        <section class="avatar half-screen">
+        <section class="avatar half-screen grey-background">
           <div class="xy-centered">
             <img class="avatar__image" src="./assets/images/avatar.jpg" alt="">
-            <h1 class="avatar__headline">Youssri Mhamdi</h1>
-            <h1 class="avatar__headline avatar__headline--thin avatar__headline--small">Web Developer</h1>
+            <h1 class="headline headline--simple headline--margin-b-small headline--no-b-line">Youssri Mhamdi</h1>
+            <h1 class="headline headline--thin headline--small headline--simple headline--margin-b-small headline--no-b-line">Web Developer</h1>
             <p><a href="#1" class="button button--centered">about me</a></p>
           </div>
         </section>
@@ -25,56 +25,155 @@
     </div>
     <section class="main-content">
       <section class="wrapper page-section">
-        <h1>About Myself</h1>
-        <p>Hi, My name is Adam Dornan. I am a Web Developer, and asellus tempus porttitor estnecer intiorer. Nulla facilisi. Nulla cursus velit et faucibus lobortis. In tincider diam metus tincede mollis aryi egestas quis. Nunc vitae felis lectus. Pellentesque imperdiet augue erat aliquer interdume turpis congue. Aliquam euismod turpis.</p>
+        <h1 class="headline" data-inner-text="About me">About Myself</h1>
+        <p class="paragraph">Hello!, I am <span class="my-name">Youssri Mhamdi</span> an expert mobile and web developer, and asellus tempus porttitor estnecer intiorer Nulla facilisi Nulla cursus velit et faucibus lobortis. In tincider diam metus tincede mollis aryi egestas quis. Nunc vitae felis lectus. Pellentesque imperdiet augue erat aliquer interdume turpis congue Aliquam euismod turpis.</p>
       </section>
-      <section>
-        <h1>services</h1>
-        <div>
-          <i class="fas fa-code"></i>
-          <h4>web developer</h4>
-          <p>Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.</p>
+      <section class="background-image-section">
+          <img class="background-image-section__image" src="./assets/images/css-file-on-a-tablet.png" alt="">
+          <div class="xy-centered background-image-section__text">
+            <h1 class="headline headline--no-b-line headline--white headline--simple headline--italic headline--thin headline--margin-b-small headline--align-left headline--last-align-center">“Let us take you into a deeper experience, make a moment a lasting conveyable memory. Let us help build your tribe.”</h1>
+            <p class="paragraph paragraph--white paragraph--last-align-left paragraph--thin">― Linus Torvalds.</p>
+          </div>
+        </section>
+        <section class="grey-background page-section">
+          <div class="wrapper">
+            <h1 class="headline" data-inner-text="services">services</h1>
+            <div class="grid grid--2-by-auto">
+              <div class="flexbox flexbox--align-base grid__item">
+                <i class="fas fa-code icon icon--move-down icon--big icon--right-padding"></i>
+                <div>
+                  <h4 class="headline headline--no-b-line headline--tiny headline--margin-b-small headline--align-left headline--bold">web developement</h4>
+                  <p  class="paragraph paragraph--last-align-left">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun tincede mollis aryi egestas.</p>
+                </div>
+              </div>
+              <div class="flexbox flexbox--align-base grid__item">
+                <i class="fas fa-mobile-alt icon icon--move-down icon--big icon--right-padding"></i>
+                <div>
+                  <h4 class="headline headline--no-b-line headline--tiny headline--margin-b-small headline--align-left headline--bold">mobile development</h4>
+                  <p  class="paragraph paragraph--last-align-left">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun tincede mollis aryi egestas.</p>
+                </div>
+              </div>
+              <div class="flexbox flexbox--align-base grid__item">
+                <i class="fas fa-layer-group icon icon--move-down icon--big icon--right-padding"></i>
+                <div>
+                  <h4 class="headline headline--no-b-line headline--tiny headline--margin-b-small headline--align-left headline--bold">web design</h4>
+                  <p  class="paragraph paragraph--last-align-left">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun tincede mollis aryi egestas.</p>
+                </div>
+              </div>
+              <div class="flexbox flexbox--align-base grid__item">
+                <i class="fas fa-database icon icon--move-down icon--big icon--right-padding"></i>
+                <div>
+                  <h4 class="headline headline--no-b-line headline--tiny headline--margin-b-small headline--align-left headline--bold">platform engineering</h4>
+                  <p  class="paragraph paragraph--last-align-left">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun tincede mollis aryi egestas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="page-section wrapper">
+        <h1 class="headline" data-inner-text="my skills">my skills</h1>
+        <p class="paragraph paragraph--margin-b">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, iste laboriosam eius modi enim natus, eaque autem quae porro id fugit nesciunt necessitatibus nobis recusandae similique eum? Nesciunt, cupiditate.</p>
+        <div class="progress-bar">
+          <div class="flexbox flexbox--align-base">
+            <h3 class="progress-bar__details progress-bar__title">html</h3>
+            <p class="progress-bar__percentage flexbox__margin-l-auto">80%</p>
+          </div>
+          <div class="progress-bar__bar progress-bar__bar--80"></div>
         </div>
-        <div>
-          <i class="fas fa-mobile-alt"></i>
-          <h4>mobile developer</h4>
-          <p>Designed with modern trends and techniques in mind, Sedna will help your product stand out in an already saturated market.</p>
+        <div class="progress-bar">
+          <div class="flexbox flexbox--align-base">
+            <h3 class="progress-bar__details progress-bar__title">css</h3>
+            <p class="progress-bar__percentage flexbox__margin-l-auto">90%</p>
+          </div>
+          <div class="progress-bar__bar progress-bar__bar--90"></div>
         </div>
-        <div>
-          <i class="fas fa-layer-group"></i>
-          <h4>responsive development</h4>
-          <p>Fusce suscipit, ante a hendrerit thelery ullamcorper, risus nisl cursus purus the viverra ante nulla vel justo.</p>
+        <div class="progress-bar">
+          <div class="flexbox flexbox--align-base">
+            <h3 class="progress-bar__details progress-bar__title">javascript</h3>
+            <p class="progress-bar__percentage flexbox__margin-l-auto">75%</p>
+          </div>
+          <div class="progress-bar__bar progress-bar__bar--75"></div>
         </div>
-        <div>
-          <i class="fas fa-pencil-ruler"></i>
-          <h4>easily customised</h4>
-          <p>Easily customise Sedna to suit your start up, portfolio or product. Take advantage of the layered Sketch file and bring your product to life.</p>
+        <div class="progress-bar">
+          <div class="flexbox flexbox--align-base">
+            <h3 class="progress-bar__details progress-bar__title">gulp</h3>
+            <p class="progress-bar__percentage flexbox__margin-l-auto">98%</p>
+          </div>
+          <div class="progress-bar__bar progress-bar__bar--98"></div>
+        </div>
+        <div class="progress-bar">
+          <div class="flexbox flexbox--align-base">
+            <h3 class="progress-bar__details progress-bar__title">npm</h3>
+            <p class="progress-bar__percentage flexbox__margin-l-auto">99%</p>
+          </div>
+          <div class="progress-bar__bar progress-bar__bar--99"></div>
         </div>
       </section>
-      <section>
-        <h1>my skills</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, iste laboriosam eius modi enim natus, eaque autem quae porro id fugit nesciunt necessitatibus nobis recusandae similique eum? Nesciunt, cupiditate a.</p>
-        <div>
-          <h3>html</h3>
-          <p>90%</p>
+      <section class="background-image-section">
+        <img class="background-image-section__image" src="./assets/images/codingman.png" alt="">
+        <div class="xy-centered background-image-section__text">
+          <h1 class="headline headline--no-b-line headline--white headline--simple headline--italic headline--thin headline--margin-b-small headline--align-left headline--last-align-center">“If you're already a front-end developer, well, pretend you're also wearing a pirate hat.” </h1>
+          <p class="paragraph paragraph--white paragraph--last-align-left paragraph--thin">― Ethan Marcotte.</p>
         </div>
-        <div>progress bar goes here-------</div>
       </section>
-      <section>
-        <img src="./assets/images/codingman.png" alt="" style="width: 50%">
-        <h1>quote goes here</h1>
+      <section class="grey-background page-section page-section--equal">
+        <div class="wrapper">
+          <div class="grid grid--4-by-1 perspective">
+            <div class="flipping-card">
+              <div class="flipping-card__face flipping-card__front flipping-card__front--color-1">
+                <div class="xy-centered">
+                    <i class="fas fa-coffee icon icon--white icon--huge"></i>
+                </div>
+              </div>
+              <div class="flipping-card__face flipping-card__back flipping-card__back--gradient-1">
+                <div class="xy-centered">
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small paragraph--uppercase">coffe</p>
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small">200 +</p>
+                </div>
+              </div>
+          </div>
+            <div class="flipping-card">
+              <div class="flipping-card__face flipping-card__front flipping-card__front--color-2">
+                <div class="xy-centered">
+                    <i class="fas fa-folder icon icon--white icon--huge"></i>
+                </div>
+              </div>
+              <div class="flipping-card__face flipping-card__back flipping-card__back--gradient-2">
+                <div class="xy-centered">
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small paragraph--uppercase">projects</p>
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small">100 +</p>
+                </div>
+              </div>
+          </div>
+            <div class="flipping-card">
+              <div class="flipping-card__face flipping-card__front flipping-card__front--color-3">
+                <div class="xy-centered">
+                    <i class="fas fa-project-diagram icon icon--white icon--huge"></i>
+                </div>
+              </div>
+              <div class="flipping-card__face flipping-card__back flipping-card__back--gradient-3">
+                <div class="xy-centered">
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small paragraph--uppercase">clients</p>
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small">60 +</p>
+                </div>
+              </div>
+          </div>
+            <div class="flipping-card">
+              <div class="flipping-card__face flipping-card__front flipping-card__front--color-5">
+                <div class="xy-centered">
+                    <i class="fas fa-award icon icon--white icon--huge"></i>
+                </div>
+              </div>
+              <div class="flipping-card__face flipping-card__back flipping-card__back--gradient-5">
+                <div class="xy-centered">
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small paragraph--uppercase">awards</p>
+                  <p class="paragraph paragraph--white paragraph--centred paragraph--small">11</p>
+                </div>
+              </div>
+          </div>
+        </div>
       </section>
-      <section>
-        <h4>done projects</h4>
-        <p>300</p>
-        <h4>awards</h4>
-        <p>2</p>
-        <h4>clients</h4>
-        <p>400+</p>
-        <h4>cups of coffe</h4>
-        <p>70+</p>
-      </section>
-      <section>
+      <section class="page-section wrapper">
         <h1>latest news</h1>
         <p>checkout the latest news of web and mobile development new in my personal website</p>
         <div>

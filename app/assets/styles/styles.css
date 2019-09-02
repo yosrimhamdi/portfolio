@@ -1,15 +1,24 @@
 @import './modules/utils/_variables';
-/* @import './modules/utils/_mixins'; */
+@import './modules/utils/_mixins';
 @import './modules/base/_typography';
 @import './modules/base/_base';
 @import './modules/layouts/_flexbox';
+@import './modules/layouts/_grid';
 @import './modules/components/_animated-hero';
 @import './modules/components/_content-wrapper';
-@import './modules/components/_xy-centered';
 @import './modules/components/_avatar';
 @import './modules/components/_button';
 @import './modules/components/_wrapper';
 @import './modules/components/_page-section';
 @import './modules/components/_main-content';
-@import './modules/components/_translate-on-click';
 @import './modules/components/_half-screen';
+@import './modules/components/_headline';
+@import './modules/components/_paragraph';
+@import './modules/components/_my-name';
+@import './modules/components/_icon';
+@import './modules/components/_progress-bar';
+@import './modules/components/_background-image-section';
+@import './modules/components/_xy-centered';
+@import './modules/components/_grey-background';
+@import './modules/components/_flipping-card';
+@import './modules/components/_perspective';

@@ -1,0 +1,24 @@
+.paragraph {
+  font-size: .9rem;
+  text-align: justify;
+  text-align-last: center;
+
+  &--last-align-left {
+    text-align-last: left;
+  }
+  &--margin-b {
+    margin-bottom: 2.5em;
+  }
+  &--white {
+    color: white;
+  }  
+  &--centred {
+    text-align: center;
+  }
+  &--small {
+    font-size: 1.2rem;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
