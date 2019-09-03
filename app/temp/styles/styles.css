@@ -263,7 +263,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }.grey-background {
-  background-color: #F3F4F8;
+  background-color: rgb(249, 249, 249);
 
 }.flipping-card{
   position: relative;
