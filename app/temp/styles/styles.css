@@ -173,11 +173,11 @@
     font-size: 1.2rem;
   }.paragraph--uppercase {
     text-transform: uppercase;
-  }.my-name {
-  color: #5ebae4;
-  font-weight: 500;
-  font-style: italic;
-}.icon {
+  }.paragraph--italic {
+    font-style: italic;
+  }.paragraph--blue {
+    color: #5ebae4;
+  }.icon {
   position: relative;
   color: #5ebae4;
 }.icon--big {

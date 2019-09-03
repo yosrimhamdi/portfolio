@@ -21,4 +21,10 @@
   &--uppercase {
     text-transform: uppercase;
   }
+  &--italic {
+    font-style: italic;
+  }
+  &--blue {
+    color: $mainColor;
+  }
 }
