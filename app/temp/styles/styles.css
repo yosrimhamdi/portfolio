@@ -263,6 +263,7 @@
 }.flipping-card{
   position: relative;
   cursor: pointer;
+  perspective: 1500px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }.flipping-card__face { 
@@ -270,7 +271,7 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    transition: transform 400ms;
+    transition: transform 500ms;
     box-shadow:  2px 2px 4px rgba(0,0,0, .4);
   }.flipping-card__front--color-1 {
       background-color: #5E77E4;
@@ -297,8 +298,4 @@
     transform: rotateY(180deg);
   }.flipping-card:hover .flipping-card__back {
     transform: rotateY(0);
-  }.perspective {
-  perspective: 1500px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
+  }
