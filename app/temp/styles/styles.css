@@ -39,6 +39,10 @@
   left: -50vw;
 }.content-wrapper__fixed-position {
     position: fixed;
+  }.content-wrapper__main-content {
+    margin-left: 100vw;
+    width: calc(50vw - 17px);
+  /*   padding-top: 2em; */
   }.avatar {
   position: relative;
 }.avatar__image {
@@ -92,11 +96,7 @@
   padding-bottom: 2.5em;
 }.page-section--equal {
     padding-top: 2.5em;
-  }.main-content {
-  margin-left: 100vw;
-  width: calc(50vw - 17px);
-/*   padding-top: 2em; */
-}.half-screen {
+  }.half-screen {
   height: 100vh;
   width: 50vw;
 }.headline {
