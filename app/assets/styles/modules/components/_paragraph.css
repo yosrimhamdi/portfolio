@@ -27,4 +27,7 @@
   &--blue {
     color: $mainColor;
   }
+  &--thin {
+    font-weight: 100;
+  }
 }

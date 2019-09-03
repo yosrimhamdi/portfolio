@@ -135,7 +135,7 @@
   }.headline--white {
     color: white;
   }.headline--thin {
-    font-weight: 300;
+    font-weight: 200;
   }.headline--bold {
     font-weight: 600;
   }.headline--tiny {
@@ -177,6 +177,8 @@
     font-style: italic;
   }.paragraph--blue {
     color: #5ebae4;
+  }.paragraph--thin {
+    font-weight: 100;
   }.icon {
   position: relative;
   color: #5ebae4;

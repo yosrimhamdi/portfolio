@@ -33,7 +33,7 @@
     color: white;
   }
   &--thin {
-    font-weight: 300;
+    font-weight: 200;
   }
   &--bold {
     font-weight: 600;
