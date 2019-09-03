@@ -17,7 +17,7 @@
   justify-content: center;
 }.grid--2-by-auto {
     grid-template-columns: repeat(2, 300px); 
-    grid-template-rows: repeat(2, auto); 
+    grid-template-rows: repeat(2, 200px); 
     grid-gap: 20px;
   }.grid--4-by-1 {
     grid-template-columns: repeat(4, 140px);
@@ -26,11 +26,6 @@
   }.grid--cell-content-xy-centered {
     justify-items: center;
     align-items: center;
-  }.grid__item {
-/*     color: white;
-    background-color: $mainColor; */
-    padding: 1em;
-    box-shadow: 2px 2px 5px rgba(0,0,0,.1);
   }.animated-hero {
   background-image: url('../../assets/images/stars.jpg');
   background-position: center center;
