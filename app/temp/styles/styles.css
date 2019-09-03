@@ -58,7 +58,7 @@
   margin-top: 1em;
   background-color: transparent;
   color: white;
-  padding: 1em 1.5em;
+  padding: 1em 2em;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -86,7 +86,9 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-  }.wrapper {
+  }.button--white-on-hover:hover {
+      color: white;
+    }.wrapper {
   width: 90%;
   margin: auto;
   padding-right: 12px;
