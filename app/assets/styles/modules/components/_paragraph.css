@@ -12,8 +12,11 @@
   &--white {
     color: white;
   }  
-  &--centred {
+  &--centered {
     text-align: center;
+  }
+  &--align-left {
+    text-align: left;
   }
   &--small {
     font-size: 1.2rem;

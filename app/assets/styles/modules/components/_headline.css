@@ -47,8 +47,11 @@
   &--italic {
     font-style: italic;
   }
-  &--margin-b-small {
+  &--margin-b-tiny {
     margin-bottom: .4em;
+  }
+  &--margin-b-small {
+    margin-bottom: 1em;
   }
   &--simple {
     text-transform: inherit;
@@ -63,5 +66,8 @@
     &::after {
       content: none;
     }
+  }
+  &--underline {
+    text-decoration: underline;
   }
 }
