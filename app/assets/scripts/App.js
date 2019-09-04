@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
 
 const config = {
-  autoplay: {
+/*   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
-  },
+  }, */
   speed: 800,
   loop: true,
   pagination: {

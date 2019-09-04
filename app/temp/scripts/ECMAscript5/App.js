@@ -1006,8 +1006,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       "function" == typeof v && (v = t.slidesOffsetAfter.call(e));
       var b = e.snapGrid.length,
           w = e.snapGrid.length;
-      var y,
-          x,
+      var x,
+          y,
           T = t.spaceBetween,
           E = -g,
           S = 0,
@@ -1019,13 +1019,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }) : c.css({
         marginRight: "",
         marginBottom: ""
-      }), t.slidesPerColumn > 1 && (y = Math.floor(h / t.slidesPerColumn) === h / e.params.slidesPerColumn ? h : Math.ceil(h / t.slidesPerColumn) * t.slidesPerColumn, "auto" !== t.slidesPerView && "row" === t.slidesPerColumnFill && (y = Math.max(y, t.slidesPerView * t.slidesPerColumn)));
+      }), t.slidesPerColumn > 1 && (x = Math.floor(h / t.slidesPerColumn) === h / e.params.slidesPerColumn ? h : Math.ceil(h / t.slidesPerColumn) * t.slidesPerColumn, "auto" !== t.slidesPerView && "row" === t.slidesPerColumnFill && (x = Math.max(x, t.slidesPerView * t.slidesPerColumn)));
       var $ = t.slidesPerColumn,
-          M = y / $,
+          M = x / $,
           P = Math.floor(h / t.slidesPerColumn);
 
       for (var _s22 = 0; _s22 < h; _s22 += 1) {
-        x = 0;
+        y = 0;
 
         var _n7 = c.eq(_s22);
 
@@ -1034,7 +1034,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               _a6 = void 0,
               _r4 = void 0;
 
-          "column" === t.slidesPerColumnFill ? (_r4 = _s22 - (_a6 = Math.floor(_s22 / $)) * $, (_a6 > P || _a6 === P && _r4 === $ - 1) && (_r4 += 1) >= $ && (_r4 = 0, _a6 += 1), _i8 = _a6 + _r4 * y / $, _n7.css({
+          "column" === t.slidesPerColumnFill ? (_r4 = _s22 - (_a6 = Math.floor(_s22 / $)) * $, (_a6 > P || _a6 === P && _r4 === $ - 1) && (_r4 += 1) >= $ && (_r4 = 0, _a6 += 1), _i8 = _a6 + _r4 * x / $, _n7.css({
             "-webkit-box-ordinal-group": _i8,
             "-moz-box-ordinal-group": _i8,
             "-ms-flex-order": _i8,
@@ -1049,7 +1049,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 _i9 = _n7[0].style.transform,
                 _r5 = _n7[0].style.webkitTransform;
 
-            if (_i9 && (_n7[0].style.transform = "none"), _r5 && (_n7[0].style.webkitTransform = "none"), t.roundLengths) x = e.isHorizontal() ? _n7.outerWidth(!0) : _n7.outerHeight(!0);else if (e.isHorizontal()) {
+            if (_i9 && (_n7[0].style.transform = "none"), _r5 && (_n7[0].style.webkitTransform = "none"), t.roundLengths) y = e.isHorizontal() ? _n7.outerWidth(!0) : _n7.outerHeight(!0);else if (e.isHorizontal()) {
               var _e24 = parseFloat(_s23.getPropertyValue("width")),
                   _t17 = parseFloat(_s23.getPropertyValue("padding-left")),
                   _i10 = parseFloat(_s23.getPropertyValue("padding-right")),
@@ -1057,7 +1057,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                   _n8 = parseFloat(_s23.getPropertyValue("margin-right")),
                   _r6 = _s23.getPropertyValue("box-sizing");
 
-              x = _r6 && "border-box" === _r6 ? _e24 + _a7 + _n8 : _e24 + _t17 + _i10 + _a7 + _n8;
+              y = _r6 && "border-box" === _r6 ? _e24 + _a7 + _n8 : _e24 + _t17 + _i10 + _a7 + _n8;
             } else {
               var _e25 = parseFloat(_s23.getPropertyValue("height")),
                   _t18 = parseFloat(_s23.getPropertyValue("padding-top")),
@@ -1066,12 +1066,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                   _n9 = parseFloat(_s23.getPropertyValue("margin-bottom")),
                   _r7 = _s23.getPropertyValue("box-sizing");
 
-              x = _r7 && "border-box" === _r7 ? _e25 + _a8 + _n9 : _e25 + _t18 + _i11 + _a8 + _n9;
+              y = _r7 && "border-box" === _r7 ? _e25 + _a8 + _n9 : _e25 + _t18 + _i11 + _a8 + _n9;
             }
-            _i9 && (_n7[0].style.transform = _i9), _r5 && (_n7[0].style.webkitTransform = _r5), t.roundLengths && (x = Math.floor(x));
-          } else x = (i - (t.slidesPerView - 1) * T) / t.slidesPerView, t.roundLengths && (x = Math.floor(x)), c[_s22] && (e.isHorizontal() ? c[_s22].style.width = "".concat(x, "px") : c[_s22].style.height = "".concat(x, "px"));
+            _i9 && (_n7[0].style.transform = _i9), _r5 && (_n7[0].style.webkitTransform = _r5), t.roundLengths && (y = Math.floor(y));
+          } else y = (i - (t.slidesPerView - 1) * T) / t.slidesPerView, t.roundLengths && (y = Math.floor(y)), c[_s22] && (e.isHorizontal() ? c[_s22].style.width = "".concat(y, "px") : c[_s22].style.height = "".concat(y, "px"));
 
-          c[_s22] && (c[_s22].swiperSlideSize = x), f.push(x), t.centeredSlides ? (E = E + x / 2 + S / 2 + T, 0 === S && 0 !== _s22 && (E = E - i / 2 - T), 0 === _s22 && (E = E - i / 2 - T), Math.abs(E) < .001 && (E = 0), t.roundLengths && (E = Math.floor(E)), C % t.slidesPerGroup == 0 && u.push(E), m.push(E)) : (t.roundLengths && (E = Math.floor(E)), C % t.slidesPerGroup == 0 && u.push(E), m.push(E), E = E + x + T), e.virtualSize += x + T, S = x, C += 1;
+          c[_s22] && (c[_s22].swiperSlideSize = y), f.push(y), t.centeredSlides ? (E = E + y / 2 + S / 2 + T, 0 === S && 0 !== _s22 && (E = E - i / 2 - T), 0 === _s22 && (E = E - i / 2 - T), Math.abs(E) < .001 && (E = 0), t.roundLengths && (E = Math.floor(E)), C % t.slidesPerGroup == 0 && u.push(E), m.push(E)) : (t.roundLengths && (E = Math.floor(E)), C % t.slidesPerGroup == 0 && u.push(E), m.push(E), E = E + y + T), e.virtualSize += y + T, S = y, C += 1;
         }
       }
 
@@ -1083,7 +1083,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         width: "".concat(e.virtualSize + t.spaceBetween, "px")
       }) : s.css({
         height: "".concat(e.virtualSize + t.spaceBetween, "px")
-      })), t.slidesPerColumn > 1 && (e.virtualSize = (x + t.spaceBetween) * y, e.virtualSize = Math.ceil(e.virtualSize / t.slidesPerColumn) - t.spaceBetween, e.isHorizontal() ? s.css({
+      })), t.slidesPerColumn > 1 && (e.virtualSize = (y + t.spaceBetween) * x, e.virtualSize = Math.ceil(e.virtualSize / t.slidesPerColumn) - t.spaceBetween, e.isHorizontal() ? s.css({
         width: "".concat(e.virtualSize + t.spaceBetween, "px")
       }) : s.css({
         height: "".concat(e.virtualSize + t.spaceBetween, "px")
@@ -1623,7 +1623,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }
   };
 
-  var y = function () {
+  var x = function () {
     var e = a.navigator.userAgent,
         t = {
       ios: !1,
@@ -1653,7 +1653,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return t.pixelRatio = a.devicePixelRatio || 1, t;
   }();
 
-  function x(e) {
+  function y(e) {
     var t = this,
         s = t.touchEventsData,
         n = t.params,
@@ -1969,7 +1969,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             s = e.touchEvents,
             a = e.el,
             n = e.wrapperEl;
-        e.onTouchStart = x.bind(e), e.onTouchMove = T.bind(e), e.onTouchEnd = E.bind(e), e.onClick = C.bind(e);
+        e.onTouchStart = y.bind(e), e.onTouchMove = T.bind(e), e.onTouchEnd = E.bind(e), e.onClick = C.bind(e);
         var r = "container" === t.touchEventsTarget ? a : n,
             l = !!t.nested;
 
@@ -1986,10 +1986,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             } : l), r.addEventListener(s.end, e.onTouchEnd, _i13);
           }
 
-          (t.simulateTouch && !y.ios && !y.android || t.simulateTouch && !p.touch && y.ios) && (r.addEventListener("mousedown", e.onTouchStart, !1), i.addEventListener("mousemove", e.onTouchMove, l), i.addEventListener("mouseup", e.onTouchEnd, !1));
+          (t.simulateTouch && !x.ios && !x.android || t.simulateTouch && !p.touch && x.ios) && (r.addEventListener("mousedown", e.onTouchStart, !1), i.addEventListener("mousemove", e.onTouchMove, l), i.addEventListener("mouseup", e.onTouchEnd, !1));
         } else r.addEventListener(s.start, e.onTouchStart, !1), i.addEventListener(s.move, e.onTouchMove, l), i.addEventListener(s.end, e.onTouchEnd, !1);
 
-        (t.preventClicks || t.preventClicksPropagation) && r.addEventListener("click", e.onClick, !0), e.on(y.ios || y.android ? "resize orientationchange observerUpdate" : "resize observerUpdate", S, !0);
+        (t.preventClicks || t.preventClicksPropagation) && r.addEventListener("click", e.onClick, !0), e.on(x.ios || x.android ? "resize orientationchange observerUpdate" : "resize observerUpdate", S, !0);
       },
       detachEvents: function detachEvents() {
         var e = this,
@@ -2010,10 +2010,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             r.removeEventListener(s.start, e.onTouchStart, _i14), r.removeEventListener(s.move, e.onTouchMove, l), r.removeEventListener(s.end, e.onTouchEnd, _i14);
           }
 
-          (t.simulateTouch && !y.ios && !y.android || t.simulateTouch && !p.touch && y.ios) && (r.removeEventListener("mousedown", e.onTouchStart, !1), i.removeEventListener("mousemove", e.onTouchMove, l), i.removeEventListener("mouseup", e.onTouchEnd, !1));
+          (t.simulateTouch && !x.ios && !x.android || t.simulateTouch && !p.touch && x.ios) && (r.removeEventListener("mousedown", e.onTouchStart, !1), i.removeEventListener("mousemove", e.onTouchMove, l), i.removeEventListener("mouseup", e.onTouchEnd, !1));
         } else r.removeEventListener(s.start, e.onTouchStart, !1), i.removeEventListener(s.move, e.onTouchMove, l), i.removeEventListener(s.end, e.onTouchEnd, !1);
 
-        (t.preventClicks || t.preventClicksPropagation) && r.removeEventListener("click", e.onClick, !0), e.off(y.ios || y.android ? "resize orientationchange observerUpdate" : "resize observerUpdate", S);
+        (t.preventClicks || t.preventClicksPropagation) && r.removeEventListener("click", e.onClick, !0), e.off(x.ios || x.android ? "resize orientationchange observerUpdate" : "resize observerUpdate", S);
       }
     },
     breakpoints: {
@@ -2080,7 +2080,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             s = this.rtl,
             i = this.$el,
             a = [];
-        a.push("initialized"), a.push(t.direction), t.freeMode && a.push("free-mode"), p.flexbox || a.push("no-flexbox"), t.autoHeight && a.push("autoheight"), s && a.push("rtl"), t.slidesPerColumn > 1 && a.push("multirow"), y.android && a.push("android"), y.ios && a.push("ios"), (c.isIE || c.isEdge) && (p.pointerEvents || p.prefixedPointerEvents) && a.push("wp8-".concat(t.direction)), a.forEach(function (s) {
+        a.push("initialized"), a.push(t.direction), t.freeMode && a.push("free-mode"), p.flexbox || a.push("no-flexbox"), t.autoHeight && a.push("autoheight"), s && a.push("rtl"), t.slidesPerColumn > 1 && a.push("multirow"), x.android && a.push("android"), x.ios && a.push("ios"), (c.isIE || c.isEdge) && (p.pointerEvents || p.prefixedPointerEvents) && a.push("wp8-".concat(t.direction)), a.forEach(function (s) {
           e.push(t.containerModifierClass + s);
         }), i.addClass(e.join(" "));
       },
@@ -2358,10 +2358,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var k = {
     name: "device",
     proto: {
-      device: y
+      device: x
     },
     "static": {
-      device: y
+      device: x
     }
   },
       L = {
@@ -2500,20 +2500,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       f = t.rtlTranslate ? "right" : t.isHorizontal() ? "left" : "top", a ? (g = Math.floor(s / 2) + i + n, v = Math.floor(s / 2) + i + r) : (g = s + (i - 1) + n, v = i + r);
       var b = Math.max((m || 0) - v, 0),
           w = Math.min((m || 0) + g, p.length - 1),
-          y = (t.slidesGrid[b] || 0) - (t.slidesGrid[0] || 0);
+          x = (t.slidesGrid[b] || 0) - (t.slidesGrid[0] || 0);
 
-      function x() {
+      function y() {
         t.updateSlides(), t.updateProgress(), t.updateSlidesClasses(), t.lazy && t.params.lazy.enabled && t.lazy.load();
       }
 
       if (d.extend(t.virtual, {
         from: b,
         to: w,
-        offset: y,
+        offset: x,
         slidesGrid: t.slidesGrid
-      }), l === b && o === w && !e) return t.slidesGrid !== c && y !== u && t.slides.css(f, "".concat(y, "px")), void t.updateProgress();
+      }), l === b && o === w && !e) return t.slidesGrid !== c && x !== u && t.slides.css(f, "".concat(x, "px")), void t.updateProgress();
       if (t.params.virtual.renderExternal) return t.params.virtual.renderExternal.call(t, {
-        offset: y,
+        offset: x,
         from: b,
         to: w,
         slides: function () {
@@ -2525,7 +2525,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
           return e;
         }()
-      }), void x();
+      }), void y();
       var T = [],
           E = [];
       if (e) t.$wrapperEl.find(".".concat(t.params.slideClass)).remove();else for (var _e55 = l; _e55 <= o; _e55 += 1) {
@@ -2542,7 +2542,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return t - e;
       }).forEach(function (e) {
         t.$wrapperEl.prepend(h(p[e], e));
-      }), t.$wrapperEl.children(".swiper-slide").css(f, "".concat(y, "px")), x();
+      }), t.$wrapperEl.children(".swiper-slide").css(f, "".concat(x, "px")), y();
     },
     renderSlide: function renderSlide(e, t) {
       var s = this,
@@ -3149,7 +3149,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       if (!p.gestures) {
         if (!s.fakeGestureTouched || !s.fakeGestureMoved) return;
-        if ("touchend" !== e.type || "touchend" === e.type && e.changedTouches.length < 2 && !y.android) return;
+        if ("touchend" !== e.type || "touchend" === e.type && e.changedTouches.length < 2 && !x.android) return;
         s.fakeGestureTouched = !1, s.fakeGestureMoved = !1;
       }
 
@@ -3159,7 +3159,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       var t = this.zoom,
           s = t.gesture,
           i = t.image;
-      s.$imageEl && 0 !== s.$imageEl.length && (i.isTouched || (y.android && e.preventDefault(), i.isTouched = !0, i.touchesStart.x = "touchstart" === e.type ? e.targetTouches[0].pageX : e.pageX, i.touchesStart.y = "touchstart" === e.type ? e.targetTouches[0].pageY : e.pageY));
+      s.$imageEl && 0 !== s.$imageEl.length && (i.isTouched || (x.android && e.preventDefault(), i.isTouched = !0, i.touchesStart.x = "touchstart" === e.type ? e.targetTouches[0].pageX : e.pageX, i.touchesStart.y = "touchstart" === e.type ? e.targetTouches[0].pageY : e.pageY));
     },
     onTouchMove: function onTouchMove(e) {
       var t = this,
@@ -3219,8 +3219,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           a = s.gesture,
           n = s.image;
       if (a.$slideEl || (a.$slideEl = t.clickedSlide ? r(t.clickedSlide) : t.slides.eq(t.activeIndex), a.$imageEl = a.$slideEl.find("img, svg, canvas"), a.$imageWrapEl = a.$imageEl.parent(".".concat(i.containerClass))), !a.$imageEl || 0 === a.$imageEl.length) return;
-      var l, o, d, p, c, h, u, m, f, g, v, b, w, y, x, T, E, S;
-      a.$slideEl.addClass("".concat(i.zoomedSlideClass)), void 0 === n.touchesStart.x && e ? (l = "touchend" === e.type ? e.changedTouches[0].pageX : e.pageX, o = "touchend" === e.type ? e.changedTouches[0].pageY : e.pageY) : (l = n.touchesStart.x, o = n.touchesStart.y), s.scale = a.$imageWrapEl.attr("data-swiper-zoom") || i.maxRatio, s.currentScale = a.$imageWrapEl.attr("data-swiper-zoom") || i.maxRatio, e ? (E = a.$slideEl[0].offsetWidth, S = a.$slideEl[0].offsetHeight, c = (d = a.$slideEl.offset().left) + E / 2 - l, h = (p = a.$slideEl.offset().top) + S / 2 - o, f = a.$imageEl[0].offsetWidth, g = a.$imageEl[0].offsetHeight, v = f * s.scale, b = g * s.scale, x = -(w = Math.min(E / 2 - v / 2, 0)), T = -(y = Math.min(S / 2 - b / 2, 0)), (u = c * s.scale) < w && (u = w), u > x && (u = x), (m = h * s.scale) < y && (m = y), m > T && (m = T)) : (u = 0, m = 0), a.$imageWrapEl.transition(300).transform("translate3d(".concat(u, "px, ").concat(m, "px,0)")), a.$imageEl.transition(300).transform("translate3d(0,0,0) scale(".concat(s.scale, ")"));
+      var l, o, d, p, c, h, u, m, f, g, v, b, w, x, y, T, E, S;
+      a.$slideEl.addClass("".concat(i.zoomedSlideClass)), void 0 === n.touchesStart.x && e ? (l = "touchend" === e.type ? e.changedTouches[0].pageX : e.pageX, o = "touchend" === e.type ? e.changedTouches[0].pageY : e.pageY) : (l = n.touchesStart.x, o = n.touchesStart.y), s.scale = a.$imageWrapEl.attr("data-swiper-zoom") || i.maxRatio, s.currentScale = a.$imageWrapEl.attr("data-swiper-zoom") || i.maxRatio, e ? (E = a.$slideEl[0].offsetWidth, S = a.$slideEl[0].offsetHeight, c = (d = a.$slideEl.offset().left) + E / 2 - l, h = (p = a.$slideEl.offset().top) + S / 2 - o, f = a.$imageEl[0].offsetWidth, g = a.$imageEl[0].offsetHeight, v = f * s.scale, b = g * s.scale, y = -(w = Math.min(E / 2 - v / 2, 0)), T = -(x = Math.min(S / 2 - b / 2, 0)), (u = c * s.scale) < w && (u = w), u > y && (u = y), (m = h * s.scale) < x && (m = x), m > T && (m = T)) : (u = 0, m = 0), a.$imageWrapEl.transition(300).transform("translate3d(".concat(u, "px, ").concat(m, "px,0)")), a.$imageEl.transition(300).transform("translate3d(0,0,0) scale(".concat(s.scale, ")"));
     },
     out: function out() {
       var e = this,
@@ -4628,10 +4628,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }];
   void 0 === z.use && (z.use = z.Class.use, z.installModule = z.Class.installModule), z.use(ie);
   new z(".swiper-container", {
-    autoplay: {
-      delay: 4e3,
-      disableOnInteraction: !1
-    },
     speed: 800,
     loop: !0,
     pagination: {
