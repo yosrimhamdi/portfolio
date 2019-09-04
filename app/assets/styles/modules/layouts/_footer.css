@@ -1,0 +1,30 @@
+.footer {
+  background-color: $bgBlack;
+  color: $darkGrey;
+
+  &__info {
+    padding: 2em 0;
+  }
+  &__copyright{
+    padding: 1.5em 0;
+    border-top: .5px solid rgb(214, 214, 214);
+  }
+  &__my-name {
+    color: $mainColor;
+    font-style: italic;
+    font-size: .8rem;
+  }
+  &__logo {
+    width: 120px;
+    height: 120px;
+    margin-right: 2em;
+  }
+  &__intro {
+    margin-right: 4em;
+    flex-basis: 200px;
+  }
+  &__contact-us {
+    position: relative;
+/*     bottom: 1px;
+ */  }
+}

@@ -7,4 +7,10 @@
   &__margin-l-auto {
     margin-left: auto;
   }
+  &--y-centered {
+    align-items: center;
+  }
+  &--x-centered {
+    justify-content: center;
+  }
 }

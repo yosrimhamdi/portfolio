@@ -6,6 +6,9 @@
   &--last-align-left {
     text-align-last: left;
   }
+  &--margin-b-tiny {
+    margin-bottom: .3em;
+  }
   &--margin-b {
     margin-bottom: 2.5em;
   }

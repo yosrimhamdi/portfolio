@@ -5,14 +5,17 @@
   &--big {
     font-size: 1.5rem;
   }
-  &--move-down {
-    top: 10px;
+  &--move-down-3px {
+    top: 3px;
   }
   &--right-padding {
-    padding-right: .6em;
+    padding-right: 1em;
   }
   &--white {
     color: white;
+  }
+  &--color-grey {
+    color: $darkGrey;
   }
   &--huge {
     font-size: 2.5rem;
