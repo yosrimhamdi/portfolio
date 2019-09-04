@@ -21,4 +21,5 @@
 @import './modules/components/_flipping-card';
 @import './modules/components/_news';
 @import './modules/components/_swiper';
+@import './modules/components/_form';
 @import '../../../node_modules/swiper/dist/css/swiper.min.css';
