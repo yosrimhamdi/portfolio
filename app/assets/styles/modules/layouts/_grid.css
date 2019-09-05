@@ -2,16 +2,36 @@
   display: grid;
   justify-content: center;
 
-  &--2-by-auto {
-    grid-template-columns: repeat(2, 300px); 
-    grid-template-rows: repeat(2, 200px); 
-    grid-gap: 20px;
+  &--2-by-auto-atLarge {
+    grid-template-columns: 300px; 
+    grid-template-rows: repeat(4, 200px); 
+    grid-row-gap: 10px;
+
+    @mixin atSmall {
+      grid-template-columns: repeat(2, 230px); 
+      grid-template-rows: repeat(2, 200px); 
+      grid-column-gap: 10px;
+    }
+    @mixin atMedium {
+      grid-template-columns: repeat(2, 300px); 
+    }
+    @mixin atLarge  {
+      grid-template-columns: repeat(2, 230px); 
+    }
+    @mixin atHuge {
+      grid-template-columns: repeat(2, 300px); 
+    }
   }
 
-  &--4-by-1 {
-    grid-template-columns: repeat(4, 140px);
-    grid-template-rows: 140px;
-    grid-column-gap: 20px;
+  &--4-by-1-atLarge {
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(2, 140px);
+    grid-gap: 10px;
+
+    @mixin atSmall {
+      grid-template-columns: repeat(4, 110px);
+      grid-template-rows: 110px;
+    }
   }
 
   &--cell-content-xy-centered {

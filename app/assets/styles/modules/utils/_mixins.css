@@ -22,3 +22,8 @@
     @mixin-content;
   }
 }
+@define-mixin  atHuge {
+  @media (min-width: 1340px) {
+    @mixin-content;
+  }
+}

@@ -1,9 +1,10 @@
 .content-wrapper {
   @mixin atLarge {
     width: 150vw;
+    position: relative;
+    left: -50vw;
   }
   height: 100vh;
-  position: relative;
 
   &__fixed-position {
     @mixin atLarge {
