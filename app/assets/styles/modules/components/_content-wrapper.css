@@ -1,15 +1,20 @@
 .content-wrapper {
-  width: 150vw;
+  @mixin atLarge {
+    width: 150vw;
+  }
   height: 100vh;
   position: relative;
-  left: -50vw;
 
   &__fixed-position {
-    position: fixed;
+    @mixin atLarge {
+      position: fixed;
+    }
   }
 
   &__main-content {
-    margin-left: 100vw;
-    width: calc(50vw - 17px);
+    @mixin atLarge {
+      margin-left: 100vw;
+      width: calc(50vw - 17px);
+    }
   }
 }

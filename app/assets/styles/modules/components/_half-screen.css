@@ -1,4 +1,7 @@
 .half-screen {
   height: 100vh;
-  width: 50vw;
+  
+  @mixin atLarge {
+    width: 50vw;
+  }
 }

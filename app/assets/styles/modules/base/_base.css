@@ -7,5 +7,9 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: $mainGrey;
+}
+
+html, body {
   overflow-x: hidden;
+  width: 100%;
 }

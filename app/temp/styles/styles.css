@@ -5,10 +5,17 @@
 }body {
   font-family: 'Poppins', sans-serif;
   color: #6d6a6a;
+}html, body {
   overflow-x: hidden;
+  width: 100%;
 }.flexbox {
   display: flex;
-}.flexbox--align-base {
+}.flexbox--atLarge {
+    display: block;
+  }@media (min-width: 1024px) {.flexbox--atLarge {
+      display: flex
+  }
+  }.flexbox--align-base {
     align-items: baseline;
   }.flexbox__margin-l-auto {
     margin-left: auto;
@@ -31,21 +38,28 @@
     justify-items: center;
     align-items: center;
   }.animated-hero {
-  background-image: url('../../assets/images/stars.jpg');
-  background-position: center center;
-  background-size: cover;
-  -webkit-filter: brightness(25%);
-          filter: brightness(25%);
-}.content-wrapper {
-  width: 150vw;
+  display: none;
+}@media (min-width: 1024px) {.animated-hero {
+    display: block;
+    background-image: url('../../assets/images/stars.jpg');
+    background-position: center center;
+    background-size: cover;
+    -webkit-filter: brightness(25%);
+            filter: brightness(25%)
+}
+  }.content-wrapper {
   height: 100vh;
   position: relative;
-  left: -50vw;
-}.content-wrapper__fixed-position {
-    position: fixed;
-  }.content-wrapper__main-content {
-    margin-left: 100vw;
-    width: calc(50vw - 17px);
+}@media (min-width: 1024px) {.content-wrapper {
+    width: 150vw
+}
+  }@media (min-width: 1024px) {.content-wrapper__fixed-position {
+      position: fixed
+  }
+  }@media (min-width: 1024px) {.content-wrapper__main-content {
+      margin-left: 100vw;
+      width: calc(50vw - 17px)
+  }
   }.avatar {
   position: relative;
 }.avatar__image {
@@ -92,19 +106,23 @@
   }.button--white-on-hover:hover {
       color: white;
     }.wrapper {
-  width: 90%;
   margin: auto;
   padding-right: 12px;
   padding-left: 12px;
-}.page-section {
+}@media (min-width: 720px) {.wrapper {
+    width: 90%;
+}
+  }.page-section {
   padding-top: 3.1em;
   padding-bottom: 2.5em;
 }.page-section--equal {
     padding-top: 2.5em;
   }.half-screen {
   height: 100vh;
-  width: 50vw;
-}.headline {
+}@media (min-width: 1024px) {.half-screen {
+    width: 50vw
+}
+  }.headline {
   position: relative;
   font-family: 'Montserrat', sans-serif;
   color: #3c3838;

@@ -1,5 +1,7 @@
 .wrapper {
-  width: 90%;
+  @mixin atMedium {
+    width: 90%;
+  }
   margin: auto;
   padding-right: 12px;
   padding-left: 12px;

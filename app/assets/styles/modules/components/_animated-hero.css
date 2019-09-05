@@ -1,6 +1,11 @@
 .animated-hero {
-  background-image: url('../../assets/images/stars.jpg');
-  background-position: center center;
-  background-size: cover;
-  filter: brightness(25%);
+  display: none;
+  
+  @mixin atLarge {
+    display: block;
+    background-image: url('../../assets/images/stars.jpg');
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(25%);
+  }
 }

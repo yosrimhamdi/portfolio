@@ -1,6 +1,12 @@
 .flexbox {
   display: flex;
 
+  &--atLarge {
+    display: block;
+    @mixin atLarge {
+      display: flex;
+    }
+  }
   &--align-base {
     align-items: baseline;
   }
