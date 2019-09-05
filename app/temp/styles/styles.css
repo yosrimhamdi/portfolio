@@ -312,7 +312,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}.grey-background {
+}.xy-centered--full-width {
+    width: 100%;
+  }.grey-background {
   background-color: rgb(249, 249, 249);
 
 }.flipping-card{
