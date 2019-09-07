@@ -1,6 +1,6 @@
 .half-screen {
   height: 50vh;
-  height: var(--var, 100vh);
+  height: calc(var(--var, 100vh) * 100);
   
   @mixin atLarge {
     width: 50vw;
