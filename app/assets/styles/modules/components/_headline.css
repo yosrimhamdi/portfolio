@@ -60,6 +60,12 @@
       font-size: 1.2rem;
     }
   }
+  &--small-plus {
+    font-size: .95rem;
+    @mixin atLarge {
+      font-size: 1.2rem;
+    }
+  }
   &--medium {
     font-size: 1.2rem;
     @mixin atLarge {
@@ -100,5 +106,8 @@
   }
   &--underline {
     text-decoration: underline;
+  }
+  &--text-shadow {
+    text-shadow: 2px 1px 3px rgba(0,0,0,.1) ;
   }
 }

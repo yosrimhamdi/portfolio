@@ -1,6 +1,10 @@
 .background-image-section {
-  height: 200px;
+  height: 140px;
   position: relative;
+
+  @mixin atLarge {
+    height: 160px;
+  }
 
   &--400pxh {
     height: 270px;
