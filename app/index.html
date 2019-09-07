@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script>
-    let vh = window.innerHeight;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.addEventListener('resize', () => {
+      let vh = window.innerHeight;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
   </script>
   <link rel="stylesheet" href="./temp/styles/styles.css">
   <script src="https://kit.fontawesome.com/f5e19f4cb0.js"></script>
