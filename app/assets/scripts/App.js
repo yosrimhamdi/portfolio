@@ -1,14 +1,15 @@
 import Swiper from 'swiper';
 
 const config = {
-/*   autoplay: {
-    delay: 4000,
+  autoplay: {
+    delay: 5000,
     disableOnInteraction: false,
-  }, */
+  },
   speed: 800,
   loop: true,
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    dynamicBullets: true
   },
   navigation: {
     nextEl: '.swiper-button-next',
