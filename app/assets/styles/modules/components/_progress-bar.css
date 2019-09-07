@@ -38,14 +38,22 @@
     }
   }
   &__details {
-    margin-bottom: .1em
+    margin-bottom: .1em;
   }
   &__title {
     text-transform: uppercase;
     color: $mainBlack;
+    font-size: .9rem;
+    @mixin atLarge {
+      font-size: 1.2rem;      
+    }
   }
   &__percentage {
-    font-weight: bolder;
+    font-weight: 800;
     color: $mainBlack;
+    font-size: .8rem;
+    @mixin atLarge {
+      font-size: 1rem;      
+    }
   }
 }

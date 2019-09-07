@@ -2,9 +2,16 @@
   position: relative;
 
   &__image {
-    width: 160px;
     clip-path: circle();
     display: block;
-    margin: 0 auto 2em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1.2em;
+    width: 120px;
+
+   @mixin atLarge {
+    width: 160px;
+    margin-bottom: 2em;
+   }
   }
 }

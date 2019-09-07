@@ -1,8 +1,13 @@
 .paragraph {
-  font-size: .9rem;
   text-align: justify;
   text-align-last: center;
+  font-size: .8rem;
+  font-weight: 300;
 
+  @mixin atLarge {
+    font-size: .9rem;
+  }
+  
   &--last-align-left {
     text-align-last: left;
   }
