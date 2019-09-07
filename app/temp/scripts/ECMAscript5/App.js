@@ -2708,7 +2708,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }
   };
-  var V = {
+  var X = {
     lastScrollTime: d.now(),
     event: a.navigator.userAgent.indexOf("firefox") > -1 ? "DOMMouseScroll" : function () {
       var e = "onwheel" in i;
@@ -2747,7 +2747,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       t.originalEvent && (t = t.originalEvent);
       var n = 0;
       var r = s.rtlTranslate ? -1 : 1,
-          l = V.normalize(t);
+          l = X.normalize(t);
       if (i.forceToAxis) {
         if (s.isHorizontal()) {
           if (!(Math.abs(l.pixelX) > Math.abs(l.pixelY))) return !0;
@@ -2784,20 +2784,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     },
     enable: function enable() {
       var e = this;
-      if (!V.event) return !1;
+      if (!X.event) return !1;
       if (e.mousewheel.enabled) return !1;
       var t = e.$el;
-      return "container" !== e.params.mousewheel.eventsTarged && (t = r(e.params.mousewheel.eventsTarged)), t.on("mouseenter", e.mousewheel.handleMouseEnter), t.on("mouseleave", e.mousewheel.handleMouseLeave), t.on(V.event, e.mousewheel.handle), e.mousewheel.enabled = !0, !0;
+      return "container" !== e.params.mousewheel.eventsTarged && (t = r(e.params.mousewheel.eventsTarged)), t.on("mouseenter", e.mousewheel.handleMouseEnter), t.on("mouseleave", e.mousewheel.handleMouseLeave), t.on(X.event, e.mousewheel.handle), e.mousewheel.enabled = !0, !0;
     },
     disable: function disable() {
       var e = this;
-      if (!V.event) return !1;
+      if (!X.event) return !1;
       if (!e.mousewheel.enabled) return !1;
       var t = e.$el;
-      return "container" !== e.params.mousewheel.eventsTarged && (t = r(e.params.mousewheel.eventsTarged)), t.off(V.event, e.mousewheel.handle), e.mousewheel.enabled = !1, !0;
+      return "container" !== e.params.mousewheel.eventsTarged && (t = r(e.params.mousewheel.eventsTarged)), t.off(X.event, e.mousewheel.handle), e.mousewheel.enabled = !1, !0;
     }
   };
-  var X = {
+  var Y = {
     update: function update() {
       var e = this,
           t = e.params.navigation;
@@ -2833,7 +2833,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       t && t.length && (t.off("click", e.navigation.onNextClick), t.removeClass(e.params.navigation.disabledClass)), s && s.length && (s.off("click", e.navigation.onPrevClick), s.removeClass(e.params.navigation.disabledClass));
     }
   };
-  var Y = {
+  var V = {
     update: function update() {
       var e = this,
           t = e.rtl,
@@ -3866,11 +3866,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       d.extend(this, {
         mousewheel: {
           enabled: !1,
-          enable: V.enable.bind(this),
-          disable: V.disable.bind(this),
-          handle: V.handle.bind(this),
-          handleMouseEnter: V.handleMouseEnter.bind(this),
-          handleMouseLeave: V.handleMouseLeave.bind(this),
+          enable: X.enable.bind(this),
+          disable: X.disable.bind(this),
+          handle: X.handle.bind(this),
+          handleMouseEnter: X.handleMouseEnter.bind(this),
+          handleMouseLeave: X.handleMouseLeave.bind(this),
           lastScrollTime: d.now()
         }
       });
@@ -3898,11 +3898,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     create: function create() {
       d.extend(this, {
         navigation: {
-          init: X.init.bind(this),
-          update: X.update.bind(this),
-          destroy: X.destroy.bind(this),
-          onNextClick: X.onNextClick.bind(this),
-          onPrevClick: X.onPrevClick.bind(this)
+          init: Y.init.bind(this),
+          update: Y.update.bind(this),
+          destroy: Y.destroy.bind(this),
+          onNextClick: Y.onNextClick.bind(this),
+          onPrevClick: Y.onPrevClick.bind(this)
         }
       });
     },
@@ -3969,10 +3969,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     create: function create() {
       d.extend(this, {
         pagination: {
-          init: Y.init.bind(this),
-          render: Y.render.bind(this),
-          update: Y.update.bind(this),
-          destroy: Y.destroy.bind(this),
+          init: V.init.bind(this),
+          render: V.render.bind(this),
+          update: V.update.bind(this),
+          destroy: V.destroy.bind(this),
           dynamicBulletIndex: 0
         }
       });
@@ -4627,36 +4627,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }
   }];
   void 0 === z.use && (z.use = z.Class.use, z.installModule = z.Class.installModule), z.use(ie);
-
-  var ae =
-  /*#__PURE__*/
-  function () {
-    function ae() {
-      _classCallCheck(this, ae);
-
-      this.root = document.documentElement, this.updateVh(), this.events();
-    }
-
-    _createClass(ae, [{
-      key: "events",
-      value: function events() {
-        window.addEventListener("resize", this.updateVh.bind(this));
-      }
-    }, {
-      key: "updateVh",
-      value: function updateVh() {
-        this.root.style.setProperty("--vh", "".concat(this.vhValue(), "px"));
-      }
-    }, {
-      key: "vhValue",
-      value: function vhValue() {
-        return window.innerHeight;
-      }
-    }]);
-
-    return ae;
-  }();
-
   new z(".swiper-container", {
     autoplay: {
       delay: 5e3,
@@ -4672,5 +4642,5 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     }
-  }), new ae();
+  });
 }]);
