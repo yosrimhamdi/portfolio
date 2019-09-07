@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script>
-    document.addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
       let vh = window.innerHeight;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
+      console.log(vh);
     });
   </script>
   <link rel="stylesheet" href="./temp/styles/styles.css">
