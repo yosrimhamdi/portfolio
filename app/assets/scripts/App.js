@@ -19,4 +19,4 @@ const config = {
 };
 
 new Swiper('.swiper-container', config);
-new UpdateVh();
+/* new UpdateVh(); */

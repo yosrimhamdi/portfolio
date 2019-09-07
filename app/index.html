@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="./temp/scripts/ECMAscript5/App.js"></script>
+  <script>
+    let vh = window.innerHeight;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+  </script>
   <link rel="stylesheet" href="./temp/styles/styles.css">
   <script src="https://kit.fontawesome.com/f5e19f4cb0.js"></script>
   <title>justme</title>
@@ -319,6 +323,6 @@
       </footer>
     </section>
  </div>
-
+ <script src="./temp/scripts/ECMAscript5/App.js"></script>
 </body>
 </html>
