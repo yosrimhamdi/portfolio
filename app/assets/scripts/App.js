@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import UpdateVh from './modules/UpdateVh';
 
 const config = {
   autoplay: {
@@ -18,3 +19,4 @@ const config = {
 };
 
 new Swiper('.swiper-container', config);
+new UpdateVh();
