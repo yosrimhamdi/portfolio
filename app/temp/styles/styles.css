@@ -393,7 +393,7 @@
     width: 100%;
     padding: 0 8px;
   }.xy-centered--to-top-until-large {
-    top: 47%;
+    top: 45%;
   }@media (min-width: 1024px) {.xy-centered--to-top-until-large {
       top: 50%
   }

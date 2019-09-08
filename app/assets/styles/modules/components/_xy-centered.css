@@ -9,7 +9,7 @@
     padding: 0 8px;
   }
   &--to-top-until-large {
-    top: 47%;
+    top: 45%;
     @mixin atLarge {
       top: 50%;
     }
