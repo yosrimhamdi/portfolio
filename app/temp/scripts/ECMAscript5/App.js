@@ -9659,7 +9659,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }), new ae(), new le(), new de.a(".professional-skill", {
     strings: ["web developer", "front-end engineer", "web expert"],
     loop: !0,
-    typeSpeed: 100,
+    typeSpeed: 80,
     shuffle: !0,
     backSpeed: 40,
     smartBackspace: !1

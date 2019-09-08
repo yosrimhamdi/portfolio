@@ -26,7 +26,7 @@ new SlideOnClick();
 new Typed('.professional-skill', {
   strings: ['web developer', 'front-end engineer', 'web expert'],
   loop: true,
-  typeSpeed: 100,
+  typeSpeed: 80,
   shuffle: true,
   backSpeed: 40,
   smartBackspace: false
