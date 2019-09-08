@@ -21,7 +21,7 @@ class SlideOnClick {
     this.animatedHero.toggleClass('scale-on-click--clicked');
   }
   disableJump() {
-    if (window.innerHeight < 1024) {
+    if (window.innerHeight >= 1024) {
       this.button.attr('href','#1');
     }
   }
