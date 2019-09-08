@@ -20,6 +20,9 @@
   &--white {
     color: white;
   }  
+  &--blue {
+    color: $mainColor;
+  }
   &--centered {
     text-align: center;
   }
@@ -34,9 +37,6 @@
   }
   &--italic {
     font-style: italic;
-  }
-  &--blue {
-    color: $mainColor;
   }
   &--thin {
     font-weight: 100;

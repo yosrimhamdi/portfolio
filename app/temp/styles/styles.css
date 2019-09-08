@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
   color: #6d6a6a;
 }html, body {
-  overflow-x: hidden;
+/*   overflow-x: hidden; */
   width: 100%;
 }.flexbox {
   display: flex;
@@ -278,6 +278,8 @@
     margin-bottom: 2.5em;
   }.paragraph--white {
     color: white;
+  }.paragraph--blue {
+    color: #5ebae4;
   }.paragraph--centered {
     text-align: center;
   }.paragraph--align-left {
@@ -288,8 +290,6 @@
     text-transform: uppercase;
   }.paragraph--italic {
     font-style: italic;
-  }.paragraph--blue {
-    color: #5ebae4;
   }.paragraph--thin {
     font-weight: 100;
   }.paragraph--text-shadow {
@@ -302,7 +302,7 @@
   }.icon--move-down-3px {
     top: 3px;
   }.icon--right-padding {
-    padding-right: 1em;
+    padding-right: .7em;
   }.icon--white {
     color: white;
   }.icon--color-grey {
@@ -543,26 +543,27 @@
   }.footer {
   background-color: #0d101d;
   color: #7f7f7f;
-}.footer__info {
-    padding: 2em 0;
+}.footer__upper-content {
+    padding: 2em 10px;
   }.footer__copyright{
-    padding: 1.5em 0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     border-top: .5px solid rgb(214, 214, 214);
-  }.footer__my-name {
-    color: #5ebae4;
-    font-style: italic;
-    font-size: .8rem;
   }.footer__logo {
     width: 120px;
     height: 120px;
-    margin-right: 2em;
+    margin-right: .5em;
+  }@media (min-width: 720px) {.footer__logo {
+      margin-right: 2em
+  }
   }.footer__intro {
-    margin-right: 4em;
-    flex-basis: 200px;
-  }.footer__contact-us {
-    position: relative;
-/*     bottom: 1px;
- */  }/**
+    display: none;
+  }@media (min-width: 1024px) {.footer__intro {
+      display: block;
+      margin-right: 2em;
+      flex-basis: 200px
+  }
+  }/**
  * Swiper 4.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/

@@ -2,29 +2,29 @@
   background-color: $bgBlack;
   color: $darkGrey;
 
-  &__info {
-    padding: 2em 0;
+  &__upper-content {
+    padding: 2em 10px;
   }
   &__copyright{
-    padding: 1.5em 0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     border-top: .5px solid rgb(214, 214, 214);
-  }
-  &__my-name {
-    color: $mainColor;
-    font-style: italic;
-    font-size: .8rem;
   }
   &__logo {
     width: 120px;
     height: 120px;
-    margin-right: 2em;
+    margin-right: .5em;
+
+    @mixin atMedium {
+      margin-right: 2em;
+    }
   }
   &__intro {
-    margin-right: 4em;
-    flex-basis: 200px;
+    display: none;
+    @mixin atLarge {
+      display: block;
+      margin-right: 2em;
+      flex-basis: 200px;
+    }
   }
-  &__contact-us {
-    position: relative;
-/*     bottom: 1px;
- */  }
 }

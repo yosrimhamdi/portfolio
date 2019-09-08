@@ -9,7 +9,7 @@
     top: 3px;
   }
   &--right-padding {
-    padding-right: 1em;
+    padding-right: .7em;
   }
   &--white {
     color: white;
