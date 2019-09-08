@@ -254,6 +254,8 @@
     text-decoration: underline;
   }.headline--text-shadow {
     text-shadow: 2px 1px 3px rgba(0,0,0,.1) ;
+  }.headline--capitalize {
+    text-transform: capitalize;
   }.paragraph {
   text-align: justify;
   -moz-text-align-last: center;
