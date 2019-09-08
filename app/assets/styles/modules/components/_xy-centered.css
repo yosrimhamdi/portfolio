@@ -8,4 +8,10 @@
     width: 100%;
     padding: 0 8px;
   }
+  &--to-top-until-large {
+    top: 47%;
+    @mixin atLarge {
+      top: 50%;
+    }
+  }
 }
