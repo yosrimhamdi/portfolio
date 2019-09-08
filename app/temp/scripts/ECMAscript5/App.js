@@ -9661,7 +9661,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     loop: !0,
     typeSpeed: 100,
     shuffle: !0,
-    backSpeed: 60,
+    backSpeed: 40,
     smartBackspace: !1
   });
 }]);
