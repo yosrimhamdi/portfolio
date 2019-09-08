@@ -1,0 +1,13 @@
+.slide-on-click {
+  @mixin atLarge {
+    position: relative;
+    left: 0;
+    transition: left 400ms;
+  }
+
+  &--clicked {
+    @mixin atLarge {
+      left: -50vw;
+    }
+  }
+}
