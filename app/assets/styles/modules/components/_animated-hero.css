@@ -1,11 +1,7 @@
 .animated-hero {
-  display: none;
-  
-  @mixin atLarge {
-    display: block;
-    background-image: url('../../assets/images/stars.jpg');
-    background-position: center center;
-    background-size: cover;
-    filter: brightness(25%);
+background-color: rgb(66, 66, 66);
+  #particles-js {
+    width: 100%;
+    height: 100%;
   }
 }

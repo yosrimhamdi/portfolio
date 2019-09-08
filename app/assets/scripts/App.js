@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
 import UpdateVh from './modules/UpdateVh';
 import SlideOnClick from './modules/SlideOnClick';
+import 'particles.js';
 
 const config = {
   autoplay: {
@@ -22,3 +23,7 @@ const config = {
 new Swiper('.swiper-container', config);
 new UpdateVh();
 new SlideOnClick();
+
+particlesJS.load('particles-js', '/particles/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
