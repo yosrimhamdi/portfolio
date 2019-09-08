@@ -1,5 +1,10 @@
 .animated-hero {
-  position: relative;  
+  position: relative;
+  display: none;
+  
+  @mixin atLarge {
+    display: block;
+  }
 
   &__image {
     width: 100%;
