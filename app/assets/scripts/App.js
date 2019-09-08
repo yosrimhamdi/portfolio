@@ -33,5 +33,6 @@ new Typed('.professional-skill', {
   loop: true,
   typeSpeed: 100,
   shuffle: true,
-  backSpeed: 60
+  backSpeed: 60,
+  smartBackspace: false
 })

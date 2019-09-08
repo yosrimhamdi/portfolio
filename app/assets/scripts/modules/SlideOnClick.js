@@ -1,10 +1,12 @@
 import $ from 'jquery';
+import smoothScroll from 'jquery-smooth-scroll';
 
 class SlideOnClick {
   constructor() {
     this.button = $('.button-main');
     this.contentWrapper = $('.content-wrapper');
     this.animatedHero = $('.animated-hero');
+    this.enableSmoothScroll();
     this.initialClasses();
     this.events();
   }
@@ -18,6 +20,9 @@ class SlideOnClick {
   animate() {
     this.contentWrapper.toggleClass('slide-on-click--clicked');
     this.animatedHero.toggleClass('scale-on-click--clicked');
+  }
+  enableSmoothScroll() {
+    this.button.smoothScroll();
   }
 };
 
