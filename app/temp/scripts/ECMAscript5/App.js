@@ -9630,7 +9630,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "disableJump",
       value: function disableJump() {
-        window.innerHeight >= 1024 && this.button.attr("href", "#1");
+        window.innerWidth >= 1024 && this.button.attr("href", "#1");
       }
     }]);
 
