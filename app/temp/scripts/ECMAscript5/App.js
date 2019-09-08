@@ -352,8 +352,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           F = new RegExp("^" + _ + "+|((?:^|[^\\\\])(?:\\\\.)*)" + _ + "+$", "g"),
           R = new RegExp("^" + _ + "*," + _ + "*"),
           X = new RegExp("^" + _ + "*([>+~]|" + _ + ")" + _ + "*"),
-          W = new RegExp(_ + "|>"),
-          G = new RegExp(q),
+          G = new RegExp(_ + "|>"),
+          W = new RegExp(q),
           V = new RegExp("^" + j + "$"),
           Y = {
         ID: new RegExp("^#(" + j + ")"),
@@ -430,7 +430,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
 
           if (i.qsa && !$[e + " "] && (!v || !v.test(e)) && (1 !== T || "object" !== t.nodeName.toLowerCase())) {
-            if (g = e, y = t, 1 === T && W.test(e)) {
+            if (g = e, y = t, 1 === T && G.test(e)) {
               for ((d = t.getAttribute("id")) ? d = d.replace(ne, se) : t.setAttribute("id", d = x), o = (f = r(e)).length; o--;) {
                 f[o] = "#" + d + " " + be(f[o]);
               }
@@ -724,7 +724,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           PSEUDO: function PSEUDO(e) {
             var t,
                 i = !e[6] && e[2];
-            return Y.CHILD.test(e[0]) ? null : (e[3] ? e[2] = e[4] || e[5] || "" : i && G.test(i) && (t = r(i, !0)) && (t = i.indexOf(")", i.length - t) - i.length) && (e[0] = e[0].slice(0, t), e[2] = i.slice(0, t)), e.slice(0, 3));
+            return Y.CHILD.test(e[0]) ? null : (e[3] ? e[2] = e[4] || e[5] || "" : i && W.test(i) && (t = r(i, !0)) && (t = i.indexOf(")", i.length - t) - i.length) && (e[0] = e[0].slice(0, t), e[2] = i.slice(0, t)), e.slice(0, 3));
           }
         },
         filter: {
@@ -1595,12 +1595,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }), E.ready.then = R.then, "complete" === r.readyState || "loading" !== r.readyState && !r.documentElement.doScroll ? i.setTimeout(E.ready) : (r.addEventListener("DOMContentLoaded", X), i.addEventListener("load", X));
 
-    var W = function W(e, t, i, n, s, a, r) {
+    var G = function G(e, t, i, n, s, a, r) {
       var o = 0,
           l = e.length,
           c = null == i;
       if ("object" === T(i)) for (o in s = !0, i) {
-        W(e, t, o, i[o], !0, a, r);
+        G(e, t, o, i[o], !0, a, r);
       } else if (void 0 !== n && (s = !0, y(n) || (r = !0), c && (r ? (t.call(e, n), t = null) : (c = t, t = function t(e, _t2, i) {
         return c.call(E(e), i);
       })), t)) for (; o < l; o++) {
@@ -1608,7 +1608,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
       return s ? e : c ? t.call(e) : l ? t(e[0], i) : a;
     },
-        G = /^-ms-/,
+        W = /^-ms-/,
         V = /-([a-z])/g;
 
     function Y(e, t) {
@@ -1616,7 +1616,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }
 
     function U(e) {
-      return e.replace(G, "ms-").replace(V, Y);
+      return e.replace(W, "ms-").replace(V, Y);
     }
 
     var J = function J(e) {
@@ -1727,7 +1727,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
         return "object" == _typeof(e) ? this.each(function () {
           Z.set(this, e);
-        }) : W(this, function (t) {
+        }) : G(this, function (t) {
           var i;
           if (a && void 0 === t) return void 0 !== (i = Z.get(a, e)) ? i : void 0 !== (i = ie(a, e)) ? i : void 0;
           this.each(function () {
@@ -2384,7 +2384,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         return Re(this, e);
       },
       text: function text(e) {
-        return W(this, function (e) {
+        return G(this, function (e) {
           return void 0 === e ? E.text(this) : this.empty().each(function () {
             1 !== this.nodeType && 11 !== this.nodeType && 9 !== this.nodeType || (this.textContent = e);
           });
@@ -2427,7 +2427,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         });
       },
       html: function html(e) {
-        return W(this, function (e) {
+        return G(this, function (e) {
           var t = this[0] || {},
               i = 0,
               n = this.length;
@@ -2472,11 +2472,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
 
     var Xe = new RegExp("^(" + ne + ")(?!px)[a-z%]+$", "i"),
-        We = function We(e) {
+        Ge = function Ge(e) {
       var t = e.ownerDocument.defaultView;
       return t && t.opener || (t = i), t.getComputedStyle(e);
     },
-        Ge = new RegExp(ae.join("|"), "i");
+        We = new RegExp(ae.join("|"), "i");
 
     function Ve(e, t, i) {
       var n,
@@ -2484,7 +2484,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           a,
           r,
           o = e.style;
-      return (i = i || We(e)) && ("" !== (r = i.getPropertyValue(t) || i[t]) || oe(e) || (r = E.style(e, t)), !g.pixelBoxStyles() && Xe.test(r) && Ge.test(t) && (n = o.width, s = o.minWidth, a = o.maxWidth, o.minWidth = o.maxWidth = o.width = r, r = i.width, o.width = n, o.minWidth = s, o.maxWidth = a)), void 0 !== r ? r + "" : r;
+      return (i = i || Ge(e)) && ("" !== (r = i.getPropertyValue(t) || i[t]) || oe(e) || (r = E.style(e, t)), !g.pixelBoxStyles() && Xe.test(r) && We.test(t) && (n = o.width, s = o.minWidth, a = o.maxWidth, o.minWidth = o.maxWidth = o.width = r, r = i.width, o.width = n, o.minWidth = s, o.maxWidth = a)), void 0 !== r ? r + "" : r;
     }
 
     function Ye(e, t) {
@@ -2578,7 +2578,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }
 
     function at(e, t, i) {
-      var n = We(e),
+      var n = Ge(e),
           s = (!g.boxSizingReliable() || i) && "border-box" === E.css(e, "boxSizing", !1, n),
           a = s,
           r = Ve(e, t, n),
@@ -2658,7 +2658,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         },
         set: function set(e, i, n) {
           var s,
-              a = We(e),
+              a = Ge(e),
               r = !g.scrollboxSize() && "absolute" === a.position,
               o = (r || n) && "border-box" === E.css(e, "boxSizing", !1, a),
               l = n ? st(e, t, n, o, a) : 0;
@@ -2687,14 +2687,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }, "margin" !== e && (E.cssHooks[e + t].set = nt);
     }), E.fn.extend({
       css: function css(e, t) {
-        return W(this, function (e, t, i) {
+        return G(this, function (e, t, i) {
           var n,
               s,
               a = {},
               r = 0;
 
           if (Array.isArray(t)) {
-            for (n = We(e), s = t.length; r < s; r++) {
+            for (n = Ge(e), s = t.length; r < s; r++) {
               a[t[r]] = E.css(e, t[r], !1, n);
             }
 
@@ -3033,7 +3033,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         gt = E.expr.attrHandle;
     E.fn.extend({
       attr: function attr(e, t) {
-        return W(this, E.attr, e, t, arguments.length > 1);
+        return G(this, E.attr, e, t, arguments.length > 1);
       },
       removeAttr: function removeAttr(e) {
         return this.each(function () {
@@ -3096,7 +3096,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     E.fn.extend({
       prop: function prop(e, t) {
-        return W(this, E.prop, e, t, arguments.length > 1);
+        return G(this, E.prop, e, t, arguments.length > 1);
       },
       removeProp: function removeProp(e) {
         return this.each(function () {
@@ -3436,7 +3436,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       };
     }
 
-    function Wt(e, t, i, n) {
+    function Gt(e, t, i, n) {
       var s = {},
           a = e === Bt;
 
@@ -3451,7 +3451,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return r(t.dataTypes[0]) || !s["*"] && r("*");
     }
 
-    function Gt(e, t) {
+    function Wt(e, t) {
       var i,
           n,
           s = E.ajaxSettings.flatOptions || {};
@@ -3504,7 +3504,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
       },
       ajaxSetup: function ajaxSetup(e, t) {
-        return t ? Gt(Gt(e, E.ajaxSettings), t) : Gt(E.ajaxSettings, e);
+        return t ? Wt(Wt(e, E.ajaxSettings), t) : Wt(E.ajaxSettings, e);
       },
       ajaxPrefilter: Xt(qt),
       ajaxTransport: Xt(Bt),
@@ -3575,7 +3575,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         }
 
-        if (f.data && f.processData && "string" != typeof f.data && (f.data = E.param(f.data, f.traditional)), Wt(qt, f, t, C), d) return C;
+        if (f.data && f.processData && "string" != typeof f.data && (f.data = E.param(f.data, f.traditional)), Gt(qt, f, t, C), d) return C;
 
         for (p in (u = E.event && f.global) && 0 == E.active++ && E.event.trigger("ajaxStart"), f.type = f.type.toUpperCase(), f.hasContent = !jt.test(f.type), s = f.url.replace(Ot, ""), f.hasContent ? f.data && f.processData && 0 === (f.contentType || "").indexOf("application/x-www-form-urlencoded") && (f.data = f.data.replace(It, "+")) : (h = f.url.slice(s.length), f.data && (f.processData || "string" == typeof f.data) && (s += (Mt.test(s) ? "&" : "?") + f.data, delete f.data), !1 === f.cache && (s = s.replace(Nt, "$1"), h = (Mt.test(s) ? "&" : "?") + "_=" + $t++ + h), f.url = s + h), f.ifModified && (E.lastModified[s] && C.setRequestHeader("If-Modified-Since", E.lastModified[s]), E.etag[s] && C.setRequestHeader("If-None-Match", E.etag[s])), (f.data && f.hasContent && !1 !== f.contentType || t.contentType) && C.setRequestHeader("Content-Type", f.contentType), C.setRequestHeader("Accept", f.dataTypes[0] && f.accepts[f.dataTypes[0]] ? f.accepts[f.dataTypes[0]] + ("*" !== f.dataTypes[0] ? ", " + Ft + "; q=0.01" : "") : f.accepts["*"]), f.headers) {
           C.setRequestHeader(p, f.headers[p]);
@@ -3583,7 +3583,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
         if (f.beforeSend && (!1 === f.beforeSend.call(m, C, f) || d)) return C.abort();
 
-        if (T = "abort", y.add(f.complete), C.done(f.success), C.fail(f.error), n = Wt(Bt, f, t, C)) {
+        if (T = "abort", y.add(f.complete), C.done(f.success), C.fail(f.error), n = Gt(Bt, f, t, C)) {
           if (C.readyState = 1, u && v.trigger("ajaxSend", [C, f]), d) return C;
           f.async && f.timeout > 0 && (l = i.setTimeout(function () {
             C.abort("timeout");
@@ -3934,7 +3934,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       var i = "pageYOffset" === t;
 
       E.fn[e] = function (n) {
-        return W(this, function (e, n, s) {
+        return G(this, function (e, n, s) {
           var a;
           if (b(e) ? a = e : 9 === e.nodeType && (a = e.defaultView), void 0 === s) return a ? a[t] : e[n];
           a ? a.scrollTo(i ? a.pageXOffset : s, i ? s : a.pageYOffset) : e[n] = s;
@@ -3956,7 +3956,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         E.fn[n] = function (s, a) {
           var r = arguments.length && (i || "boolean" != typeof s),
               o = i || (!0 === s || !0 === a ? "margin" : "border");
-          return W(this, function (t, i, s) {
+          return G(this, function (t, i, s) {
             var a;
             return b(t) ? 0 === n.indexOf("outer") ? t["inner" + e] : t.document.documentElement["client" + e] : 9 === t.nodeType ? (a = t.documentElement, Math.max(t.body["scroll" + e], a["scroll" + e], t.body["offset" + e], a["offset" + e], a["client" + e])) : void 0 === s ? E.css(t, i, o) : E.style(t, i, s, o);
           }, t, r ? s : void 0, r);
@@ -8195,7 +8195,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       });
     }
   };
-  var W = {
+  var G = {
     getDistanceBetweenTouches: function getDistanceBetweenTouches(e) {
       if (e.targetTouches.length < 2) return 1;
       var t = e.targetTouches[0].pageX,
@@ -8212,7 +8212,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       if (n.fakeGestureTouched = !1, n.fakeGestureMoved = !1, !d.gestures) {
         if ("touchstart" !== e.type || "touchstart" === e.type && e.targetTouches.length < 2) return;
-        n.fakeGestureTouched = !0, s.scaleStart = W.getDistanceBetweenTouches(e);
+        n.fakeGestureTouched = !0, s.scaleStart = G.getDistanceBetweenTouches(e);
       }
 
       s.$slideEl && s.$slideEl.length || (s.$slideEl = r(e.target).closest(".swiper-slide"), 0 === s.$slideEl.length && (s.$slideEl = t.slides.eq(t.activeIndex)), s.$imageEl = s.$slideEl.find("img, svg, canvas"), s.$imageWrapEl = s.$imageEl.parent(".".concat(i.containerClass)), s.maxRatio = s.$imageWrapEl.attr("data-swiper-zoom") || i.maxRatio, 0 !== s.$imageWrapEl.length) ? (s.$imageEl.transition(0), t.zoom.isScaling = !0) : s.$imageEl = void 0;
@@ -8224,7 +8224,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       if (!d.gestures) {
         if ("touchmove" !== e.type || "touchmove" === e.type && e.targetTouches.length < 2) return;
-        i.fakeGestureMoved = !0, n.scaleMove = W.getDistanceBetweenTouches(e);
+        i.fakeGestureMoved = !0, n.scaleMove = G.getDistanceBetweenTouches(e);
       }
 
       n.$imageEl && 0 !== n.$imageEl.length && (d.gestures ? i.scale = e.scale * i.currentScale : i.scale = n.scaleMove / n.scaleStart * i.currentScale, i.scale > n.maxRatio && (i.scale = n.maxRatio - 1 + Math.pow(i.scale - n.maxRatio + 1, .5)), i.scale < t.minRatio && (i.scale = t.minRatio + 1 - Math.pow(t.minRatio - i.scale + 1, .5)), n.$imageEl.transform("translate3d(0,0,0) scale(".concat(i.scale, ")")));
@@ -8339,7 +8339,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       d.gestures ? (e.$wrapperEl.off("gesturestart", ".swiper-slide", t.onGestureStart, i), e.$wrapperEl.off("gesturechange", ".swiper-slide", t.onGestureChange, i), e.$wrapperEl.off("gestureend", ".swiper-slide", t.onGestureEnd, i)) : "touchstart" === e.touchEvents.start && (e.$wrapperEl.off(e.touchEvents.start, ".swiper-slide", t.onGestureStart, i), e.$wrapperEl.off(e.touchEvents.move, ".swiper-slide", t.onGestureChange, i), e.$wrapperEl.off(e.touchEvents.end, ".swiper-slide", t.onGestureEnd, i)), e.$wrapperEl.off(e.touchEvents.move, ".".concat(e.params.zoom.containerClass), t.onTouchMove);
     }
   };
-  var G = {
+  var W = {
     loadInSlide: function loadInSlide(e) {
       var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : !0;
       var i = this,
@@ -9231,7 +9231,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
       };
       "onGestureStart onGestureChange onGestureEnd onTouchStart onTouchMove onTouchEnd onTransitionEnd toggle enable disable in out".split(" ").forEach(function (i) {
-        t[i] = W[i].bind(e);
+        t[i] = G[i].bind(e);
       }), c.extend(e, {
         zoom: t
       });
@@ -9293,8 +9293,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       c.extend(this, {
         lazy: {
           initialImageLoaded: !1,
-          load: G.load.bind(this),
-          loadInSlide: G.loadInSlide.bind(this)
+          load: W.load.bind(this),
+          loadInSlide: W.loadInSlide.bind(this)
         }
       });
     },
@@ -9741,48 +9741,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }]);
 
     return ae;
-  }(),
-      re = i(0),
+  }();
+
+  i(0), i(2);
+  i(3);
+  var re = i(1),
       oe = i.n(re);
-
-  i(2);
-
-  var le =
-  /*#__PURE__*/
-  function () {
-    function le() {
-      _classCallCheck(this, le);
-
-      this.button = oe()(".button-main"), this.contentWrapper = oe()(".content-wrapper"), this.animatedHero = oe()(".animated-hero"), this.enableSmoothScroll(), this.initialClasses(), this.events();
-    }
-
-    _createClass(le, [{
-      key: "events",
-      value: function events() {
-        this.button.click(this.animate.bind(this));
-      }
-    }, {
-      key: "initialClasses",
-      value: function initialClasses() {
-        this.contentWrapper.addClass("slide-on-click"), this.animatedHero.addClass("scale-on-click");
-      }
-    }, {
-      key: "animate",
-      value: function animate() {
-        this.contentWrapper.toggleClass("slide-on-click--clicked"), this.animatedHero.toggleClass("scale-on-click--clicked");
-      }
-    }, {
-      key: "enableSmoothScroll",
-      value: function enableSmoothScroll() {
-        this.button.smoothScroll();
-      }
-    }]);
-
-    return le;
-  }(),
-      ce = (i(3), i(1)),
-      de = i.n(ce);
-
   new se(".swiper-container", {
     autoplay: {
       delay: 5e3,
@@ -9798,9 +9762,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     }
-  }), new ae(), new le(), particlesJS.load("particles-js", "/particles/particles.json", function () {
+  }), new ae(), particlesJS.load("particles-js", "/particles/particles.json", function () {
     console.log("callback - particles.js config loaded");
-  }), new de.a(".professional-skill", {
+  }), new oe.a(".professional-skill", {
     strings: ["web developer", "front-end engineer", "web expert"],
     loop: !0,
     typeSpeed: 100,

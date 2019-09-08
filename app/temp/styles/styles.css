@@ -8,6 +8,7 @@
 }html, body {
   overflow-x: hidden;
   width: 100%;
+  scroll-behavior: smooth;
 }.flexbox {
   display: flex;
 }.flexbox--atLarge {

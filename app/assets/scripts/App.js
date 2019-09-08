@@ -22,7 +22,7 @@ new Swiper('.swiper-container', {
 });
 
 new UpdateVh();
-new SlideOnClick();
+/* new SlideOnClick(); */
 
 particlesJS.load('particles-js', '/particles/particles.json', function() {
   console.log('callback - particles.js config loaded');
