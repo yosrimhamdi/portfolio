@@ -4,6 +4,7 @@ import SlideOnClick from './modules/SlideOnClick';
 import 'particles.js';
 import Typed from 'typed.js';
 
+particlesJS.load('particles-js', '/particles/particles.json', () => 0);
 new Swiper('.swiper-container', {
   autoplay: {
     delay: 5000,
@@ -20,14 +21,8 @@ new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   }
 });
-
 new UpdateVh();
-/* new SlideOnClick(); */
-
-particlesJS.load('particles-js', '/particles/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
+new SlideOnClick();
 new Typed('.professional-skill', {
   strings: ['web developer', 'front-end engineer', 'web expert'],
   loop: true,
@@ -35,4 +30,4 @@ new Typed('.professional-skill', {
   shuffle: true,
   backSpeed: 60,
   smartBackspace: false
-})
+});
