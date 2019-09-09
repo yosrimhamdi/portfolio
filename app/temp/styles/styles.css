@@ -9,6 +9,12 @@
   overflow-x: hidden;
   width: 100%;
   scroll-behavior: smooth;
+}@-webkit-keyframes slide {
+  0% { left: -100%}
+  100% {left: 0}
+}@keyframes slide {
+  0% { left: -100%}
+  100% {left: 0}
 }.flexbox {
   display: flex;
 }.flexbox--atLarge {
@@ -323,7 +329,7 @@
   }.progress-bar__bar::after {
       content: '';
       position: relative;
-/*       left: -100%; */
+      left: -100%;
       display: block;
       height: 100%;
       background-color: #5ebae4;
@@ -592,4 +598,7 @@
   transition: transform 340ms;
 }.scale-on-click--clicked {
     transform: scale(.5);
+  }.progress-on-scroll::after {
+    -webkit-animation: slide 400ms forwards;
+            animation: slide 400ms forwards;
   }

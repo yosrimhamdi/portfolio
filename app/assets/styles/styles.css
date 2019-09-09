@@ -2,6 +2,7 @@
 @import './modules/utils/_mixins';
 @import './modules/base/_typography';
 @import './modules/base/_base';
+@import './modules/base/_animations';
 @import './modules/layouts/_flexbox';
 @import './modules/layouts/_grid';
 @import './modules/components/_animated-hero';
@@ -26,3 +27,4 @@
 @import '../../../node_modules/swiper/dist/css/swiper.min.css';
 @import './modules/components/_slide-on-click';
 @import './modules/components/_scale-on-click';
+@import './modules/components/_progress-on-scroll';

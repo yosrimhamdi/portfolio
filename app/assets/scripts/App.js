@@ -1,9 +1,11 @@
 import Swiper from 'swiper';
 import UpdateVh from './modules/UpdateVh';
 import SlideOnClick from './modules/SlideOnClick';
+import ProgressOnScroll from './modules/ProgressOnScroll';
 import 'particles.js';
 import Typed from 'typed.js';
 
+new ProgressOnScroll();
 particlesJS.load('particles-js', '/particles/particles.json', () => 0);
 new Swiper('.swiper-container', {
   autoplay: {
