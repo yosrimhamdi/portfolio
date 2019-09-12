@@ -5,6 +5,7 @@ class SlideOnClick {
     this.button = $('.button-main');
     this.contentWrapper = $('.content-wrapper');
     this.animatedHero = $('.animated-hero');
+    this.html = $('html');
     this.disableJump();
     this.initialClasses();
     this.events();
@@ -19,6 +20,7 @@ class SlideOnClick {
   animate() {
     this.contentWrapper.toggleClass('slide-on-click--clicked');
     this.animatedHero.toggleClass('scale-on-click--clicked');
+    this.html.toggleClass('overflow-x-visible');
   }
   disableJump() {
     if (window.innerWidth >= 1024) {

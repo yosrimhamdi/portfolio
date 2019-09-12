@@ -11,7 +11,6 @@
   }
 
   &__main-content {
-    overflow: hidden;
     @mixin atLarge {
       margin-left: 100vw;
       width: calc(50vw - 17px);

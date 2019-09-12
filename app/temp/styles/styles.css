@@ -5,9 +5,10 @@
 }body {
   font-family: 'Poppins', sans-serif;
   color: #6d6a6a;
-  overflow-x:hidden;
 }html {
   scroll-behavior: smooth;
+}body, html {
+  width: 100vw;
 }@-webkit-keyframes slide {
   0% { left: -100%}
   100% {left: 0}
@@ -95,8 +96,6 @@
   }@media (min-width: 1024px) {.content-wrapper__fixed-position {
       position: fixed
   }
-  }.content-wrapper__main-content {
-    overflow: hidden;
   }@media (min-width: 1024px) {.content-wrapper__main-content {
       margin-left: 100vw;
       width: calc(50vw - 17px)
@@ -169,6 +168,7 @@
 }.page-section--equal {
     padding-top: 2.5em;
   }.half-screen {
+  height: 100vh;
   height: var(--vh, 100vh);
 }@media (min-width: 1024px) {.half-screen {
     width: 50vw
@@ -405,7 +405,7 @@
   }.grey-background {
   background-color: rgb(249, 249, 249);
 
-}.flipping-card{
+}.flipping-card {
   position: relative;
   cursor: pointer;
   perspective: 1500px;
@@ -441,11 +441,7 @@
       background-image: linear-gradient(to bottom right, #5ebae4, #CB5EE4);
     }.flipping-card__back--gradient-5 {
       background-image: linear-gradient(to bottom right, #5ebae4, #E45E77);
-    }.flipping-card:hover .flipping-card__front {
-    transform: rotateY(180deg);
-  }.flipping-card:hover .flipping-card__back {
-    transform: rotateY(0);
-  }.news__box {
+    }.news__box {
     width: 100%;
     max-height: 400px;
     box-shadow:0 0 5px rgba(0,0,0, .2);
@@ -600,4 +596,6 @@
   }.progress-on-scroll::after {
     -webkit-animation: slide 1000ms forwards;
             animation: slide 1000ms forwards;
-  }
+  }.overflow-x-visible {
+  overflow-x: visible;
+}

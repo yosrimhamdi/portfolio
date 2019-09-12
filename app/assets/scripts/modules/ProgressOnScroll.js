@@ -14,7 +14,7 @@ class ProgressOnScroll {
         console.log(direction);
         $(el).addClass('progress-on-scroll');
       },
-      offset: 'bottom-in-view'
+      offset: '96%'
     });
    });
   }
