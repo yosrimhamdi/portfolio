@@ -8,7 +8,7 @@ class UpdateVh {
     window.addEventListener('resize', this.updateVh.bind(this));
   }
   updateVh() {
-    this.root.style.setProperty('--vh', `${ this.vhValue()}px`);
+    this.root.style.setProperty('--vh', `${this.vhValue()}px`);
   }
   vhValue() {
     return window.innerHeight;

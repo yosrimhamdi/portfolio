@@ -10066,7 +10066,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "animate",
       value: function animate() {
-        this.contentWrapper.toggleClass("slide-on-click--clicked"), this.animatedHero.toggleClass("scale-on-click--clicked"), this.html.toggleClass("overflow-x-visible"), console.log(this.html);
+        this.contentWrapper.toggleClass("slide-on-click--clicked"), this.animatedHero.toggleClass("scale-on-click--clicked"), this.html.toggleClass("overflow-x-visible");
       }
     }, {
       key: "disableJump",
