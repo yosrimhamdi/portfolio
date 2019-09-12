@@ -10,10 +10,11 @@ class ProgressOnScroll {
    this.progressBars.each(function (index,el){
     new Waypoint({
       element: el,
-      handler: function() {
+      handler: function(direction) {
+        console.log(direction);
         $(el).addClass('progress-on-scroll');
       },
-      offset: '90%'
+      offset: 'bottom-in-view'
     });
    });
   }

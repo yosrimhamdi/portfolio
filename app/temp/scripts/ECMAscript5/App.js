@@ -10067,10 +10067,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         this.progressBars.each(function (e, t) {
           new Waypoint({
             element: t,
-            handler: function handler() {
-              oe()(t).addClass("progress-on-scroll");
+            handler: function handler(e) {
+              console.log(e), oe()(t).addClass("progress-on-scroll");
             },
-            offset: "90%"
+            offset: "bottom-in-view"
           });
         });
       }

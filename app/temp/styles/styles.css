@@ -5,9 +5,8 @@
 }body {
   font-family: 'Poppins', sans-serif;
   color: #6d6a6a;
-}html, body {
-  overflow-x: hidden;
-  width: 100%;
+  overflow-x:hidden;
+}html {
   scroll-behavior: smooth;
 }@-webkit-keyframes slide {
   0% { left: -100%}
@@ -599,6 +598,6 @@
 }.scale-on-click--clicked {
     transform: scale(.5);
   }.progress-on-scroll::after {
-    -webkit-animation: slide 400ms forwards;
-            animation: slide 400ms forwards;
+    -webkit-animation: slide 1000ms forwards;
+            animation: slide 1000ms forwards;
   }
