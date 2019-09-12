@@ -1,4 +1,5 @@
 import FlipCardOnScroll from './modules/FlipCardOnScroll';
+import SendEmail from './modules/SendEmail';
 import Swiper from 'swiper';
 import UpdateVh from './modules/UpdateVh';
 import SlideOnClick from './modules/SlideOnClick';
@@ -34,4 +35,5 @@ new Typed('.professional-skill', {
   backSpeed: 40,
   smartBackspace: false
 });
-new FlipCardOnScroll;
+new FlipCardOnScroll();
+new SendEmail();

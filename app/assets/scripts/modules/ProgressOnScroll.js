@@ -11,7 +11,6 @@ class ProgressOnScroll {
     new Waypoint({
       element: el,
       handler: function(direction) {
-        console.log(direction);
         $(el).addClass('progress-on-scroll');
       },
       offset: '96%'
