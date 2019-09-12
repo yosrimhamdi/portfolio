@@ -20,4 +20,8 @@
   &--huge {
     font-size: 2.5rem;
   }
+  &--shadow {
+    text-shadow: -3px 3px 3px rgba(#000, .2);
+  }
 }
+
