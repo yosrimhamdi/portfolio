@@ -9,6 +9,7 @@
   scroll-behavior: smooth;
 }body, html {
   width: 100vw;
+  overflow-x: hidden;
 }@-webkit-keyframes slide {
   0% { left: -100%}
   100% {left: 0}
