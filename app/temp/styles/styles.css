@@ -492,13 +492,13 @@
   }
   }.swiper:hover .swiper-button {
       opacity: 1;
-    }.form__input-wrapper {
+    }.form__group {
     position: relative;
     max-width: 300px;
     height: 45px;
     margin: 0 auto .8em auto;   
     box-shadow: 0 0 7px rgba(0,0,0, .1);
-  }@media (min-width: 1024px) {.form__input-wrapper {
+  }@media (min-width: 1024px) {.form__group {
       height: 50px
   }
   }.form__input {
