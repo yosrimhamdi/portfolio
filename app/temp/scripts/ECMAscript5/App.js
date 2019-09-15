@@ -5604,7 +5604,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "getUserData",
       value: function getUserData() {
-        this.userInfo.to_email = s()(".form__input").val(), this.userInfo.to_name = "Ahmed";
+        this.userInfo.to_name = s()("#name ").val(), this.userInfo.to_email = s()("#email").val();
       }
     }, {
       key: "clearInput",

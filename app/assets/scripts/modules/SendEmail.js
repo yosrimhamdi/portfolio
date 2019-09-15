@@ -33,8 +33,8 @@ class SendEmail {
     this.button.text(text);
   }
   getUserData() {
-    this.userInfo.to_email = $('.form__input').val();
-    this.userInfo.to_name = 'Ahmed';
+    this.userInfo.to_name = $('#name ').val();
+    this.userInfo.to_email = $('#email').val();
   }
   clearInput() {
     this.input.val('');
