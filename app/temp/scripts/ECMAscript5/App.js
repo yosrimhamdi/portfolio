@@ -5547,21 +5547,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function r() {
       _classCallCheck(this, r);
 
-      this.frontSide = s()(".flipping-card__front"), this.backSide = s()(".flipping-card__back"), this.createWaypoints();
+      this.frontSide = s()(".flipping-card__front"), this.backSide = s()(".flipping-card__back"), this.triggerPoint = s()("#trigger-point"), this.createWaypoints();
     }
 
     _createClass(r, [{
       key: "createWaypoints",
       value: function createWaypoints() {
         var e = this;
-        this.frontSide.each(function (t, i) {
-          new Waypoint({
-            element: i,
-            handler: function handler() {
-              e.frontSide.css("transform", "rotateY(180deg)"), e.backSide.css("transform", "rotateY(0)");
-            },
-            offset: "50%"
-          });
+        new Waypoint({
+          element: e.triggerPoint[0],
+          handler: function handler() {
+            e.frontSide.css("transform", "rotateY(180deg)"), e.backSide.css("transform", "rotateY(0)");
+          },
+          offset: "50%"
         });
       }
     }]);
