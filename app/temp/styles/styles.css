@@ -326,9 +326,12 @@
       content: '● ● ●';
       color: #5ebae4;
       display: inline-block;
-      font-size: .5rem;
+      font-size: .3rem;
       margin-top: 1.2em;
-    }.background-image-section {
+    }@media (min-width: 720px) {.progress-bar:last-child::after {
+        font-size: .5rem
+    }
+  }.background-image-section {
   height: 140px;
   position: relative;
 }@media (min-width: 1024px) {.background-image-section {

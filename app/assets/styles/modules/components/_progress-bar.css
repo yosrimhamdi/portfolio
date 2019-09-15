@@ -60,8 +60,12 @@
       content: '● ● ●';
       color: $mainColor;
       display: inline-block;
-      font-size: .5rem;
+      font-size: .3rem;
       margin-top: 1.2em;
+
+      @mixin atMedium {
+        font-size: .5rem;
+      }
     }
   }
 }
