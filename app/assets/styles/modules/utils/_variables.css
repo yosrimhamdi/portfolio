@@ -6,7 +6,7 @@ $accent-4: #E45EBA;
 $accent-5: #E45E77;
 $mainGrey: #6d6a6a;
 $mainBlack: #3c3838;
-$bgBlack: #0d101d;
+$darkBlack: #0d101d;
 $darkGrey: #7f7f7f;
 $bgGrey: rgb(249, 249, 249);
 $gradient-1 : linear-gradient(to bottom right, $mainColor, $accent-1);

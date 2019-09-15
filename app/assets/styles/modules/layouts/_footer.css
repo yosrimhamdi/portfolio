@@ -1,5 +1,5 @@
 .footer {
-  background-color: $bgBlack;
+  background-color: $darkBlack;
   color: $darkGrey;
 
   &__upper-content {

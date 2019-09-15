@@ -9,9 +9,9 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     background-color: transparent;
-    border: 2px solid #191912;
+    border: 2px solid $darkBlack;
     border-radius: 2px;
-    color: #191912;
+    color: $darkBlack;
     transition: all 200ms;
 
     @mixin atLarge {
