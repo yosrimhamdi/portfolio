@@ -50,5 +50,7 @@
     justify-content: center;
     align-items: center;
     font-size: .9rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
