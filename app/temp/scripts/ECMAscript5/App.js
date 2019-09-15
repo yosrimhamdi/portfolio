@@ -10174,7 +10174,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function ue() {
       _classCallCheck(this, ue);
 
-      this.root = document.documentElement, this.updateVh();
+      this.root = document.documentElement, this.updateVh(), this.events();
     }
 
     _createClass(ue, [{
