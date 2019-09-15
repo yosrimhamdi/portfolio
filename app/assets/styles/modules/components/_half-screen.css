@@ -1,7 +1,7 @@
 .half-screen {
   height: 100vh;
-/*   height: var(--vh ,100vh); */
-  transition: 1s; 
+  height: var(--vh ,100vh);
+  transition: 1000ms; 
   @mixin atLarge {
     width: 50vw;
   }
