@@ -5591,7 +5591,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       value: function event() {
         var e = this;
         this.button.click(function () {
-          e.updateBtnText("sending..."), e.getUserData(), Object(a.validate)(e.userInfo.to_email) & e.userInfo.to_name && (e.sendMail(), e.clearInput());
+          e.updateBtnText("sending..."), e.getUserData(), Object(a.validate)(e.userInfo.to_email) && e.userInfo.to_name && (e.sendMail(), e.clearInput());
         });
       }
     }, {
