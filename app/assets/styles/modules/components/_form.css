@@ -61,5 +61,7 @@
     width: 100%;
     max-width: 300px;
     height: 45px;
+    outline: none;
+    cursor: pointer;
   }
 }

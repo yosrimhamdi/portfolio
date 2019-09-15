@@ -1,6 +1,5 @@
 .flipping-card {
   position: relative;
-  cursor: pointer;
   perspective: 1500px;
   backface-visibility: hidden;
   width: 100%;
