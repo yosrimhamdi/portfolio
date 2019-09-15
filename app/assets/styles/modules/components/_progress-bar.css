@@ -1,8 +1,7 @@
 .progress-bar {
-  margin-bottom: 1em;
-  
-  &:last-child {
-    margin-bottom: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
   }
   &__bar {
     width: 100%;
@@ -54,6 +53,15 @@
     font-size: .8rem;
     @mixin atLarge {
       font-size: 1rem;      
+    }
+  }
+  &:last-child {
+    &::after {
+      content: '⬤ ⬤ ⬤';
+      color: $mainColor;
+      display: inline-block;
+      font-size: .4rem;
+      margin-top: 2.6em;
     }
   }
 }
