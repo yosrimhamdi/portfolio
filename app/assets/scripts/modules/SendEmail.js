@@ -13,7 +13,7 @@ class SendEmail {
     }
     this.userInfo = {
       to_email: 'pmon12091@gmail.com',
-      to_name: 'James',
+      to_name: '',
       message_html: `We will send you daily web developement trends.`
     }
     this.event();
@@ -23,7 +23,7 @@ class SendEmail {
     this.button.click(function() {
       that.updateBtnText('sending...');
       that.getUserData();
-      if(validate(that.userInfo.to_email)) {
+      if(validate(that.userInfo.to_email) & that.userInfo.to_name) {
         that.sendMail();
         that.clearInput();
       }
