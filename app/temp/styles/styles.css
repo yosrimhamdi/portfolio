@@ -322,11 +322,11 @@
       font-size: 1rem
   }
   }.progress-bar:last-child::after {
-      content: '⬤ ⬤ ⬤';
+      content: '● ● ●';
       color: #5ebae4;
       display: inline-block;
-      font-size: .3rem;
-      margin-top: 3.5em;
+      font-size: .5rem;
+      margin-top: 1.2em;
     }.background-image-section {
   height: 140px;
   position: relative;

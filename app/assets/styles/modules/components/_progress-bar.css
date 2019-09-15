@@ -57,11 +57,11 @@
   }
   &:last-child {
     &::after {
-      content: '⬤ ⬤ ⬤';
+      content: '● ● ●';
       color: $mainColor;
       display: inline-block;
-      font-size: .3rem;
-      margin-top: 3.5em;
+      font-size: .5rem;
+      margin-top: 1.2em;
     }
   }
 }
