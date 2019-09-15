@@ -9,9 +9,9 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     background-color: transparent;
-    border: 2px solid $darkBlack;
     border-radius: 2px;
-    color: $darkBlack;
+    background-color: $mainColor;
+    color: white;
     transition: all 200ms;
 
     @mixin atLarge {
@@ -19,11 +19,14 @@
     }
     
     &:hover { 
-      background-color: $mainColor;
-      color: white;
-      border-color: $mainColor;
       letter-spacing: 2px;
       box-shadow: 0 0 15px -2px rgba(#000, .3); 
+    }
+    &--full-width {
+      width: 100%;
+    }
+    &--no-t-margin {
+      margin-top: 0;
     }
   }
   &--centered-button {

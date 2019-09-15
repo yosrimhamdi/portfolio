@@ -17,4 +17,7 @@
   &__details {
     padding: 10px;
   }
+  &__button-wrapper {
+    padding:0 3px 3px;
+  }
 }

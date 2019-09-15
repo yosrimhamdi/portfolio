@@ -1,5 +1,5 @@
 .content-wrapper {
-/*   left: -50vw !important; */
+  left: -50vw !important;
   @mixin atLarge {
     width: 150vw;
   }

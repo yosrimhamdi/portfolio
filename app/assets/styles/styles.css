@@ -8,7 +8,6 @@
 @import './modules/components/_animated-hero';
 @import './modules/components/_content-wrapper';
 @import './modules/components/_avatar';
-@import './modules/components/_button-container';
 @import './modules/components/_wrapper';
 @import './modules/components/_page-section';
 @import './modules/components/_half-screen';
@@ -21,6 +20,7 @@
 @import './modules/components/_grey-background';
 @import './modules/components/_flipping-card';
 @import './modules/components/_news';
+@import './modules/components/_button-container';
 @import './modules/components/_swiper';
 @import './modules/components/_form';
 @import './modules/layouts/_footer';
