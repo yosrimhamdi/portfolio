@@ -119,11 +119,11 @@
     margin-bottom: 2em
   }
   }.wrapper {
-  margin: auto;
   padding-right: 12px;
   padding-left: 12px;
 }@media (min-width: 720px) {.wrapper {
     width: 90%;
+    margin: auto;
 }
   }.page-section {
   padding-top: 3.1em;
@@ -552,10 +552,7 @@
   }.footer__logo {
     width: 120px;
     height: 120px;
-    margin-right: .5em;
-  }@media (min-width: 720px) {.footer__logo {
-      margin-right: 2em
-  }
+    margin-right: 3em;
   }.footer__intro {
     display: none;
   }@media (min-width: 1024px) {.footer__intro {
