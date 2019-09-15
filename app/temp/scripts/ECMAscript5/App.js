@@ -10224,12 +10224,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "animate",
       value: function animate() {
-        this.contentWrapper.toggleClass("slide-on-click--clicked"), this.animatedHero.toggleClass("scale-on-click--clicked"), this.html.toggleClass("overflow-x-visible");
+        this.contentWrapper.toggleClass("slide-on-click--clicked"), this.animatedHero.toggleClass("scale-on-click--clicked"), window.innerWidth >= 1024 && this.html.toggleClass("overflow-x-visible");
       }
     }, {
       key: "disableJump",
       value: function disableJump() {
-        window.innerWidth >= 1024 && this.button.attr("href", "#1");
+        window.innerWidth >= 1024 ? this.button.attr("href", "#1") : this.html.addClass("overflow-x-visible");
       }
     }]);
 
