@@ -5591,13 +5591,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       value: function event() {
         var e = this;
         this.button.click(function () {
-          e.getUserData(), Object(a.validate)(e.userInfo.to_email) && e.userInfo.to_name && (e.updateBtnText("sending..."), e.sendMail(), e.clearInput());
+          e.getUserData(), Object(a.validate)(e.userInfo.to_email) && e.userInfo.to_name && (e.button.text("sending..."), e.sendMail(), e.clearInput());
         });
-      }
-    }, {
-      key: "updateBtnText",
-      value: function updateBtnText(e) {
-        this.button.text(e);
       }
     }, {
       key: "getUserData",
@@ -5612,11 +5607,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "sendMail",
       value: function sendMail() {
-        var e = this.updateBtnText;
+        var e = this.button;
         o.init(this.emailjs.userId), o.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo).then(function () {
-          e("sent!");
+          e.text("sent!");
         }, function (t) {
-          e("send");
+          e.text("send");
         });
       }
     }]);
