@@ -5580,7 +5580,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         template_id: "template_fqxB2jK3",
         userId: "user_LRXENJDLJYtP2cKZ0qAZT"
       }, this.userInfo = {
-        to_email: "pmon12091@gmail.com",
+        to_email: "",
         to_name: "",
         message_html: "We will send you daily web developement trends."
       }, this.event();
@@ -5591,7 +5591,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       value: function event() {
         var e = this;
         this.button.click(function () {
-          e.updateBtnText("sending..."), e.getUserData(), Object(a.validate)(e.userInfo.to_email) && e.userInfo.to_name && (e.sendMail(), e.clearInput());
+          e.getUserData(), Object(a.validate)(e.userInfo.to_email) && e.userInfo.to_name && (e.updateBtnText("sending..."), e.sendMail(), e.clearInput());
         });
       }
     }, {
@@ -5612,11 +5612,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "sendMail",
       value: function sendMail() {
-        var e = this.button;
+        var e = this.updateBtnText;
         o.init(this.emailjs.userId), o.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo).then(function () {
-          e.text("sent!");
+          e("sent!");
         }, function (t) {
-          e.text("send");
+          e("send");
         });
       }
     }]);

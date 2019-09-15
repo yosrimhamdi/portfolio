@@ -12,7 +12,7 @@ class SendEmail {
       userId: 'user_LRXENJDLJYtP2cKZ0qAZT'
     }
     this.userInfo = {
-      to_email: 'pmon12091@gmail.com',
+      to_email: '',
       to_name: '',
       message_html: `We will send you daily web developement trends.`
     }
@@ -21,9 +21,9 @@ class SendEmail {
   event() {
     const that = this;
     this.button.click(function() {
-      that.updateBtnText('sending...');
       that.getUserData();
       if(validate(that.userInfo.to_email) && that.userInfo.to_name) {
+        that.updateBtnText('sending...');
         that.sendMail();
         that.clearInput();
       }
@@ -40,13 +40,13 @@ class SendEmail {
     this.input.val('');
   }
   sendMail() {
-    const button = this.button;
+    const updateBtnText = this.updateBtnText;
     emailjs.init(this.emailjs.userId);
     emailjs.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo)
   	.then(function(){ 
-      button.text("sent!");
+      updateBtnText("sent!");
      }, function(err) {
-      button.text("send");
+      updateBtnText("send");
     });
   }
 }
