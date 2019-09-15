@@ -5578,11 +5578,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       this.button = s()(".form__button"), this.input = s()(".form__input"), this.emailjs = {
         service_id: "default_service",
         template_id: "template_fqxB2jK3",
+        template_id_me: "tome",
         userId: "user_LRXENJDLJYtP2cKZ0qAZT"
       }, this.userInfo = {
         to_email: "",
         to_name: "",
-        message_html: "We will send you daily web developement trends."
+        message_html: "you have just submitted to our website."
       }, this.event();
     }
 
@@ -5590,8 +5591,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       key: "event",
       value: function event() {
         var e = this;
-        this.button.click(function () {
-          e.getUserData(), Object(a.validate)(e.userInfo.to_email) && e.userInfo.to_name && (e.button.text("sending..."), e.sendMail(), e.clearInput());
+        this.button.click(function (t) {
+          if (e.getUserData(), Object(a.validate)(e.userInfo.to_email) && e.userInfo.to_name) return e.button.text("submitting..."), e.sendMailToUser(), e.sendMailToMe(), e.clearInput(), !1;
         });
       }
     }, {
@@ -5605,14 +5606,30 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         this.input.val("");
       }
     }, {
-      key: "sendMail",
-      value: function sendMail() {
-        var e = this.button;
+      key: "updateBtnText",
+      value: function updateBtnText(e) {
+        var _this = this;
+
+        var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "submit";
+        this.button.text(e), setTimeout(function () {
+          _this.button.text(t);
+        }, 5e3);
+      }
+    }, {
+      key: "sendMailToUser",
+      value: function sendMailToUser() {
+        var _this2 = this;
+
         o.init(this.emailjs.userId), o.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo).then(function () {
-          e.text("sent!");
-        }, function (t) {
-          e.text("send");
+          _this2.updateBtnText("check your mail!");
+        }, function () {
+          _this2.updateBtnText("check your mail!", "error");
         });
+      }
+    }, {
+      key: "sendMailToMe",
+      value: function sendMailToMe() {
+        o.send(this.emailjs.service_id, this.emailjs.template_id_me, this.userInfo);
       }
     }]);
 
@@ -7667,7 +7684,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function O() {
       var _e50, _e51;
 
-      var _this;
+      var _this3;
 
       _classCallCheck(this, O);
 
@@ -7677,13 +7694,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         e[_key9] = arguments[_key9];
       }
 
-      1 === e.length && e[0].constructor && e[0].constructor === Object ? i = e[0] : (_e50 = e, _e51 = _slicedToArray(_e50, 2), t = _e51[0], i = _e51[1], _e50), i || (i = {}), i = m.extend({}, i), t && !i.el && (i.el = t), _this = _possibleConstructorReturn(this, _getPrototypeOf(O).call(this, i)), Object.keys(D).forEach(function (e) {
+      1 === e.length && e[0].constructor && e[0].constructor === Object ? i = e[0] : (_e50 = e, _e51 = _slicedToArray(_e50, 2), t = _e51[0], i = _e51[1], _e50), i || (i = {}), i = m.extend({}, i), t && !i.el && (i.el = t), _this3 = _possibleConstructorReturn(this, _getPrototypeOf(O).call(this, i)), Object.keys(D).forEach(function (e) {
         Object.keys(D[e]).forEach(function (t) {
           O.prototype[t] || (O.prototype[t] = D[e][t]);
         });
       });
 
-      var n = _assertThisInitialized(_this);
+      var n = _assertThisInitialized(_this3);
 
       void 0 === n.modules && (n.modules = {}), Object.keys(n.modules).forEach(function (e) {
         var t = n.modules[e];
@@ -7703,11 +7720,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       var s = m.extend({}, L);
       n.useModulesParams(s), n.params = m.extend({}, s, I, i), n.originalParams = m.extend({}, n.params), n.passedParams = m.extend({}, i), n.$ = p;
       var r = p(n.params.el);
-      if (!(t = r[0])) return _possibleConstructorReturn(_this);
+      if (!(t = r[0])) return _possibleConstructorReturn(_this3);
 
       if (r.length > 1) {
         var _e53 = [];
-        return _possibleConstructorReturn(_this, (r.each(function (t, n) {
+        return _possibleConstructorReturn(_this3, (r.each(function (t, n) {
           var s = m.extend({}, i, {
             el: n
           });
@@ -7718,7 +7735,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
       t.swiper = n, r.data("swiper", n);
       var a = r.children(".".concat(n.params.wrapperClass));
-      return _possibleConstructorReturn(_this, (m.extend(n, {
+      return _possibleConstructorReturn(_this3, (m.extend(n, {
         $el: r,
         el: t,
         $wrapperEl: a,
@@ -10266,7 +10283,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return 0;
   }), new de(".swiper-container", {
     autoplay: {
-      delay: 5e3,
+      delay: 4e3,
       disableOnInteraction: !1
     },
     speed: 800,

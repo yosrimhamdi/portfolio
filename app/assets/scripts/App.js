@@ -11,7 +11,7 @@ new ProgressOnScroll();
 particlesJS.load('particles-js', '/particles/particles.json', () => 0);
 new Swiper('.swiper-container', {
   autoplay: {
-    delay: 5000,
+    delay: 4000,
     disableOnInteraction: false,
   },
   speed: 800,
