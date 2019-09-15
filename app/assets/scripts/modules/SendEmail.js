@@ -23,14 +23,11 @@ class SendEmail {
     this.button.click(function() {
       that.getUserData();
       if(validate(that.userInfo.to_email) && that.userInfo.to_name) {
-        that.updateBtnText('sending...');
+        that.button.text('sending...');
         that.sendMail();
         that.clearInput();
       }
     });
-  }
-  updateBtnText(text) {
-    this.button.text(text);
   }
   getUserData() {
     this.userInfo.to_name = $('#name ').val();
@@ -40,13 +37,13 @@ class SendEmail {
     this.input.val('');
   }
   sendMail() {
-    const updateBtnText = this.updateBtnText;
+    const button = this.button;
     emailjs.init(this.emailjs.userId);
     emailjs.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo)
   	.then(function(){ 
-      updateBtnText("sent!");
+      button.text("sent!");
      }, function(err) {
-      updateBtnText("send");
+      button.text("send");
     });
   }
 }
