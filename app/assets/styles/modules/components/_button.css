@@ -1,35 +1,31 @@
-.button-container {
-  &__button {
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 1em;
-    padding: 1em 2em;
-    font-size: .8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-color: transparent;
-    border-radius: 2px;
-    background-color: $mainColor;
-    color: white;
-    transition: all 200ms;
+.button {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 1em 2em;
+  font-size: .8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border-radius: 2px;
+  background-color: $mainColor;
+  color: white;
+  transition: all 200ms;
 
-    @mixin atLarge {
-      font-size: .9rem;
-    }
-    
-    &:hover { 
-      letter-spacing: 2px;
-      box-shadow: 0 0 15px -2px rgba(#000, .3); 
-    }
-    &--full-width {
-      width: 100%;
-    }
-    &--no-t-margin {
-      margin-top: 0;
-    }
+  @mixin atLarge {
+    font-size: .9rem;
   }
-  &--centered-button {
+  
+  &:hover { 
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px -2px rgba(#000, .3); 
+  }
+  &--full-width {
+    width: 100%;
     text-align: center;
+  }
+  &--no-t-margin {
+    margin-top: 0;
   }
 }
