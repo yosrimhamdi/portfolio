@@ -105,6 +105,7 @@
   }
   }.avatar {
   position: relative;
+  order: 1;
 }.avatar__image {
     -webkit-clip-path: circle();
             clip-path: circle();
