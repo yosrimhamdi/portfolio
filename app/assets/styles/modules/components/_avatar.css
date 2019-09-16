@@ -1,6 +1,5 @@
 .avatar {
   position: relative;
-  backface-visibility: hidden;
 
   &__image {
     clip-path: circle();
