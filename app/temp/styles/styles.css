@@ -234,7 +234,6 @@
   -moz-text-align-last: center;
        text-align-last: center;
   font-size: .8rem;
-  font-weight: 300;
 }@media (min-width: 1024px) {.paragraph {
     font-size: .9rem
 }
