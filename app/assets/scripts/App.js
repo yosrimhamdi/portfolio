@@ -32,8 +32,7 @@ new Typed('.professional-skill', {
   loop: true,
   typeSpeed: 80,
   shuffle: true,
-  backSpeed: 40,
-  smartBackspace: false
+  backSpeed: 30
 });
 new FlipCardOnScroll();
 new SendEmail();
