@@ -15,7 +15,7 @@ class FlipCardOnScroll {
         that.frontSide.css('transform', 'rotateY(180deg)');
         that.backSide.css('transform', 'rotateY(0)');
       },
-      offset: '40%'
+      offset: '60%'
     });
   }
 }

@@ -5559,7 +5559,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           handler: function handler() {
             e.frontSide.css("transform", "rotateY(180deg)"), e.backSide.css("transform", "rotateY(0)");
           },
-          offset: "40%"
+          offset: "60%"
         });
       }
     }]);
