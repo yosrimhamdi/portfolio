@@ -1,0 +1,48 @@
+/* this file is generated automatically by a gulp task DO NOT change this file manually but instead change the template file in ./app/gulp/templates/ */
+    .icon {
+      background-image: url('/assets/images/sprites/sprite-ef7e6541.svg');
+    }
+
+    .no-svg .icon {
+      background-image: url('/assets/images/sprites/sprite-ef7e6541.png');
+    }
+  .icon--New_folder-code {
+    height: 512px;
+    width: 640px;
+    background-position: 0 0;
+  }
+  .icon--New_folder-crop {
+    height: 512px;
+    width: 512px;
+    background-position: 100% 0;
+  }
+  .icon--New_folder-database {
+    height: 512px;
+    width: 448px;
+    background-position: 0 100%;
+  }
+  .icon--New_folder-mobile {
+    height: 512px;
+    width: 320px;
+    background-position: 53.84615384615385% 100%;
+  }
+  .icon--at {
+    height: 16px;
+    width: 16px;
+    background-position: 67.6056338028169% 50.79365079365079%;
+  }
+  .icon--compass {
+    height: 16px;
+    width: 16px;
+    background-position: 69.01408450704226% 50.79365079365079%;
+  }
+  .icon--envelope {
+    height: 16px;
+    width: 16px;
+    background-position: 70.4225352112676% 50.79365079365079%;
+  }
+  .icon--mobile {
+    height: 16px;
+    width: 10px;
+    background-position: 71.45359019264448% 50.79365079365079%;
+  }
