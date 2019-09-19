@@ -26,6 +26,7 @@
     "emailjs-com": "^2.3.2",
     "jquery": "^3.4.1",
     "lazysizes": "^5.1.1",
+    "modernizr": "^3.7.1",
     "particles.js": "^2.0.0",
     "picturefill": "^3.0.3",
     "swiper": "^4.5.0",
