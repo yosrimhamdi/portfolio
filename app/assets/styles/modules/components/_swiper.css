@@ -8,9 +8,9 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: .8em;
-    width: 60px;
-    height: 60px;
+    margin-bottom: 1.2em;
+    width: 70px;
+    height: 70px;
     border-width: 2px;
     
     @mixin atLarge {

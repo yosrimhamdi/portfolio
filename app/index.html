@@ -22,7 +22,10 @@
           </div>
         </section>
         <section class="animated-hero half-screen">
-          <img class="animated-hero__image" src="./assets/images/stars.jpg" alt="">
+          <picture>
+            <source srcset="./assets/images/stars.jpg" media="(min-width: 1024)">
+            <img class="animated-hero__image" alt="star image">
+          </picture>
           <div id="particles-js"></div>
         </section>
       </div>
@@ -34,10 +37,9 @@
       </section>
         <section class="background-image-section">
           <picture>
-            <source srcset="./assets/images/background-images/image-1--large.jpg" media="(min-width:1024px)">
-            <source srcset="./assets/images/background-images/image-1--medium-i.jpg" media="(min-width:720px)">
+            <source srcset="./assets/images/background-images/image-1--medium.jpg" media="(min-width:720px)">
             <source srcset="./assets/images/background-images/image-1--small.jpg" media="(min-width:530px)">
-            <img class="background-image-section__image" src="./assets/images/background-images/image-1--smaller.jpg" alt="">
+            <img class="background-image-section__image" src="./assets/images/background-images/image-1--smaller.jpg" alt="pragrammer writing code">
           </picture>
           <div class="xy-centered background-image-section__content">
             <h1 class="headline headline--no-b-line headline--white headline--simple headline--italic headline--margin-b-tiny headline--small-plus headline--thin headline--last-align-center headline--text-shadow">“Let us take you into a deeper experience, make a moment a lasting conveyable memory. Let us help build your tribe.” </h1>
@@ -118,7 +120,11 @@
         </div>
       </section>
       <section class="background-image-section">
-        <img class="background-image-section__image" src="./assets/images/second.jpg" alt="">
+        <picture>
+          <source srcset="./assets/images/background-images/image-2--medium.jpg" media="(min-width:720px)">
+          <source srcset="./assets/images/background-images/image-2--small.jpg" media="(min-width:530px)">
+          <img class="background-image-section__image" src="./assets/images/background-images/image-2--smaller.jpg" alt="programmer in front of his computer">
+        </picture>
         <div class="xy-centered background-image-section__content">
           <h1 class="headline headline--no-b-line headline--white headline--simple headline--italic headline--thin headline--small-plus headline--margin-b-tiny headline--last-align-center headline--text-shadow">“If you're already a front-end developer, well, pretend you're also wearing a pirate hat.” </h1>
           <p class="paragraph paragraph--white paragraph--last-align-left paragraph--thin paragraph--text-shadow">― Ethan Marcotte.</p>
@@ -185,7 +191,11 @@
         <h1 class="headline" data-inner-text="news">latest news</h1>
         <p class="paragraph paragraph--margin-b">Checkout the latest news, hacks and tricks of web and mobile development in my personal website.</p>
         <div class="news__box">
-          <img class="news__image" src="./assets/images/news/5d6e6273e90e2.png" alt="new image goes here">
+          <picture>
+            <source srcset="./assets/images/news/npm--medium.png" media="(min-width:720px)">
+            <source srcset="./assets/images/news/npm--small.png" media="(min-width:530px)">
+            <img class="news__image" src="./assets/images/news/npm--smaller.png" alt="npm logo">
+          </picture>          
           <div class="news__details">
             <h2 class="headline headline--no-b-line headline--margin-b-small headline--tiny headline--bold headline--italic headline--underline">NPM: Supporting Open Source Maintainers</h2>
             <p class="paragraph paragraph--last-align-left">Part of npm, Inc.’s mission is to ensure the sustainability of the Open Source JavaScript ecosystem, and without fair compensation for developers, sustainability is impossible in the long term. For both practical and ethical reasons, those who consistently contribute to the open source commons should be compensated..</p>
@@ -195,7 +205,11 @@
           </div>
         </div>
         <div class="news__box">
-          <img class="news__image" src="./assets/images/news/a.png" alt="new image goes here">
+          <picture>
+            <source srcset="./assets/images/news/css--medium.png" media="(min-width:720px)">
+            <source srcset="./assets/images/news/css--small.png" media="(min-width:530px)">
+            <img class="news__image" src="./assets/images/news/css--smaller.png" alt="css logo">
+          </picture>             
           <div class="news__details">
             <h2 class="headline headline--no-b-line headline--margin-b-small headline--tiny headline--bold headline--italic headline--underline">A Book Apart, Get Ready for CSS Grid Layout</h2>
             <p class="paragraph paragraph--last-align-left">By the time CSS Grid Layout was supported by all major browsers in 2017, Rachel Andrew had already thoroughly parsed the spec and, with the release of the first edition of Get Ready for CSS Grid Layout in 2016, helped legions of readers put the new two-dimensional layout system to work in their designs..</p>
@@ -205,7 +219,11 @@
           </div>
         </div>
         <div class="news__box">
-          <img class="news__image" src="./assets/images/news/js.png" alt="new image goes here">
+        <picture>
+            <source srcset="./assets/images/news/js--medium.png" media="(min-width:720px)">
+            <source srcset="./assets/images/news/js--small.png" media="(min-width:530px)">
+            <img class="news__image" src="./assets/images/news/js--smaller.png" alt="js logo">
+          </picture> 
           <div class="news__details">
             <h2 class="headline headline--no-b-line headline--margin-b-small headline--tiny headline--bold headline--italic headline--underline">3 Ways to Clone Objects in JavaScript</h2>
             <p class="paragraph paragraph--last-align-left">Cloning an object in JavaScript a task that is almost always used in any project, to clone everything from simple objects to the most complicated ones. As it may seem simple for not seasoned JavaScript developers, it actually has some pitfalls that would hurt you in the bones if you didn’t know the proper way to do it..</p>
@@ -216,26 +234,30 @@
         </div>
       </section>
       <section class="swiper background-image-section background-image-section--400pxh">
-        <img class="background-image-section__image" src="./assets/images/third.jpg" alt="">
+        <picture>
+          <source srcset="./assets/images/background-images/image-3--medium.jpg" media="(min-width:720px)">
+          <source srcset="./assets/images/background-images/image-3--small.jpg" media="(min-width:530px)">
+          <img class="background-image-section__image" src="./assets/images/background-images/image-3--smaller.jpg" alt="man sitting in front of his computer at the office">
+        </picture>
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="xy-centered xy-centered--full-width">
-                  <img class="swiper__image" src="./assets/images/swiper-sction/man-smiling.png" alt="">
+                  <img class="swiper__image" src="./assets/images/swiper-sction/Jhon.jpg" alt="Jhon's photo: my friend">
                   <h1 class="headline headline--no-b-line headline--white headline--simple headline--italic headline--small headline--thin headline--margin-b-tiny headline--last-align-center headline--last-align-center headline--text-shadow">“Lorem ipsum dolor sit, reiciendis debitis magni!”</h1>
                   <p class="paragraph paragraph--white paragraph--thin paragraph--text-shadow">― Jhon William ―</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="xy-centered xy-centered--full-width">
-                  <img class="swiper__image" src="./assets/images/swiper-sction/5d6fcc1c835af.png" alt="">
+                  <img class="swiper__image" src="./assets/images/swiper-sction/Edward.jpg" alt="Edwards's photo: my friend">
                   <h1 class="headline headline--no-b-line headline--white headline--simple headline--italic headline--small headline--thin headline--margin-b-tiny headline--last-align-center headline--last-align-center headline--text-shadow">“Lorem ipsum dolor sit, reiciendis debitis magni!”</h1>
                   <p class="paragraph paragraph--white paragraph--thin paragraph--text-shadow">― Edward Jhonson ―</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="xy-centered xy-centered--full-width">
-                  <img class="swiper__image" src="./assets/images/swiper-sction/5d6fcb78545c3.png" alt="">
+                  <img class="swiper__image" src="./assets/images/swiper-sction/Thomas.jpg" alt="">
                   <h1 class="headline headline--no-b-line headline--white headline--simple headline--italic headline--small headline--thin headline--margin-b-tiny headline--last-align-center headline--last-align-center headline--text-shadow">“Lorem ipsum dolor sit, reiciendis debitis magni!”</h1>
                   <p class="paragraph paragraph--white paragraph--thin paragraph--text-shadow">― Thomas Paul ―</p>
               </div>
@@ -261,7 +283,7 @@
       </form>
       <footer class="footer">
         <div class="footer__upper-content flexbox flexbox--x-centered flexbox--y-centered">
-          <img class="footer__logo" src="./assets/images/me.png" alt="site logo">
+          <img class="footer__logo" src="./assets/images/logo.png" alt="site logo">
           <p class="footer__intro paragraph paragraph--last-align-left">Ipsa quae ab illo inventore veritatis et quasi sunt explicabo. Ipsa quae ab illo inventoreveritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           <div>
             <h4 class="headline headline--white headline--no-b-line headline--margin-b-tiny headline--last-align-center">contact me</h4>

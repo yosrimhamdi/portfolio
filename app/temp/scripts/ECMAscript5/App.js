@@ -5559,7 +5559,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           handler: function handler() {
             e.frontSide.css("transform", "rotateY(180deg)"), e.backSide.css("transform", "rotateY(0)");
           },
-          offset: "50%"
+          offset: "40%"
         });
       }
     }]);
@@ -10301,7 +10301,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     loop: !0,
     typeSpeed: 80,
     shuffle: !0,
-    backSpeed: 40,
-    smartBackspace: !1
+    backSpeed: 30
   }), new r(), new l();
 }]);
