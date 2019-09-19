@@ -21,7 +21,9 @@
     "email-validator": "^2.0.4",
     "emailjs-com": "^2.3.2",
     "jquery": "^3.4.1",
+    "lazysizes": "^5.1.1",
     "particles.js": "^2.0.0",
+    "picturefill": "^3.0.3",
     "swiper": "^4.5.0",
     "typed.js": "^2.0.10",
     "waypoints": "^4.0.1"
