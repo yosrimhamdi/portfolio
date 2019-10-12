@@ -835,12 +835,19 @@ body, html {
     border-top: .5px solid rgb(214, 214, 214);
   }
 .footer__logo {
-    width: 120px;
-    height: 120px;
-    margin-right: 1em;
+    width: 100px;
+    height: 100px;
+    margin-right: .7em;
+  }
+@media (min-width: 720px) {
+.footer__logo {
+      width: 120px;
+      height: 120px;
+      margin-right: 1em
+  }
   }
 .footer__margin-r {
-    margin-right: .5em;
+    margin-right: 1em;
   }
 /**
  * Swiper 4.5.0
