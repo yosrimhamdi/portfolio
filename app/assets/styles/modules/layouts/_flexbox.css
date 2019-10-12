@@ -10,13 +10,19 @@
   &--align-base {
     align-items: baseline;
   }
-  &__margin-l-auto {
-    margin-left: auto;
-  }
   &--y-centered {
     align-items: center;
   }
   &--x-centered {
     justify-content: center;
+  }
+  &--atMedium {
+    flex-direction: column;
+    @mixin atMedium {
+      flex-direction: row;
+    }
+  }
+  &__margin-l-auto {
+    margin-left: auto;
   }
 }
