@@ -134,7 +134,6 @@ body, html {
     z-index: 1;
   }
 .content-wrapper {
-  left: -50vw !important;
   height: 100vh;
 }
 @media (min-width: 1024px) {
