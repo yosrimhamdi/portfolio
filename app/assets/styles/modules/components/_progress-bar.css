@@ -32,8 +32,11 @@
     &--98::after {
       width: 98%;
     }
-    &--90::after {
-      width: 90%;
+    &--100::after {
+      width: 100%;
+    }
+    &--60::after {
+      width: 60%;
     }
   }
   &__details {
