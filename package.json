@@ -19,8 +19,6 @@
     "postcss-mixins": "^6.2.2",
     "postcss-nested": "^4.1.2",
     "postcss-simple-vars": "^5.0.2",
-    "stylelint-config-prettier": "^6.0.0",
-    "stylelint-config-standard": "^19.0.0",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
@@ -28,10 +26,8 @@
     "emailjs-com": "^2.3.2",
     "jquery": "^3.4.1",
     "lazysizes": "^5.1.1",
-    "modernizr": "^3.7.1",
     "particles.js": "^2.0.0",
     "picturefill": "^3.0.3",
-    "swiper": "^4.5.0",
     "typed.js": "^2.0.10",
     "waypoints": "^4.0.1"
   }
