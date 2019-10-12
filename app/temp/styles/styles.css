@@ -130,6 +130,8 @@
   padding-bottom: 2.5em;
 }.page-section--equal {
     padding-top: 2.5em;
+  }.page-section--no-b-padding {
+    padding-bottom: 0;
   }.half-screen {
   height: 100vh;
   height: var(--vh ,100vh);
