@@ -1,20 +1,21 @@
 import '../../../../node_modules/waypoints/lib/noframework.waypoints';
 import $ from 'jquery';
+
 class ShakeOnScroll {
   constructor() {
     this.elements = $('.flipping-card');
-    this.setUpWaypoints();
+    this.triggerPoint = $('#trigger-point');
+    this.setUpWaypoint();
   }
-  setUpWaypoints() {
-    this.elements.each(function(index, el) {
+  setUpWaypoint() {
+    const that = this;
       new Waypoint({
-        element: el,
+        element: that.triggerPoint[0],
         handler: () => {
-          $(el).addClass("shakeOnScroll");
+          this.elements.addClass("shakeOnScroll");
         },
         offset: '80%'
       });
-    });
   }
 }
 

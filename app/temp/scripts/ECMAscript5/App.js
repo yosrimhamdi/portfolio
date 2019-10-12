@@ -5531,20 +5531,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function o() {
       _classCallCheck(this, o);
 
-      this.elements = r()(".flipping-card"), this.setUpWaypoints();
+      this.elements = r()(".flipping-card"), this.triggerPoint = r()("#trigger-point"), this.setUpWaypoint();
     }
 
     _createClass(o, [{
-      key: "setUpWaypoints",
-      value: function setUpWaypoints() {
-        this.elements.each(function (e, t) {
-          new Waypoint({
-            element: t,
-            handler: function handler() {
-              r()(t).addClass("shakeOnScroll");
-            },
-            offset: "80%"
-          });
+      key: "setUpWaypoint",
+      value: function setUpWaypoint() {
+        var _this = this;
+
+        new Waypoint({
+          element: this.triggerPoint[0],
+          handler: function handler() {
+            _this.elements.addClass("shakeOnScroll");
+          },
+          offset: "80%"
         });
       }
     }]);
@@ -5593,22 +5593,22 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "updateBtnText",
       value: function updateBtnText(e) {
-        var _this = this;
+        var _this2 = this;
 
         var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "submit";
         this.button.text(e), setTimeout(function () {
-          _this.button.text(t);
+          _this2.button.text(t);
         }, 5e3);
       }
     }, {
       key: "sendMailToUser",
       value: function sendMailToUser() {
-        var _this2 = this;
+        var _this3 = this;
 
         s.init(this.emailjs.userId), s.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo).then(function () {
-          _this2.updateBtnText("check your mail!");
+          _this3.updateBtnText("check your mail!");
         }, function () {
-          _this2.updateBtnText("check your mail!", "error");
+          _this3.updateBtnText("check your mail!", "error");
         });
       }
     }, {
