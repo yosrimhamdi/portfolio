@@ -989,6 +989,6 @@ button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-
     background: linear-gradient(to bottom right, #5ebae4, #E45E77);
   }
 .shakeOnScroll {
-  -webkit-animation: shake 3000ms;
-          animation: shake 3000ms;
+  -webkit-animation: shake 1500ms;
+          animation: shake 1500ms;
 }
