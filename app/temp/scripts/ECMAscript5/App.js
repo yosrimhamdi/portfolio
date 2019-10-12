@@ -5543,7 +5543,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             handler: function handler() {
               r()(t).addClass("shakeOnScroll");
             },
-            offset: "50%"
+            offset: "80%"
           });
         });
       }
@@ -5718,8 +5718,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }), new c(), new u(), new d.a(".professional-skill", {
     strings: ["web developer", "front-end engineer", "web expert"],
     loop: !0,
-    typeSpeed: 80,
-    shuffle: !0,
-    backSpeed: 30
+    typeSpeed: 70,
+    backSpeed: 20,
+    smartBackspace: !0
   }), new l(), new o();
 }]);

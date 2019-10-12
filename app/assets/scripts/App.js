@@ -13,9 +13,9 @@ new SlideOnClick();
 new Typed('.professional-skill', {
   strings: ['web developer', 'front-end engineer', 'web expert'],
   loop: true,
-  typeSpeed: 80,
-  shuffle: true,
-  backSpeed: 30
+  typeSpeed: 70,
+  backSpeed: 20,
+  smartBackspace: true
 });
 new SendEmail();
 new ShakeOnScroll();
