@@ -5543,7 +5543,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             handler: function handler() {
               r()(t).addClass("shakeOnScroll");
             },
-            offset: "60%"
+            offset: "50%"
           });
         });
       }

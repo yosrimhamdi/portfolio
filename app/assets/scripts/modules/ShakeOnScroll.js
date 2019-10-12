@@ -12,7 +12,7 @@ class ShakeOnScroll {
         handler: () => {
           $(el).addClass("shakeOnScroll");
         },
-        offset: '60%'
+        offset: '50%'
       });
     });
   }
