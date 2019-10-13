@@ -23,8 +23,8 @@ new Typed('.professional-skill', {
 new SendEmail();
 new ShakeOnScroll();
 new FadeInOnScroll();
-new SlideXOnScroll($('.top-row'), '60%', 'slideToLeftOnScroll');
-new SlideXOnScroll($('.bottom-row'), '60%', 'slideToRightOnScroll');
-new SlideXOnScroll($('.form__group--name'), '60%', 'slideToRightOnScroll');
-new SlideXOnScroll($('.form__group--email'), '60%', 'slideToLeftOnScroll');
-new SlideXOnScroll($('.form__button'), '60%', 'slideToRightOnScroll');
+new SlideXOnScroll($('.top-row'), '80%', 'slideToLeftOnScroll');
+new SlideXOnScroll($('.bottom-row'), '80%', 'slideToRightOnScroll');
+new SlideXOnScroll($('.form__group--name'), '80%', 'slideToRightOnScroll');
+new SlideXOnScroll($('.form__group--email'), '80%', 'slideToLeftOnScroll');
+new SlideXOnScroll($('.form__button'), '80%', 'slideToRightOnScroll');
