@@ -1,0 +1,7 @@
+.slideToLeftOnScroll {
+  transform: translateX(300%);
+  transition: transform 1000ms ease;
+    &--is-active {
+      transform: translateX(0);
+    }
+}

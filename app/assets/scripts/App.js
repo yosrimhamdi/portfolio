@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import SlideXOnScroll from './modules/SlideXOnScroll';
+import FadeInOnScroll from './modules/FadeInOnScroll';
 import ShakeOnScroll from './modules/ShakeOnScroll';
 import SendEmail from './modules/SendEmail';
 import UpdateVh from './modules/UpdateVh';
@@ -19,3 +22,9 @@ new Typed('.professional-skill', {
 });
 new SendEmail();
 new ShakeOnScroll();
+new FadeInOnScroll();
+new SlideXOnScroll($('.top-row'), '60%', 'slideToLeftOnScroll');
+new SlideXOnScroll($('.bottom-row'), '60%', 'slideToRightOnScroll');
+new SlideXOnScroll($('.form__group--name'), '60%', 'slideToRightOnScroll');
+new SlideXOnScroll($('.form__group--email'), '60%', 'slideToLeftOnScroll');
+new SlideXOnScroll($('.form__button'), '60%', 'slideToRightOnScroll');

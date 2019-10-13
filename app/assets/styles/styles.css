@@ -31,3 +31,6 @@
 @import './modules/components/_overflow-x-visible';
 @import './modules/components/_service';
 @import './modules/components/_shakeOnScroll';
+@import './modules/components/_slideToLeftOnScroll';
+@import './modules/components/_slideToRightOnScroll';
+@import './modules/components/_fadeInOnScroll';
