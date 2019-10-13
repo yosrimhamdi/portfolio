@@ -21,7 +21,7 @@
     height: 100%;
     background-color: rgba(25, 29, 39, 0.76);
   }
-  #particles-js {
+  &__particles-js {
     position: absolute;
     top: 0;
     left: 0;

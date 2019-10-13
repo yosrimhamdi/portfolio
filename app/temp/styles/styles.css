@@ -152,7 +152,7 @@ body, html {
     height: 100%;
     background-color: rgba(25, 29, 39, 0.76);
   }
-.animated-hero #particles-js {
+.animated-hero__particles-js {
     position: absolute;
     top: 0;
     left: 0;
@@ -661,6 +661,7 @@ body, html {
   color: white;
   transition: all 200ms;
   z-index: 1;
+  box-shadow: 0 0 8px -2px rgba(0,0,0, .3);
 }
 @media (min-width: 1024px) {
 .button {

@@ -5580,7 +5580,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             handler: function handler() {
               r()(t).addClass("fadeInOnScroll--is-active"), setTimeout(Waypoint.refreshAll, 1);
             },
-            offset: "70%"
+            offset: "90%"
           });
         });
       }
@@ -5782,10 +5782,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   new d(), particlesJS.load("particles-js", "/particles/particles.json", function () {
     return 0;
   }), new p(), new f(), new v.a(".professional-skill", {
-    strings: ["web developer", "front-end engineer", "web expert"],
+    strings: ["web developer", "web expert", "front-end engineer", "front-end developer"],
     loop: !0,
     typeSpeed: 70,
-    backSpeed: 20,
-    smartBackspace: !0
-  }), new u(), new a(), new s(), new o(r()(".service__box--top-row"), "75%", "slideToLeftOnScroll"), new o(r()(".service__box--bottom-row"), "75%", "slideToRightOnScroll"), new o(r()(".form__group--name"), "80%", "slideToRightOnScroll"), new o(r()(".form__group--email"), "80%", "slideToLeftOnScroll"), new o(r()(".form__button"), "80%", "slideToRightOnScroll");
+    backSpeed: 20
+  }), new u(), new a(), new s(), new o(r()(".service__box--top-row"), "75%", "slideToLeftOnScroll"), new o(r()(".service__box--bottom-row"), "75%", "slideToRightOnScroll"), new o(r()(".form__group--name"), "87%", "slideToRightOnScroll"), new o(r()(".form__group--email"), "87%", "slideToLeftOnScroll"), new o(r()(".form__button"), "87%", "slideToRightOnScroll");
 }]);

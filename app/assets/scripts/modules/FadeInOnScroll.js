@@ -17,7 +17,7 @@ class FadeInOnScroll {
         $(el).addClass('fadeInOnScroll--is-active');
         setTimeout(Waypoint.refreshAll, 1);
       },
-      offset: '70%'
+      offset: '90%'
      });
     });
   }

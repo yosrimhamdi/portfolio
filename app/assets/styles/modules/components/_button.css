@@ -12,6 +12,7 @@
   color: white;
   transition: all 200ms;
   z-index: 1;
+  box-shadow: 0 0 8px -2px rgba(#000, .3); 
 
   @mixin atLarge {
     font-size: .9rem;
