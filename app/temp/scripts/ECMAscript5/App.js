@@ -5787,5 +5787,5 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     typeSpeed: 70,
     backSpeed: 20,
     smartBackspace: !0
-  }), new u(), new a(), new s(), new o(r()(".top-row"), "80%", "slideToLeftOnScroll"), new o(r()(".bottom-row"), "80%", "slideToRightOnScroll"), new o(r()(".form__group--name"), "80%", "slideToRightOnScroll"), new o(r()(".form__group--email"), "80%", "slideToLeftOnScroll"), new o(r()(".form__button"), "80%", "slideToRightOnScroll");
+  }), new u(), new a(), new s(), new o(r()(".service__box--top-row"), "75%", "slideToLeftOnScroll"), new o(r()(".service__box--bottom-row"), "75%", "slideToRightOnScroll"), new o(r()(".form__group--name"), "80%", "slideToRightOnScroll"), new o(r()(".form__group--email"), "80%", "slideToLeftOnScroll"), new o(r()(".form__button"), "80%", "slideToRightOnScroll");
 }]);
