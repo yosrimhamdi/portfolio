@@ -344,6 +344,14 @@ body, html {
 .headline--align-left {
     text-align: left;
   }
+.headline--align-left-until-medium {
+    text-align: left;
+  }
+@media (min-width: 720px) {
+.headline--align-left-until-medium {
+      text-align: center
+  }
+  }
 .headline--last-align-center {
     -moz-text-align-last: center;
          text-align-last: center;
@@ -838,13 +846,13 @@ body, html {
 .footer__logo {
     width: 100px;
     height: 100px;
-    margin-right: .7em;
+    margin-right: auto;
   }
 @media (min-width: 720px) {
 .footer__logo {
       width: 120px;
       height: 120px;
-      margin-right: 1em
+      margin-right: 2em
   }
   }
 .footer__margin-r {

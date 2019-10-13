@@ -96,6 +96,12 @@
   &--align-left {
     text-align: left;
   }
+  &--align-left-until-medium {
+    text-align: left;
+    @mixin atMedium {
+      text-align: center;
+    }
+  }
   &--last-align-center {
     text-align-last: center;
   }
