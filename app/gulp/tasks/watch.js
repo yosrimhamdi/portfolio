@@ -7,7 +7,7 @@ const server = require('./server'),
 
 const eye = () => {
 
-  server.createServer();
+  server.createServer('app');
   
   watch('./app/*.html', server.reloadBrowser);
   watch('./app/assets/styles/**/*.css', gulp.series(styles.compileStyles, server.injectStyles));

@@ -1,11 +1,11 @@
 const gulp = require('gulp'),
       browserSync = require('browser-sync').create();
       
-const createServer = () => {
+const createServer = baseDir => {
   browserSync.init({
     notify: false,
     server: {
-      baseDir: 'app'
+      baseDir: baseDir
     }
   });
 };

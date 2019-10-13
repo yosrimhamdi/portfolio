@@ -5,7 +5,9 @@ const gulp  = require('gulp'),
       cssnano = require('gulp-cssnano'),
       uglify = require('gulp-uglify'),
       rev = require('gulp-rev'),
-      browserSync = require('browser-sync').create();
+      scripts = require('./scripts'),
+      styles = require('./styles'),
+      server = require('./server');
 
 const deleteDist = () => {
   return gulp.src('./dist', {read: false, allowEmpty: true})
@@ -38,11 +40,4 @@ const copyFolders = () => {
   return gulp.src(paths)
              .pipe(gulp.dest('./dist/'));
 };
-const preView = () => {
-  browserSync.init({
-    server: {
-      baseDir: './dist'
-    }
-  });
-};
-gulp.task('build', gulp.series(deleteDist, compressImages, copyFolders, usemin, preView));
+gulp.task('build', gulp.series(scripts.bundle, scripts.es5, styles.compileStyles ,deleteDist, compressImages, copyFolders, usemin, server.createServer.bind(this,'dist')));
