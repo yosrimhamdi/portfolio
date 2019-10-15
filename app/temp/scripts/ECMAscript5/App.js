@@ -5782,7 +5782,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   new d(), particlesJS.load("particles-js", "/particles/particles.json", function () {
     return 0;
   }), new p(), new f(), new v.a(".professional-skill", {
-    strings: ["web developer", "web expert", "front-end engineer", "front-end developer"],
+    strings: ["web developer", "web expert^3000", "front-end engineer", "front-end developer^3000"],
     loop: !0,
     typeSpeed: 70,
     backSpeed: 20

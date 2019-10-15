@@ -14,7 +14,7 @@ particlesJS.load('particles-js', '/particles/particles.json', () => 0);
 new UpdateVh();
 new SlideOnClick();
 new Typed('.professional-skill', {
-  strings: ['web developer', 'web expert', 'front-end engineer', 'front-end developer'],
+  strings: ['web developer', 'web expert^3000', 'front-end engineer', 'front-end developer^3000'],
   loop: true,
   typeSpeed: 70,
   backSpeed: 20
