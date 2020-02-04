@@ -337,7 +337,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           U = new RegExp(R + "|>"),
           X = new RegExp(F),
           J = new RegExp("^" + H + "$"),
-          V = {
+          Y = {
         ID: new RegExp("^#(" + H + ")"),
         CLASS: new RegExp("^\\.(" + H + ")"),
         TAG: new RegExp("^(" + H + "|[*])"),
@@ -347,7 +347,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         bool: new RegExp("^(?:" + M + ")$", "i"),
         needsContext: new RegExp("^" + R + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" + R + "*((?:-\\d)?\\d*)" + R + "*\\)|)(?=[^-]|$)", "i")
       },
-          Y = /HTML$/i,
+          V = /HTML$/i,
           G = /^(?:input|select|textarea|button)$/i,
           Q = /^h\d$/i,
           K = /^[^{]+\{\s*\[native \w/,
@@ -508,7 +508,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       for (t in n = ae.support = {}, o = ae.isXML = function (e) {
         var t = e.namespaceURI,
             n = (e.ownerDocument || e).documentElement;
-        return !Y.test(t || n && n.nodeName || "HTML");
+        return !V.test(t || n && n.nodeName || "HTML");
       }, f = ae.setDocument = function (e) {
         var t,
             r,
@@ -677,7 +677,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }, (i = ae.selectors = {
         cacheLength: 50,
         createPseudo: ce,
-        match: V,
+        match: Y,
         attrHandle: {},
         find: {},
         relative: {
@@ -706,7 +706,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           PSEUDO: function PSEUDO(e) {
             var t,
                 n = !e[6] && e[2];
-            return V.CHILD.test(e[0]) ? null : (e[3] ? e[2] = e[4] || e[5] || "" : n && X.test(n) && (t = s(n, !0)) && (t = n.indexOf(")", n.length - t) - n.length) && (e[0] = e[0].slice(0, t), e[2] = n.slice(0, t)), e.slice(0, 3));
+            return Y.CHILD.test(e[0]) ? null : (e[3] ? e[2] = e[4] || e[5] || "" : n && X.test(n) && (t = s(n, !0)) && (t = n.indexOf(")", n.length - t) - n.length) && (e[0] = e[0].slice(0, t), e[2] = n.slice(0, t)), e.slice(0, 3));
           }
         },
         filter: {
@@ -1065,7 +1065,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             value: n,
             type: r[0].replace(W, " ")
           }), a = a.slice(n.length)), i.filter) {
-            !(r = V[s].exec(a)) || c[s] && !(r = c[s](r)) || (n = r.shift(), o.push({
+            !(r = Y[s].exec(a)) || c[s] && !(r = c[s](r)) || (n = r.shift(), o.push({
               value: n,
               type: s,
               matches: r
@@ -1156,7 +1156,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             f && (t = t.parentNode), e = e.slice(l.shift().value.length);
           }
 
-          for (o = V.needsContext.test(e) ? 0 : l.length; o-- && (c = l[o], !i.relative[u = c.type]);) {
+          for (o = Y.needsContext.test(e) ? 0 : l.length; o-- && (c = l[o], !i.relative[u = c.type]);) {
             if ((p = i.find[u]) && (r = p(c.matches[0].replace(te, ne), ee.test(l[0].type) && ye(t.parentNode) || t))) {
               if (l.splice(o, 1), !(e = r.length && be(l))) return q.apply(n, r), n;
               break;
@@ -1593,12 +1593,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         X = /^-ms-/,
         J = /-([a-z])/g;
 
-    function V(e, t) {
+    function Y(e, t) {
       return t.toUpperCase();
     }
 
-    function Y(e) {
-      return e.replace(X, "ms-").replace(J, V);
+    function V(e) {
+      return e.replace(X, "ms-").replace(J, Y);
     }
 
     var G = function G(e) {
@@ -1620,13 +1620,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       set: function set(e, t, n) {
         var i,
             r = this.cache(e);
-        if ("string" == typeof t) r[Y(t)] = n;else for (i in t) {
-          r[Y(i)] = t[i];
+        if ("string" == typeof t) r[V(t)] = n;else for (i in t) {
+          r[V(i)] = t[i];
         }
         return r;
       },
       get: function get(e, t) {
-        return void 0 === t ? this.cache(e) : e[this.expando] && e[this.expando][Y(t)];
+        return void 0 === t ? this.cache(e) : e[this.expando] && e[this.expando][V(t)];
       },
       access: function access(e, t, n) {
         return void 0 === t || t && "string" == typeof t && void 0 === n ? this.get(e, t) : (this.set(e, t, n), void 0 !== n ? n : t);
@@ -1637,7 +1637,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
         if (void 0 !== i) {
           if (void 0 !== t) {
-            n = (t = Array.isArray(t) ? t.map(Y) : (t = Y(t)) in i ? [t] : t.match(H) || []).length;
+            n = (t = Array.isArray(t) ? t.map(V) : (t = V(t)) in i ? [t] : t.match(H) || []).length;
 
             for (; n--;) {
               delete i[t[n]];
@@ -1698,7 +1698,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         if (void 0 === e) {
           if (this.length && (r = Z.get(o), 1 === o.nodeType && !K.get(o, "hasDataAttrs"))) {
             for (n = s.length; n--;) {
-              s[n] && 0 === (i = s[n].name).indexOf("data-") && (i = Y(i.slice(5)), ne(o, i, r[i]));
+              s[n] && 0 === (i = s[n].name).indexOf("data-") && (i = V(i.slice(5)), ne(o, i, r[i]));
             }
 
             K.set(o, "hasDataAttrs", !0);
@@ -2468,7 +2468,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       return (n = n || Ue(e)) && ("" !== (s = n.getPropertyValue(t) || n[t]) || ae(e) || (s = T.style(e, t)), !y.pixelBoxStyles() && $e.test(s) && Xe.test(t) && (i = a.width, r = a.minWidth, o = a.maxWidth, a.minWidth = a.maxWidth = a.width = s, s = n.width, a.width = i, a.minWidth = r, a.maxWidth = o)), void 0 !== s ? s + "" : s;
     }
 
-    function Ve(e, t) {
+    function Ye(e, t) {
       return {
         get: function get() {
           if (!e()) return (this.get = t).apply(this, arguments);
@@ -2515,15 +2515,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
       }));
     }();
-    var Ye = ["Webkit", "Moz", "ms"],
+    var Ve = ["Webkit", "Moz", "ms"],
         Ge = s.createElement("div").style,
         Qe = {};
 
     function Ke(e) {
       var t = T.cssProps[e] || Qe[e];
       return t || (e in Ge ? e : Qe[e] = function (e) {
-        for (var t = e[0].toUpperCase() + e.slice(1), n = Ye.length; n--;) {
-          if ((e = Ye[n] + t) in Ge) return e;
+        for (var t = e[0].toUpperCase() + e.slice(1), n = Ve.length; n--;) {
+          if ((e = Ve[n] + t) in Ge) return e;
         }
       }(e) || e);
     }
@@ -2616,7 +2616,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           var r,
               o,
               s,
-              a = Y(t),
+              a = V(t),
               l = et.test(t),
               c = e.style;
           if (l || (t = Ke(a)), s = T.cssHooks[t] || T.cssHooks[a], void 0 === n) return s && "get" in s && void 0 !== (r = s.get(e, !1, i)) ? r : c[t];
@@ -2627,7 +2627,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var r,
             o,
             s,
-            a = Y(t);
+            a = V(t);
         return et.test(t) || (t = Ke(a)), (s = T.cssHooks[t] || T.cssHooks[a]) && "get" in s && (r = s.get(e, !0, n)), void 0 === r && (r = Je(e, t, i)), "normal" === r && t in nt && (r = nt[t]), "" === n || n ? (o = parseFloat(r), !0 === n || isFinite(o) ? o || 0 : r) : r;
       }
     }), T.each(["height", "width"], function (e, t) {
@@ -2646,7 +2646,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           return a && s && (l -= Math.ceil(e["offset" + t[0].toUpperCase() + t.slice(1)] - parseFloat(o[t]) - rt(e, t, "border", !1, o) - .5)), l && (r = re.exec(n)) && "px" !== (r[3] || "px") && (e.style[t] = n, n = T.css(e, t)), it(0, n, l);
         }
       };
-    }), T.cssHooks.marginLeft = Ve(y.reliableMarginLeft, function (e, t) {
+    }), T.cssHooks.marginLeft = Ye(y.reliableMarginLeft, function (e, t) {
       if (t) return (parseFloat(Je(e, "marginLeft")) || e.getBoundingClientRect().left - ue(e, {
         marginLeft: 0
       }, function () {
@@ -2808,7 +2808,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         var n, i, r, o, s;
 
         for (n in e) {
-          if (r = t[i = Y(n)], o = e[n], Array.isArray(o) && (r = o[1], o = e[n] = o[0]), n !== i && (e[i] = o, delete e[n]), (s = T.cssHooks[i]) && ("expand" in s)) for (n in o = s.expand(o), delete e[i], o) {
+          if (r = t[i = V(n)], o = e[n], Array.isArray(o) && (r = o[1], o = e[n] = o[0]), n !== i && (e[i] = o, delete e[n]), (s = T.cssHooks[i]) && ("expand" in s)) for (n in o = s.expand(o), delete e[i], o) {
             (n in e) || (e[n] = o[n], t[n] = r);
           } else t[i] = r;
         }
@@ -3725,11 +3725,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       0: 200,
       1223: 204
     },
-        Vt = T.ajaxSettings.xhr();
-    y.cors = !!Vt && "withCredentials" in Vt, y.ajax = Vt = !!Vt, T.ajaxTransport(function (e) {
+        Yt = T.ajaxSettings.xhr();
+    y.cors = !!Yt && "withCredentials" in Yt, y.ajax = Yt = !!Yt, T.ajaxTransport(function (e) {
       var _t3, i;
 
-      if (y.cors || Vt && !e.crossDomain) return {
+      if (y.cors || Yt && !e.crossDomain) return {
         send: function send(r, o) {
           var s,
               a = e.xhr();
@@ -3798,7 +3798,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }
       };
     });
-    var Yt,
+    var Vt,
         Gt = [],
         Qt = /(=)\?(?=&|$)|\?\?/;
     T.ajaxSetup({
@@ -3819,7 +3819,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }, i.always(function () {
         void 0 === o ? T(n).removeProp(r) : n[r] = o, e[r] && (e.jsonpCallback = t.jsonpCallback, Gt.push(r)), s && g(o) && o(s[0]), s = o = void 0;
       }), "script";
-    }), y.createHTMLDocument = ((Yt = s.implementation.createHTMLDocument("").body).innerHTML = "<form></form><form></form>", 2 === Yt.childNodes.length), T.parseHTML = function (e, t, n) {
+    }), y.createHTMLDocument = ((Vt = s.implementation.createHTMLDocument("").body).innerHTML = "<form></form><form></form>", 2 === Vt.childNodes.length), T.parseHTML = function (e, t, n) {
       return "string" != typeof e ? [] : ("boolean" == typeof t && (n = t, t = !1), t || (y.createHTMLDocument ? ((i = (t = s.implementation.createHTMLDocument("")).createElement("base")).href = s.location.href, t.head.appendChild(i)) : t = s), o = !n && [], (r = D.exec(e)) ? [t.createElement(r[1])] : (r = Ce([e], t, o), o && o.length && T(o).remove(), T.merge([], r.childNodes)));
       var i, r, o;
     }, T.fn.load = function (e, t, n) {
@@ -3923,7 +3923,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         }, e, i, arguments.length);
       };
     }), T.each(["top", "left"], function (e, t) {
-      T.cssHooks[t] = Ve(y.pixelPosition, function (e, n) {
+      T.cssHooks[t] = Ye(y.pixelPosition, function (e, n) {
         if (n) return n = Je(e, t), $e.test(n) ? T(e).position()[t] + "px" : n;
       });
     }), T.each({
@@ -3972,7 +3972,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }).guid = e.guid = e.guid || T.guid++, r;
     }, T.holdReady = function (e) {
       e ? T.readyWait++ : T.ready(!0);
-    }, T.isArray = Array.isArray, T.parseJSON = JSON.parse, T.nodeName = P, T.isFunction = g, T.isWindow = b, T.camelCase = Y, T.type = k, T.now = Date.now, T.isNumeric = function (e) {
+    }, T.isArray = Array.isArray, T.parseJSON = JSON.parse, T.nodeName = P, T.isFunction = g, T.isWindow = b, T.camelCase = V, T.type = k, T.now = Date.now, T.isNumeric = function (e) {
       var t = T.type(e);
       return ("number" === t || "string" === t) && !isNaN(e - parseFloat(e));
     }, void 0 === (i = function () {
@@ -5528,10 +5528,29 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function i() {
       _classCallCheck(this, i);
 
-      this.scrollBar = document.querySelector(".scroll-bar"), this.getMainContentVisibleHeight = document.querySelector(".content-wrapper__main-content").offsetHeight - window.innerHeight, this.setEvent();
+      this.footerYear = document.querySelector(".year"), this.setCurrentYear();
     }
 
     _createClass(i, [{
+      key: "setCurrentYear",
+      value: function setCurrentYear() {
+        this.footerYear.textContent = new Date().getFullYear();
+      }
+    }]);
+
+    return i;
+  }();
+
+  var r =
+  /*#__PURE__*/
+  function () {
+    function r() {
+      _classCallCheck(this, r);
+
+      this.scrollBar = document.querySelector(".scroll-bar"), this.getMainContentVisibleHeight = document.querySelector(".content-wrapper__main-content").offsetHeight - window.innerHeight, this.setEvent();
+    }
+
+    _createClass(r, [{
       key: "setEvent",
       value: function setEvent() {
         window.addEventListener("scroll", this.changeScrollBarWidth.bind(this));
@@ -5543,21 +5562,21 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return i;
+    return r;
   }(),
-      r = n(0),
-      o = n.n(r);
+      o = n(0),
+      s = n.n(o);
 
-  var s =
+  var a =
   /*#__PURE__*/
   function () {
-    function s(e, t, n) {
-      _classCallCheck(this, s);
+    function a(e, t, n) {
+      _classCallCheck(this, a);
 
       this.elements = e, this.offset = t, this.animationClass = n, this.setInitialClass(), this.setWaypoint();
     }
 
-    _createClass(s, [{
+    _createClass(a, [{
       key: "setInitialClass",
       value: function setInitialClass() {
         this.elements.addClass(this.animationClass);
@@ -5570,7 +5589,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           new Waypoint({
             element: n,
             handler: function handler() {
-              o()(n).addClass("".concat(e.animationClass, "--is-active")), setTimeout(Waypoint.refreshAll, 1);
+              s()(n).addClass("".concat(e.animationClass, "--is-active")), setTimeout(Waypoint.refreshAll, 1);
             },
             offset: e.offset
           });
@@ -5578,19 +5597,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return s;
+    return a;
   }();
 
-  var a =
+  var l =
   /*#__PURE__*/
   function () {
-    function a() {
-      _classCallCheck(this, a);
+    function l() {
+      _classCallCheck(this, l);
 
-      this.elements = o()(".news__box"), this.setInitialClass(), this.setWaypoints();
+      this.elements = s()(".news__box"), this.setInitialClass(), this.setWaypoints();
     }
 
-    _createClass(a, [{
+    _createClass(l, [{
       key: "setInitialClass",
       value: function setInitialClass() {
         this.elements.addClass("fadeInOnScroll");
@@ -5602,7 +5621,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           new Waypoint({
             element: t,
             handler: function handler() {
-              o()(t).addClass("fadeInOnScroll--is-active"), setTimeout(Waypoint.refreshAll, 1);
+              s()(t).addClass("fadeInOnScroll--is-active"), setTimeout(Waypoint.refreshAll, 1);
             },
             offset: "90%"
           });
@@ -5610,21 +5629,21 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return a;
+    return l;
   }();
 
   n(2);
 
-  var l =
+  var c =
   /*#__PURE__*/
   function () {
-    function l() {
-      _classCallCheck(this, l);
+    function c() {
+      _classCallCheck(this, c);
 
-      this.elements = o()(".flipping-card"), this.triggerPoint = o()("#trigger-point"), this.setUpWaypoint();
+      this.elements = s()(".flipping-card"), this.triggerPoint = s()("#trigger-point"), this.setUpWaypoint();
     }
 
-    _createClass(l, [{
+    _createClass(c, [{
       key: "setUpWaypoint",
       value: function setUpWaypoint() {
         var _this = this;
@@ -5639,18 +5658,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return l;
+    return c;
   }(),
-      c = n(3),
-      u = n(1);
+      u = n(3),
+      p = n(1);
 
-  var p =
+  var f =
   /*#__PURE__*/
   function () {
-    function p() {
-      _classCallCheck(this, p);
+    function f() {
+      _classCallCheck(this, f);
 
-      this.button = o()(".form__button"), this.input = o()(".form__input"), this.emailjs = {
+      this.button = s()(".form__button"), this.input = s()(".form__input"), this.emailjs = {
         service_id: "default_service",
         template_id: "template_fqxB2jK3",
         template_id_me: "tome",
@@ -5662,18 +5681,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }, this.event();
     }
 
-    _createClass(p, [{
+    _createClass(f, [{
       key: "event",
       value: function event() {
         var e = this;
         this.button.click(function (t) {
-          if (e.getUserData(), Object(c.validate)(e.userInfo.to_email) && e.userInfo.to_name) return e.button.text("submitting..."), e.sendMailToUser(), e.sendMailToMe(), e.clearInput(), !1;
+          if (e.getUserData(), Object(u.validate)(e.userInfo.to_email) && e.userInfo.to_name) return e.button.text("submitting..."), e.sendMailToUser(), e.sendMailToMe(), e.clearInput(), !1;
         });
       }
     }, {
       key: "getUserData",
       value: function getUserData() {
-        this.userInfo.to_name = o()("#name ").val(), this.userInfo.to_email = o()("#email").val();
+        this.userInfo.to_name = s()("#name ").val(), this.userInfo.to_email = s()("#email").val();
       }
     }, {
       key: "clearInput",
@@ -5695,7 +5714,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       value: function sendMailToUser() {
         var _this3 = this;
 
-        u.init(this.emailjs.userId), u.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo).then(function () {
+        p.init(this.emailjs.userId), p.send(this.emailjs.service_id, this.emailjs.template_id, this.userInfo).then(function () {
           _this3.updateBtnText("check your mail!");
         }, function () {
           _this3.updateBtnText("check your mail!", "error");
@@ -5704,23 +5723,23 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "sendMailToMe",
       value: function sendMailToMe() {
-        u.send(this.emailjs.service_id, this.emailjs.template_id_me, this.userInfo);
+        p.send(this.emailjs.service_id, this.emailjs.template_id_me, this.userInfo);
       }
     }]);
 
-    return p;
+    return f;
   }();
 
-  var f =
+  var d =
   /*#__PURE__*/
   function () {
-    function f() {
-      _classCallCheck(this, f);
+    function d() {
+      _classCallCheck(this, d);
 
       this.root = document.documentElement, this.updateVh();
     }
 
-    _createClass(f, [{
+    _createClass(d, [{
       key: "events",
       value: function events() {
         window.addEventListener("resize", this.updateVh.bind(this));
@@ -5737,19 +5756,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return f;
+    return d;
   }();
 
-  var d =
+  var h =
   /*#__PURE__*/
   function () {
-    function d() {
-      _classCallCheck(this, d);
+    function h() {
+      _classCallCheck(this, h);
 
-      this.button = o()(".button-main"), this.contentWrapper = o()(".content-wrapper"), this.animatedHero = o()(".animated-hero"), this.html = o()("html"), this.disableJump(), this.initialClasses(), this.events();
+      this.button = s()(".button-main"), this.contentWrapper = s()(".content-wrapper"), this.animatedHero = s()(".animated-hero"), this.html = s()("html"), this.disableJump(), this.initialClasses(), this.events();
     }
 
-    _createClass(d, [{
+    _createClass(h, [{
       key: "events",
       value: function events() {
         this.button.click(this.animate.bind(this));
@@ -5771,26 +5790,26 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return d;
+    return h;
   }();
 
-  var h =
+  var v =
   /*#__PURE__*/
   function () {
-    function h() {
-      _classCallCheck(this, h);
+    function v() {
+      _classCallCheck(this, v);
 
-      this.progressBars = o()(".progress-bar__bar"), this.createWaypoints();
+      this.progressBars = s()(".progress-bar__bar"), this.createWaypoints();
     }
 
-    _createClass(h, [{
+    _createClass(v, [{
       key: "createWaypoints",
       value: function createWaypoints() {
         this.progressBars.each(function (e, t) {
           new Waypoint({
             element: t,
             handler: function handler(e) {
-              o()(t).addClass("progress-on-scroll");
+              s()(t).addClass("progress-on-scroll");
             },
             offset: "96%"
           });
@@ -5798,15 +5817,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     }]);
 
-    return h;
+    return v;
   }(),
-      v = (n(7), n(4)),
-      m = n.n(v);
+      m = (n(7), n(4)),
+      y = n.n(m);
 
-  new h(), new f(), new d(), new m.a(".professional-skill", {
+  new v(), new d(), new h(), new y.a(".professional-skill", {
     strings: ["web developer", "web expert^3000", "front-end engineer", "front-end developer^3000"],
     loop: !0,
     typeSpeed: 70,
     backSpeed: 20
-  }), new p(), new l(), new a(), new s(o()(".form__group--name"), "87%", "slideToRightOnScroll"), new s(o()(".form__group--email"), "87%", "slideToLeftOnScroll"), new s(o()(".form__button"), "87%", "slideToRightOnScroll"), new i();
+  }), new f(), new c(), new l(), new a(s()(".form__group--name"), "87%", "slideToRightOnScroll"), new a(s()(".form__group--email"), "87%", "slideToLeftOnScroll"), new a(s()(".form__button"), "87%", "slideToRightOnScroll"), new r(), new i();
 }]);
