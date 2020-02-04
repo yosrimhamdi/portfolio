@@ -6,14 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
   <script src="./assets/scripts/Vendor-e571ca1fe9.js"></script>
-  <link rel="stylesheet" href="./assets/styles/styles-d62020a0ea.css"/>
+  <link rel="stylesheet" href="./assets/styles/styles-a64d2b7606.css"/>
   <script src="https://kit.fontawesome.com/f5e19f4cb0.js"></script>
   <title>― Youssri Mhamdi</title>
 </head>
 <body>  
   <div class="content-wrapper">
-    <div class="content-wrapper__fixed-position">
+    <div class="content-wrapper__banner">
       <div class="flexbox flexbox--atLarge">
+        <section class="animated-hero half-screen">
+          <picture>
+            <source srcset="./assets/images/stars.jpg" media="(min-width: 1024px)">
+            <img class="animated-hero__image" src="" alt="star image">
+          </picture>
+          <div id="particles-js" class="animated-hero__particles-js"></div>
+        </section>
         <section class="avatar half-screen grey-background">
           <div class="xy-centered xy-centered--full-width xy-centered--to-top-until-large">
             <img class="avatar__image" src="./assets/images/me-black.jpg" alt="">
@@ -22,16 +29,10 @@
             <p class="button-centered"><a href="#main-content" class="button button-main">about me</a></p>
           </div>
         </section>
-        <section class="animated-hero half-screen">
-          <picture>
-            <source srcset="./assets/images/stars.jpg" media="(min-width: 1024px)">
-            <img class="animated-hero__image" src="" alt="star image">
-          </picture>
-          <div id="particles-js" class="animated-hero__particles-js"></div>
-        </section>
       </div>
     </div>
     <section class="content-wrapper__main-content" id="main-content">
+      <div class="scroll-bar"></div>
       <section class="wrapper page-section">
         <h1 class="headline" data-inner-text="About me">About Myself</h1>
         <p class="paragraph">Hello! I am <span class="paragraph--italic paragraph--blue">Youssri Mhamdi</span>, I put my foot in the web development industry 3 years ago. I've designed developed and deployed many websites using various modern technologies. For now i'm working remotly.</p>
@@ -199,11 +200,13 @@
         <h1 class="headline" data-inner-text="news">latest news</h1>
         <p class="paragraph paragraph--margin-b">Checkout the latest news, hacks and tricks of web and mobile development in my personal website.</p>
         <div class="news__box">
-          <pictur>
-            <source data-srcset="./assets/images/news/npm--medium.png" media="(min-width:720px)">
-            <source data-srcset="./assets/images/news/npm--small.png" media="(min-width:530px)">
-            <img class="news__image lazyload" data-src="./assets/images/news/npm--smaller.png" alt="npm logo">
-          </pictur>          
+          <div class="news__image-wrapper">
+            <picture>
+              <source data-srcset="./assets/images/news/npm--medium.png" media="(min-width:720px)">
+              <source data-srcset="./assets/images/news/npm--small.png" media="(min-width:530px)">
+              <img class="news__image lazyload" data-src="./assets/images/news/npm--smaller.png" alt="npm logo">
+            </picture>      
+          </div>    
           <div class="news__details">
             <h2 class="headline headline--no-b-line headline--margin-b-small headline--tiny headline--bold headline--italic headline--underline">NPM: Supporting Open Source Maintainers</h2>
             <p class="paragraph paragraph--last-align-left">Part of npm, Inc.’s mission is to ensure the sustainability of the Open Source JavaScript ecosystem, and without fair compensation for developers, sustainability is impossible in the long term. For both practical and ethical reasons, those who consistently contribute to the open source commons should be compensated..</p>
@@ -213,11 +216,13 @@
           </div>
         </div>
         <div class="news__box">
-          <picture>
-            <source data-srcset="./assets/images/news/git--medium.png" media="(min-width:720px)">
-            <source data-srcset="./assets/images/news/git--small.png" media="(min-width:530px)">
-            <img class="news__image lazyload" data-src="./assets/images/news/git--smaller.png" alt="git logo">
-          </picture>             
+          <div class="news__image-wrapper">
+            <picture>
+              <source data-srcset="./assets/images/news/git--medium.png" media="(min-width:720px)">
+              <source data-srcset="./assets/images/news/git--small.png" media="(min-width:530px)">
+              <img class="news__image lazyload" data-src="./assets/images/news/git--smaller.png" alt="git logo">
+            </picture>  
+          </div>           
           <div class="news__details">
             <h2 class="headline headline--no-b-line headline--margin-b-small headline--tiny headline--bold headline--italic headline--underline">What is GIT, a deep dive into git version-control system</h2>
             <p class="paragraph paragraph--last-align-left">Git has been designed with the integrity of managed source code as a top priority. The content of the files as well as the true relationships between files and directories, versions, tags and commits, all of these objects in the Git repository are secured with a cryptographically secure hashing algorithm called SHA1..</p>
@@ -227,11 +232,13 @@
           </div>
         </div>
         <div class="news__box">
-        <picture>
-            <source data-srcset="./assets/images/news/nodejs--medium.jpg" media="(min-width:720px)">
-            <source data-srcset="./assets/images/news/nodejs--small.jpg" media="(min-width:530px)">
-            <img class="news__image lazyload" data-src="./assets/images/news/nodejs--smaller.jpg" alt="nodejs logo">
-          </picture> 
+          <div class="news__image-wrapper">
+            <picture>
+              <source data-srcset="./assets/images/news/nodejs--medium.jpg" media="(min-width:720px)">
+              <source data-srcset="./assets/images/news/nodejs--small.jpg" media="(min-width:530px)">
+              <img class="news__image lazyload" data-src="./assets/images/news/nodejs--smaller.jpg" alt="nodejs logo">
+            </picture> 
+          </div>
           <div class="news__details">
             <h2 class="headline headline--no-b-line headline--margin-b-small headline--tiny headline--bold headline--italic headline--underline">New Node.js 12 features will see it disrupt AI</h2>
             <p class="paragraph paragraph--last-align-left">New Node.js features isn’t the usual selling point of this platform. Node.js is primarily well-known for its speed and simplicity. This is why so many companies are willing to give it a shot. However, with the release of a new LTS (long-term support) version, Node.js will gain a lot of new features every Node.js developer can be excited..</p>
@@ -285,12 +292,12 @@
         </div>
         <div class="footer__copyright">
           <div class="wrapper">
-            <p class="paragraph">Copyright ©2019 All rights reserved | made with <i><u>love</u></i> by <span class="paragraph paragraph--blue paragraph--Mansalva">Youssri Mhamdi</span>.</p>
+            <p class="footer__copyright-paragraph">Copyright &copy;<span class="year"></span> All rights reserved | made with <i><u>love</u></i> by <span class="paragraph paragraph--blue paragraph--Mansalva">Youssri Mhamdi</span>.</p>
           </div>
         </div>
       </footer>
     </section>
  </div>
- <script src="./assets/scripts/App-e9ddd92f26.js"></script>
+ <script src="./assets/scripts/App-37b9b86267.js"></script>
 </body>
 </html>
