@@ -3990,8 +3990,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   Object.defineProperty(t, "__esModule", {
     value: !0
   });
-  var i = n(5),
-      r = n(6),
+  var i = n(5);
+  t.EmailJSResponseStatus = i.EmailJSResponseStatus;
+  var r = n(6),
       o = null,
       s = "https://api.emailjs.com";
 
@@ -4017,11 +4018,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return t && t.value && (e["g-recaptcha-response"] = t.value), t = null, e;
   }
 
-  t.init = function (e, t) {
+  function c(e, t) {
     o = e, s = t || "https://api.emailjs.com";
-  }, t.send = function (e, t, n, i) {
+  }
+
+  function u(e, t, n, i) {
     var r = {
-      lib_version: "2.3.2",
+      lib_version: "2.4.1",
       user_id: i || o,
       service_id: e,
       template_id: t,
@@ -4030,15 +4033,23 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return a(s + "/api/v1.0/email/send", JSON.stringify(r), {
       "Content-type": "application/json"
     });
-  }, t.sendForm = function (e, t, n, i) {
+  }
+
+  function p(e, t, n, i) {
     if ("string" == typeof n && (n = document.querySelector(n)), !n || "FORM" !== n.nodeName) throw "Expected the HTML form element or the style selector of form";
     r.UI.progressState(n);
     var l = new FormData(n);
-    return l.append("lib_version", "2.3.2"), l.append("service_id", e), l.append("template_id", t), l.append("user_id", i || o), a(s + "/api/v1.0/email/send-form", l).then(function (e) {
+    return l.append("lib_version", "2.4.1"), l.append("service_id", e), l.append("template_id", t), l.append("user_id", i || o), a(s + "/api/v1.0/email/send-form", l).then(function (e) {
       return r.UI.successState(n), e;
     }, function (e) {
       return r.UI.errorState(n), Promise.reject(e);
     });
+  }
+
+  t.init = c, t.send = u, t.sendForm = p, t["default"] = {
+    init: c,
+    send: u,
+    sendForm: p
   };
 }, function (e, t) {
   /*!
@@ -4472,7 +4483,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
    * 
    *   typed.js - A JavaScript Typing Animation Library
    *   Author: Matt Boldt <me@mattboldt.com>
-   *   Version: v2.0.9
+   *   Version: v2.0.11
    *   Url: https://github.com/mattboldt/typed.js
    *   License(s): MIT
    * 
@@ -4551,7 +4562,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           key: "begin",
           value: function value() {
             var e = this;
-            this.typingComplete = !1, this.shuffleStringsIfNeeded(this), this.insertCursor(), this.bindInputFocusEvents && this.bindFocusEvents(), this.timeout = setTimeout(function () {
+            this.options.onBegin(this), this.typingComplete = !1, this.shuffleStringsIfNeeded(this), this.insertCursor(), this.bindInputFocusEvents && this.bindFocusEvents(), this.timeout = setTimeout(function () {
               e.currentElContent && 0 !== e.currentElContent.length ? e.backspace(e.currentElContent, e.currentElContent.length) : e.typewrite(e.strings[e.sequence[e.arrayPos]], e.strPos);
             }, this.startDelay);
           }
@@ -4799,6 +4810,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         attr: null,
         bindInputFocusEvents: !1,
         contentType: "html",
+        onBegin: function onBegin(e) {},
         onComplete: function onComplete(e) {},
         preStringTyped: function preStringTyped(e, t) {},
         onStringTyped: function onStringTyped(e, t) {},
@@ -5491,12 +5503,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return t.indexOf(e) > -1;
   }
 
-  Object.deepExtend = function (e, t) {
-    for (var n in t) {
-      t[n] && t[n].constructor && t[n].constructor === Object ? (e[n] = e[n] || {}, arguments.callee(e[n], t[n])) : e[n] = t[n];
+  Object.deepExtend = function e(t, n) {
+    for (var i in n) {
+      n[i] && n[i].constructor && n[i].constructor === Object ? (t[i] = t[i] || {}, e(t[i], n[i])) : t[i] = n[i];
     }
 
-    return e;
+    return t;
   }, window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
     window.setTimeout(e, 1e3 / 60);
   }, window.cancelRequestAnimFrame = window.cancelAnimationFrame || window.webkitCancelRequestAnimationFrame || window.mozCancelRequestAnimationFrame || window.oCancelRequestAnimationFrame || window.msCancelRequestAnimationFrame || clearTimeout, window.pJSDom = [], window.particlesJS = function (e, t) {
@@ -5822,7 +5834,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       m = (n(7), n(4)),
       y = n.n(m);
 
-  new v(), new d(), new h(), new y.a(".professional-skill", {
+  new v(), particlesJS.load("particles-js", "/particles/particles.json", function () {
+    return 0;
+  }), new d(), new h(), new y.a(".professional-skill", {
     strings: ["web developer", "web expert^3000", "front-end engineer", "front-end developer^3000"],
     loop: !0,
     typeSpeed: 70,

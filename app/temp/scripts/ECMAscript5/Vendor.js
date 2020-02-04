@@ -543,10 +543,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   },
   9: function _(e, t, n) {
     !function (t, n) {
-      var r = function (e, t) {
+      var r = function (e, t, n) {
         "use strict";
 
-        var n, r;
+        var r, i;
         if (function () {
           var t,
               n = {
@@ -570,19 +570,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             throttleDelay: 125
           };
 
-          for (t in r = e.lazySizesConfig || e.lazysizesConfig || {}, n) {
-            t in r || (r[t] = n[t]);
+          for (t in i = e.lazySizesConfig || e.lazysizesConfig || {}, n) {
+            t in i || (i[t] = n[t]);
           }
         }(), !t || !t.getElementsByClassName) return {
           init: function init() {},
-          cfg: r,
+          cfg: i,
           noSupport: !0
         };
 
-        var i = t.documentElement,
-            s = e.Date,
+        var s = t.documentElement,
             a = e.HTMLPictureElement,
-            c = e.addEventListener,
+            c = e.addEventListener.bind(e),
             o = e.setTimeout,
             l = e.requestAnimationFrame || o,
             u = e.requestIdleCallback,
@@ -606,13 +605,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             e[r](n, t);
           });
         },
-            y = function y(e, r, i, s, a) {
+            y = function y(e, n, i, s, a) {
           var c = t.createEvent("Event");
-          return i || (i = {}), i.instance = n, c.initEvent(r, !s, !a), c.detail = i, e.dispatchEvent(c), c;
+          return i || (i = {}), i.instance = r, c.initEvent(n, !s, !a), c.detail = i, e.dispatchEvent(c), c;
         },
             z = function z(t, n) {
-          var i;
-          !a && (i = e.picturefill || r.pf) ? (n && n.src && !t.getAttribute("srcset") && t.setAttribute("srcset", n.src), i({
+          var r;
+          !a && (r = e.picturefill || i.pf) ? (n && n.src && !t.getAttribute("srcset") && t.setAttribute("srcset", n.src), r({
             reevaluate: !0,
             elements: [t]
           })) : n && n.src && (t.src = n.src);
@@ -621,7 +620,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           return (getComputedStyle(e, null) || {})[t];
         },
             w = function w(e, t, n) {
-          for (n = n || e.offsetWidth; n < r.minSize && t && !e._lazysizesWidth;) {
+          for (n = n || e.offsetWidth; n < i.minSize && t && !e._lazysizesWidth;) {
             n = t.offsetWidth, t = t.parentNode;
           }
 
@@ -651,36 +650,36 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         },
             S = function S(e) {
           var t,
-              n,
-              r = function r() {
+              r,
+              i = function i() {
             t = null, e();
           },
-              i = function i() {
-            var e = s.now() - n;
-            e < 99 ? o(i, 99 - e) : (u || r)(r);
+              s = function s() {
+            var e = n.now() - r;
+            e < 99 ? o(s, 99 - e) : (u || i)(i);
           };
 
           return function () {
-            n = s.now(), t || (t = o(i, 99));
+            r = n.now(), t || (t = o(s, 99));
           };
         },
             x = (j = /^img$/i, G = /^iframe$/i, q = "onscroll" in e && !/(gle|ing)bot/.test(navigator.userAgent), V = 0, K = 0, J = -1, X = function X(e) {
           K--, (!e || K < 0 || !e.target) && (K = 0);
         }, Y = function Y(e) {
-          return null == Q && (Q = "hidden" == b(t.body, "visibility")), Q || "hidden" != b(e.parentNode, "visibility") && "hidden" != b(e, "visibility");
+          return null == Q && (Q = "hidden" == b(t.body, "visibility")), Q || !("hidden" == b(e.parentNode, "visibility") && "hidden" == b(e, "visibility"));
         }, Z = function Z(e, n) {
           var r,
-              s = e,
+              i = e,
               a = Y(e);
 
-          for (O -= n, H += n, U -= n, F += n; a && (s = s.offsetParent) && s != t.body && s != i;) {
-            (a = (b(s, "opacity") || 1) > 0) && "visible" != b(s, "overflow") && (r = s.getBoundingClientRect(), a = F > r.left && U < r.right && H > r.top - 1 && O < r.bottom + 1);
+          for (O -= n, H += n, U -= n, F += n; a && (i = i.offsetParent) && i != t.body && i != s;) {
+            (a = (b(i, "opacity") || 1) > 0) && "visible" != b(i, "overflow") && (r = i.getBoundingClientRect(), a = F > r.left && U < r.right && H > r.top - 1 && O < r.bottom + 1);
           }
 
           return a;
         }, ee = function ee() {
           var e,
-              s,
+              n,
               a,
               c,
               o,
@@ -691,53 +690,53 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               p,
               m,
               h,
-              A = n.elements;
+              A = r.elements;
 
-          if ((N = r.loadMode) && K < 8 && (e = A.length)) {
-            for (s = 0, J++; s < e; s++) {
-              if (A[s] && !A[s]._lazyRace) if (!q || n.prematureUnveil && n.prematureUnveil(A[s])) ce(A[s]);else if ((d = A[s].getAttribute("data-expand")) && (l = 1 * d) || (l = V), p || (p = !r.expand || r.expand < 1 ? i.clientHeight > 500 && i.clientWidth > 500 ? 500 : 370 : r.expand, n._defEx = p, m = p * r.expFactor, h = r.hFac, Q = null, V < m && K < 1 && J > 2 && N > 2 && !t.hidden ? (V = m, J = 0) : V = N > 1 && J > 1 && K < 6 ? p : 0), f !== l && (k = innerWidth + l * h, I = innerHeight + l, u = -1 * l, f = l), a = A[s].getBoundingClientRect(), (H = a.bottom) >= u && (O = a.top) <= I && (F = a.right) >= u * h && (U = a.left) <= k && (H || F || U || O) && (r.loadHidden || Y(A[s])) && (D && K < 3 && !d && (N < 3 || J < 4) || Z(A[s], l))) {
-                if (ce(A[s]), o = !0, K > 9) break;
-              } else !o && D && !c && K < 4 && J < 4 && N > 2 && (B[0] || r.preloadAfterLoad) && (B[0] || !d && (H || F || U || O || "auto" != A[s].getAttribute(r.sizesAttr))) && (c = B[0] || A[s]);
+          if ((N = i.loadMode) && K < 8 && (e = A.length)) {
+            for (n = 0, J++; n < e; n++) {
+              if (A[n] && !A[n]._lazyRace) if (!q || r.prematureUnveil && r.prematureUnveil(A[n])) ce(A[n]);else if ((d = A[n].getAttribute("data-expand")) && (l = 1 * d) || (l = V), p || (p = !i.expand || i.expand < 1 ? s.clientHeight > 500 && s.clientWidth > 500 ? 500 : 370 : i.expand, r._defEx = p, m = p * i.expFactor, h = i.hFac, Q = null, V < m && K < 1 && J > 2 && N > 2 && !t.hidden ? (V = m, J = 0) : V = N > 1 && J > 1 && K < 6 ? p : 0), f !== l && (k = innerWidth + l * h, I = innerHeight + l, u = -1 * l, f = l), a = A[n].getBoundingClientRect(), (H = a.bottom) >= u && (O = a.top) <= I && (F = a.right) >= u * h && (U = a.left) <= k && (H || F || U || O) && (i.loadHidden || Y(A[n])) && (D && K < 3 && !d && (N < 3 || J < 4) || Z(A[n], l))) {
+                if (ce(A[n]), o = !0, K > 9) break;
+              } else !o && D && !c && K < 4 && J < 4 && N > 2 && (B[0] || i.preloadAfterLoad) && (B[0] || !d && (H || F || U || O || "auto" != A[n].getAttribute(i.sizesAttr))) && (c = B[0] || A[n]);
             }
 
             c && !o && ce(c);
           }
         }, te = function (e) {
           var t,
-              n = 0,
-              i = r.throttleDelay,
-              a = r.ricTimeout,
+              r = 0,
+              s = i.throttleDelay,
+              a = i.ricTimeout,
               c = function c() {
-            t = !1, n = s.now(), e();
+            t = !1, r = n.now(), e();
           },
               l = u && a > 49 ? function () {
             u(c, {
               timeout: a
-            }), a !== r.ricTimeout && (a = r.ricTimeout);
+            }), a !== i.ricTimeout && (a = i.ricTimeout);
           } : C(function () {
             o(c);
           }, !0);
 
           return function (e) {
-            var r;
-            (e = !0 === e) && (a = 33), t || (t = !0, (r = i - (s.now() - n)) < 0 && (r = 0), e || r < 9 ? l() : o(l, r));
+            var i;
+            (e = !0 === e) && (a = 33), t || (t = !0, (i = s - (n.now() - r)) < 0 && (i = 0), e || i < 9 ? l() : o(l, i));
           };
         }(ee), ne = function ne(e) {
           var t = e.target;
-          t._lazyCache ? delete t._lazyCache : (X(e), A(t, r.loadedClass), g(t, r.loadingClass), v(t, ie), y(t, "lazyloaded"));
+          t._lazyCache ? delete t._lazyCache : (X(e), A(t, i.loadedClass), g(t, i.loadingClass), v(t, ie), y(t, "lazyloaded"));
         }, re = C(ne), ie = function ie(e) {
           re({
             target: e.target
           });
         }, se = function se(e) {
           var t,
-              n = e.getAttribute(r.srcsetAttr);
-          (t = r.customMedia[e.getAttribute("data-media") || e.getAttribute("media")]) && e.setAttribute("media", t), n && e.setAttribute("srcset", n);
-        }, ae = C(function (e, t, n, i, s) {
+              n = e.getAttribute(i.srcsetAttr);
+          (t = i.customMedia[e.getAttribute("data-media") || e.getAttribute("media")]) && e.setAttribute("media", t), n && e.setAttribute("srcset", n);
+        }, ae = C(function (e, t, n, r, s) {
           var a, c, l, u, f, p;
-          (f = y(e, "lazybeforeunveil", t)).defaultPrevented || (i && (n ? A(e, r.autosizesClass) : e.setAttribute("sizes", i)), c = e.getAttribute(r.srcsetAttr), a = e.getAttribute(r.srcAttr), s && (u = (l = e.parentNode) && d.test(l.nodeName || "")), p = t.firesLoad || "src" in e && (c || a || u), f = {
+          (f = y(e, "lazybeforeunveil", t)).defaultPrevented || (r && (n ? A(e, i.autosizesClass) : e.setAttribute("sizes", r)), c = e.getAttribute(i.srcsetAttr), a = e.getAttribute(i.srcAttr), s && (u = (l = e.parentNode) && d.test(l.nodeName || "")), p = t.firesLoad || "src" in e && (c || a || u), f = {
             target: e
-          }, A(e, r.loadingClass), p && (clearTimeout(W), W = o(X, 2500), v(e, ie, !0)), u && m.call(l.getElementsByTagName("source"), se), c ? e.setAttribute("srcset", c) : a && !u && (G.test(e.nodeName) ? function (e, t) {
+          }, A(e, i.loadingClass), p && (clearTimeout(W), W = o(X, 2500), v(e, ie, !0)), u && m.call(l.getElementsByTagName("source"), se), c ? e.setAttribute("srcset", c) : a && !u && (G.test(e.nodeName) ? function (e, t) {
             try {
               e.contentWindow.location.replace(t);
             } catch (n) {
@@ -745,7 +744,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }
           }(e, a) : e.src = a), s && (c || u) && z(e, {
             src: a
-          })), e._lazyRace && delete e._lazyRace, g(e, r.lazyClass), E(function () {
+          })), e._lazyRace && delete e._lazyRace, g(e, i.lazyClass), E(function () {
             var t = e.complete && e.naturalWidth > 1;
             p && !t || (t && A(e, "ls-is-cached"), ne(f), e._lazyCache = !0, o(function () {
               "_lazyCache" in e && delete e._lazyCache;
@@ -755,25 +754,34 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           if (!e._lazyRace) {
             var t,
                 n = j.test(e.nodeName),
-                i = n && (e.getAttribute(r.sizesAttr) || e.getAttribute("sizes")),
-                s = "auto" == i;
-            (!s && D || !n || !e.getAttribute("src") && !e.srcset || e.complete || h(e, r.errorClass) || !h(e, r.lazyClass)) && (t = y(e, "lazyunveilread").detail, s && M.updateElem(e, !0, e.offsetWidth), e._lazyRace = !0, K++, ae(e, t, s, i, n));
+                r = n && (e.getAttribute(i.sizesAttr) || e.getAttribute("sizes")),
+                s = "auto" == r;
+            (!s && D || !n || !e.getAttribute("src") && !e.srcset || e.complete || h(e, i.errorClass) || !h(e, i.lazyClass)) && (t = y(e, "lazyunveilread").detail, s && M.updateElem(e, !0, e.offsetWidth), e._lazyRace = !0, K++, ae(e, t, s, r, n));
           }
         }, oe = S(function () {
-          r.loadMode = 3, te();
+          i.loadMode = 3, te();
         }), le = function le() {
-          3 == r.loadMode && (r.loadMode = 2), oe();
+          3 == i.loadMode && (i.loadMode = 2), oe();
         }, _ue = function ue() {
-          D || (s.now() - $ < 999 ? o(_ue, 999) : (D = !0, r.loadMode = 3, te(), c("scroll", le, !0)));
+          D || (n.now() - $ < 999 ? o(_ue, 999) : (D = !0, i.loadMode = 3, te(), c("scroll", le, !0)));
         }, {
           _: function _() {
-            $ = s.now(), n.elements = t.getElementsByClassName(r.lazyClass), B = t.getElementsByClassName(r.lazyClass + " " + r.preloadClass), c("scroll", te, !0), c("resize", te, !0), e.MutationObserver ? new MutationObserver(te).observe(i, {
+            $ = n.now(), r.elements = t.getElementsByClassName(i.lazyClass), B = t.getElementsByClassName(i.lazyClass + " " + i.preloadClass), c("scroll", te, !0), c("resize", te, !0), c("pageshow", function (e) {
+              if (e.persisted) {
+                var n = t.querySelectorAll("." + i.loadingClass);
+                n.length && n.forEach && l(function () {
+                  n.forEach(function (e) {
+                    e.complete && ce(e);
+                  });
+                });
+              }
+            }), e.MutationObserver ? new MutationObserver(te).observe(s, {
               childList: !0,
               subtree: !0,
               attributes: !0
-            }) : (i.addEventListener("DOMNodeInserted", te, !0), i.addEventListener("DOMAttrModified", te, !0), setInterval(te, 999)), c("hashchange", te, !0), ["focus", "mouseover", "click", "load", "transitionend", "animationend"].forEach(function (e) {
+            }) : (s.addEventListener("DOMNodeInserted", te, !0), s.addEventListener("DOMAttrModified", te, !0), setInterval(te, 999)), c("hashchange", te, !0), ["focus", "mouseover", "click", "load", "transitionend", "animationend"].forEach(function (e) {
               t.addEventListener(e, te, !0);
-            }), /d$|^c/.test(t.readyState) ? _ue() : (c("load", _ue), t.addEventListener("DOMContentLoaded", te), o(_ue, 2e4)), n.elements.length ? (ee(), E._lsFlush()) : te();
+            }), /d$|^c/.test(t.readyState) ? _ue() : (c("load", _ue), t.addEventListener("DOMContentLoaded", te), o(_ue, 2e4)), r.elements.length ? (ee(), E._lsFlush()) : te();
           },
           checkElems: te,
           unveil: ce,
@@ -800,7 +808,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         }), {
           _: function _() {
-            L = t.getElementsByClassName(r.autosizesClass), c("resize", P);
+            L = t.getElementsByClassName(i.autosizesClass), c("resize", P);
           },
           checkElems: P,
           updateElem: _
@@ -815,9 +823,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
         var de, fe, pe, me, he, Ae, ge;
         return o(function () {
-          r.init && T();
-        }), n = {
-          cfg: r,
+          i.init && T();
+        }), r = {
+          cfg: i,
           autoSizer: M,
           loader: x,
           init: T,
@@ -829,7 +837,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           gW: w,
           rAF: E
         };
-      }(t, t.document);
+      }(t, t.document, Date);
 
       t.lazySizes = r, e.exports && (e.exports = r);
     }("undefined" != typeof window ? window : {});
