@@ -1,7 +1,10 @@
 .scroll-bar {
   z-index: 2;
   position: fixed;
-  height: 5px;
-  width: 0;
-  background-image: linear-gradient(to right, $mainColor, $accent-2);;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 0;
+  width: 5px;
+  background-color: $mainColor;
 }

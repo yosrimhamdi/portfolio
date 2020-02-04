@@ -5539,7 +5539,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "changeScrollBarWidth",
       value: function changeScrollBarWidth() {
-        this.scrollBar.style.width = "".concat(50 * window.scrollY / this.getMainContentVisibleHeight, "%");
+        this.scrollBar.style.height = "".concat(100 * window.scrollY / this.getMainContentVisibleHeight, "%");
       }
     }]);
 

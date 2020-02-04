@@ -8,7 +8,7 @@ class ScrollBar {
     window.addEventListener('scroll', this.changeScrollBarWidth.bind(this));
   }
   changeScrollBarWidth() {
-    this.scrollBar.style.width = `${(window.scrollY*50)/this.getMainContentVisibleHeight}%`
+    this.scrollBar.style.height = `${(window.scrollY*100)/this.getMainContentVisibleHeight}%`
   }
 }
 
