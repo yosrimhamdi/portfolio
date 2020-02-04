@@ -3,5 +3,5 @@
   position: fixed;
   height: 5px;
   width: 0;
-  background-color: red;
+  background-image: linear-gradient(to right, $mainColor, $accent-2);;
 }
