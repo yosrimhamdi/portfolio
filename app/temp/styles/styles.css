@@ -9,7 +9,11 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #757575;
+  -ms-overflow-style: none;
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 html {
   scroll-behavior: smooth;
 }

@@ -7,6 +7,11 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: $mainGrey;
+  -ms-overflow-style: none;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 html {
   scroll-behavior: smooth;
