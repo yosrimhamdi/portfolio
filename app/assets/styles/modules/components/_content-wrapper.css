@@ -12,6 +12,7 @@
 
   &__main-content {
     overflow: hidden;
+    position: relative;
 
     @mixin atLarge {
       margin-left: 100vw;

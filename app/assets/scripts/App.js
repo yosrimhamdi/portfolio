@@ -1,3 +1,4 @@
+import ScrollBar from './modules/ScrollBar';
 import $ from 'jquery';
 import SlideXOnScroll from './modules/SlideXOnScroll';
 import FadeInOnScroll from './modules/FadeInOnScroll';
@@ -10,7 +11,7 @@ import 'particles.js';
 import Typed from 'typed.js';
 
 new ProgressOnScroll();
-particlesJS.load('particles-js', '/particles/particles.json', () => 0);
+// particlesJS.load('particles-js', '/particles/particles.json', () => 0);
 new UpdateVh();
 new SlideOnClick();
 new Typed('.professional-skill', {
@@ -25,3 +26,4 @@ new FadeInOnScroll();
 new SlideXOnScroll($('.form__group--name'), '87%', 'slideToRightOnScroll');
 new SlideXOnScroll($('.form__group--email'), '87%', 'slideToLeftOnScroll');
 new SlideXOnScroll($('.form__button'), '87%', 'slideToRightOnScroll');
+new ScrollBar();

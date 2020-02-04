@@ -179,6 +179,7 @@ body, html {
   }
 .content-wrapper__main-content {
     overflow: hidden;
+    position: relative;
   }
 @media (min-width: 1024px) {
 .content-wrapper__main-content {
@@ -922,8 +923,9 @@ body, html {
       opacity: 1;
     }
 .scroll-bar {
+  z-index: 2;
   position: fixed;
   height: 5px;
-  width: 40%;
+  width: 0;
   background-color: red;
 }

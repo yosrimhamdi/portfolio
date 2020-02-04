@@ -1,6 +1,7 @@
 .scroll-bar {
+  z-index: 2;
   position: fixed;
   height: 5px;
-  width: 40%;
+  width: 0;
   background-color: red;
 }
