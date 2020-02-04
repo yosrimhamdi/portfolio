@@ -183,7 +183,7 @@ body, html {
 @media (min-width: 1024px) {
 .content-wrapper__main-content {
       margin-left: 100vw;
-      width: calc(50vw - 17px)
+      width: 50vw
   }
   }
 .avatar {
@@ -921,3 +921,9 @@ body, html {
       transform: translateY(0);
       opacity: 1;
     }
+.scroll-bar {
+  position: fixed;
+  height: 5px;
+  width: 40%;
+  background-color: red;
+}
