@@ -5528,7 +5528,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     function i() {
       _classCallCheck(this, i);
 
-      this.scrollBar = document.querySelector(".scroll-bar"), this.setEvent();
+      this.scrollBar = document.querySelector(".scroll-bar"), this.getMainContentVisibleHeight = document.querySelector(".content-wrapper__main-content").offsetHeight - window.innerHeight, this.setEvent();
     }
 
     _createClass(i, [{
@@ -5539,12 +5539,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       key: "changeScrollBarWidth",
       value: function changeScrollBarWidth() {
-        this.scrollBar.style.width = "".concat(50 * window.scrollY / this.getMainContentVisibleHeight(), "%");
-      }
-    }, {
-      key: "getMainContentVisibleHeight",
-      value: function getMainContentVisibleHeight() {
-        return document.querySelector(".content-wrapper__main-content").offsetHeight - window.innerHeight;
+        this.scrollBar.style.width = "".concat(50 * window.scrollY / this.getMainContentVisibleHeight, "%");
       }
     }]);
 
