@@ -3,12 +3,17 @@
   color: $darkGrey;
 
   &__upper-content {
-    padding: 1.5em 10px;
+    padding: .7em 10px;
   }
   &__copyright{
-    padding-top: .9em;
-    padding-bottom: .9em;
+    padding-top: .4em;
+    padding-bottom: .4em;
     border-top: .5px solid rgb(214, 214, 214);
+  }
+  &__copyright-paragraph {
+    font-size: .8rem;
+    font-weight: 400;
+    text-align: center;
   }
   &__logo {
     width: 100px;
