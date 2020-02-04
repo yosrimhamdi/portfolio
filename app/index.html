@@ -16,8 +16,15 @@
 </head>
 <body>  
   <div class="content-wrapper">
-    <div class="content-wrapper__fixed-position">
+    <div class="content-wrapper__banner">
       <div class="flexbox flexbox--atLarge">
+        <section class="animated-hero half-screen">
+          <picture>
+            <source srcset="./assets/images/stars.jpg" media="(min-width: 1024px)">
+            <img class="animated-hero__image" src="" alt="star image">
+          </picture>
+          <div id="particles-js" class="animated-hero__particles-js"></div>
+        </section>
         <section class="avatar half-screen grey-background">
           <div class="xy-centered xy-centered--full-width xy-centered--to-top-until-large">
             <img class="avatar__image" src="./assets/images/me-black.jpg" alt="">
@@ -25,13 +32,6 @@
             <h1 class="headline headline--thin headline--medium headline--simple headline--margin-b-tiny headline--no-b-line headline--capitalize"><span class="professional-skill"></span></h1>
             <p class="button-centered"><a href="#main-content" class="button button-main">about me</a></p>
           </div>
-        </section>
-        <section class="animated-hero half-screen">
-          <picture>
-            <source srcset="./assets/images/stars.jpg" media="(min-width: 1024px)">
-            <img class="animated-hero__image" src="" alt="star image">
-          </picture>
-          <div id="particles-js" class="animated-hero__particles-js"></div>
         </section>
       </div>
     </div>

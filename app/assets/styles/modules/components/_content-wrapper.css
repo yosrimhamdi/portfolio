@@ -4,7 +4,7 @@
   }
   height: 100vh;
 
-  &__fixed-position {
+  &__banner {
     @mixin atLarge {
       position: fixed;
     }
