@@ -1,3 +1,4 @@
+import LoadingBar from './modules/LoadingBar';
 import UpdateYear from './modules/UpdateYear';
 import ScrollBar from './modules/ScrollBar';
 import $ from 'jquery';
@@ -16,7 +17,12 @@ particlesJS.load('particles-js', '/particles/particles.json', () => 0);
 new UpdateVh();
 new SlideOnClick();
 new Typed('.professional-skill', {
-  strings: ['web developer', 'web expert^3000', 'front-end engineer', 'front-end developer^3000'],
+  strings: [
+    'web developer',
+    'web expert^3000',
+    'front-end engineer',
+    'front-end developer^3000'
+  ],
   loop: true,
   typeSpeed: 70,
   backSpeed: 20
@@ -29,3 +35,4 @@ new SlideXOnScroll($('.form__group--email'), '87%', 'slideToLeftOnScroll');
 new SlideXOnScroll($('.form__button'), '87%', 'slideToRightOnScroll');
 new ScrollBar();
 new UpdateYear();
+new LoadingBar();

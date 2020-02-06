@@ -55,6 +55,18 @@ body, html {
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(0px, -0px) rotate(-0deg); }
 }
+@-webkit-keyframes translateText {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes translateText {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
 .flexbox {
   display: flex;
 }
@@ -941,4 +953,42 @@ body, html {
   width: 5px;
   background-color: #5ebae4
 }
+  }
+.loading-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 1;
+  transition: transform 500ms;
+}
+.loading-screen--is-hidden {
+    transform: translateY(-100%);
+  }
+.loading-screen__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+  }
+.loading-screen__text {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+.loading-screen__text--is-animated {
+    -webkit-animation: translateText 1000ms forwards;
+            animation: translateText 1000ms forwards;
+  }
+.loading-screen__progress-bar {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: rgb(134, 134, 134);
+    transition: width 400ms;
   }

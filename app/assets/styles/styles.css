@@ -34,4 +34,5 @@
 @import './modules/components/_slideToLeftOnScroll';
 @import './modules/components/_slideToRightOnScroll';
 @import './modules/components/_fadeInOnScroll';
-@import './modules/components/_scroll-bar'
+@import './modules/components/_scroll-bar';
+@import './modules/components/_loading-screen';
