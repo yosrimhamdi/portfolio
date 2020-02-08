@@ -10,9 +10,9 @@
     margin-bottom: 1.2em;
     width: 120px;
 
-   @mixin atLarge {
-    width: 160px;
-    margin-bottom: 2em;
-   }
+    @mixin atLarge {
+      width: 140px;
+      margin-bottom: 2em;
+    }
   }
 }

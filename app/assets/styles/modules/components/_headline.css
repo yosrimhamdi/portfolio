@@ -12,14 +12,14 @@
     font-size: 2rem;
     margin-bottom: 2em;
   }
-  
-  &::before{
+
+  &::before {
     content: attr(data-inner-text);
     @mixin xy-centered;
     width: 700%;
     font-weight: 800;
     text-align: center;
-    color: rgba($mainBlack, .07);
+    color: rgba($mainBlack, 0.07);
     font-size: 3.2rem;
 
     @mixin atLarge {
@@ -48,7 +48,7 @@
     font-weight: 600;
   }
   &--tiny {
-    font-size: .8rem;
+    font-size: 0.8rem;
 
     @mixin atLarge {
       font-size: 1rem;
@@ -61,7 +61,7 @@
     }
   }
   &--small-plus {
-    font-size: .95rem;
+    font-size: 0.95rem;
     @mixin atLarge {
       font-size: 1.2rem;
     }
@@ -69,7 +69,7 @@
   &--medium {
     font-size: 1.2rem;
     @mixin atLarge {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
   }
   &--large {
@@ -82,9 +82,9 @@
     font-style: italic;
   }
   &--margin-b-tiny {
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
     @mixin atLarge {
-      margin-bottom: .4em;
+      margin-bottom: 0.4em;
     }
   }
   &--margin-b-small {
@@ -114,7 +114,7 @@
     text-decoration: underline;
   }
   &--text-shadow {
-    text-shadow: 2px 1px 3px rgba(0,0,0,.1) ;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
   }
   &--capitalize {
     text-transform: capitalize;

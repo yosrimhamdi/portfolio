@@ -254,8 +254,8 @@ body, html {
   }
 @media (min-width: 1024px) {
 .avatar__image {
-    width: 160px;
-    margin-bottom: 2em
+      width: 140px;
+      margin-bottom: 2em
   }
   }
 .wrapper {
@@ -304,7 +304,7 @@ body, html {
     margin-bottom: 2em
 }
   }
-.headline::before{
+.headline::before {
     content: attr(data-inner-text);
     position: absolute;
     top: 50%;
@@ -313,11 +313,11 @@ body, html {
     width: 700%;
     font-weight: 800;
     text-align: center;
-    color: rgba(60,56,56, .07);
+    color: rgba(60,56,56, 0.07);
     font-size: 3.2rem;
   }
 @media (min-width: 1024px) {
-.headline::before{
+.headline::before {
       font-size: 5rem
   }
   }
@@ -342,7 +342,7 @@ body, html {
     font-weight: 600;
   }
 .headline--tiny {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 @media (min-width: 1024px) {
 .headline--tiny {
@@ -358,7 +358,7 @@ body, html {
   }
   }
 .headline--small-plus {
-    font-size: .95rem;
+    font-size: 0.95rem;
   }
 @media (min-width: 1024px) {
 .headline--small-plus {
@@ -370,7 +370,7 @@ body, html {
   }
 @media (min-width: 1024px) {
 .headline--medium {
-      font-size: 1.7rem
+      font-size: 1.6rem
   }
   }
 .headline--large {
@@ -385,11 +385,11 @@ body, html {
     font-style: italic;
   }
 .headline--margin-b-tiny {
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
 @media (min-width: 1024px) {
 .headline--margin-b-tiny {
-      margin-bottom: .4em
+      margin-bottom: 0.4em
   }
   }
 .headline--margin-b-small {
@@ -420,7 +420,7 @@ body, html {
     text-decoration: underline;
   }
 .headline--text-shadow {
-    text-shadow: 2px 1px 3px rgba(0,0,0,.1) ;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
   }
 .headline--capitalize {
     text-transform: capitalize;
@@ -720,8 +720,8 @@ body, html {
   text-decoration: none;
   display: inline-block;
   margin-top: 1em;
-  padding: 1em 2em;
-  font-size: .8rem;
+  padding: 0.9em 2em;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 2px;
@@ -729,11 +729,11 @@ body, html {
   color: white;
   transition: all 200ms;
   z-index: 1;
-  box-shadow: 0 0 8px -2px rgba(0,0,0, .3);
+  box-shadow: 0 0 8px -2px rgba(0,0,0, 0.3);
 }
 @media (min-width: 1024px) {
 .button {
-    font-size: .9rem
+    font-size: 0.9rem
 }
   }
 .button::after {
@@ -748,13 +748,13 @@ body, html {
     z-index: -1;
     transition: all 300ms;
   }
-.button:hover { 
+.button:hover {
     letter-spacing: 2px;
-    box-shadow: 0 0 15px -2px rgba(0,0,0, .3); 
+    box-shadow: 0 0 15px -2px rgba(0,0,0, 0.3);
     transform: translateY(-2px);
   }
 .button:hover::after {
-      transform: scale(1.25 ,1.5);
+      transform: scale(1.25, 1.5);
       opacity: 0;
     }
 .button:active {
