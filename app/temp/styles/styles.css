@@ -255,7 +255,7 @@ body, html {
 @media (min-width: 1024px) {
 .avatar__image {
       width: 140px;
-      margin-bottom: 2em
+      margin-bottom: 1.1em
   }
   }
 .wrapper {
