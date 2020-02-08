@@ -22,49 +22,89 @@ body, html {
   overflow-x: hidden;
 }
 @-webkit-keyframes slide {
-  0% { left: -100%}
-  100% {left: 0}
-}
-@keyframes slide {
-  0% { left: -100%}
-  100% {left: 0}
-}
-@-webkit-keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-2deg); }
-  20% { transform: translate(-3px, 0px) rotate(2deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(2deg); }
-  50% { transform: translate(-1px, 2px) rotate(-2deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-2deg); }
-  80% { transform: translate(-1px, -1px) rotate(2deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(0px, -0px) rotate(-0deg); }
-}
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-2deg); }
-  20% { transform: translate(-3px, 0px) rotate(2deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(2deg); }
-  50% { transform: translate(-1px, 2px) rotate(-2deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-2deg); }
-  80% { transform: translate(-1px, -1px) rotate(2deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(0px, -0px) rotate(-0deg); }
-}
-@-webkit-keyframes translateText {
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
   }
 }
-@keyframes translateText {
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(2deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-2deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(2deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, -0px) rotate(-0deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(2deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-2deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(2deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, -0px) rotate(-0deg);
   }
 }
 .flexbox {
@@ -960,7 +1000,7 @@ body, html {
   height: 100vh;
   background-color: black;
   z-index: 1;
-  transition: transform 500ms;
+  transition: transform 500ms ease;
 }
 .loading-screen--is-hidden {
     transform: translateY(-100%);
@@ -970,19 +1010,32 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw;
+    width: 60vw;
+  }
+@media (min-width: 1024px) {
+.loading-screen__content {
+      width: 50vw
+  }
   }
 .loading-screen__text {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
     letter-spacing: 1px;
     color: white;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     text-align: center;
+    transition: all 700ms ease;
+  }
+@media (min-width: 1024px) {
+.loading-screen__text {
+      font-size: 0.9rem
+  }
   }
 .loading-screen__text--is-animated {
-    -webkit-animation: translateText 1000ms forwards;
-            animation: translateText 1000ms forwards;
+    transform: translateY(-100%);
+    opacity: 0;
   }
 .loading-screen__progress-bar {
     content: '';
@@ -990,5 +1043,5 @@ body, html {
     width: 0;
     height: 1px;
     background-color: rgb(134, 134, 134);
-    transition: width 400ms;
+    transition: width 500ms;
   }

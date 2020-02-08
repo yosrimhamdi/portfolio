@@ -6501,7 +6501,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     _createClass(s, [{
       key: "loadFiles",
       value: function loadFiles() {
-        this.queue.loadFile("../../../assets/images/stars.jpg");
+        window.innerWidth >= 1024 ? this.queue.loadFile("../../../assets/images/stars.jpg") : (this.updateProgressBar({
+          progress: 1
+        }), this.animateLoadingScreen());
       }
     }, {
       key: "setEvents",
@@ -6515,7 +6517,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }
     }, {
       key: "animateLoadingScreen",
-      value: function animateLoadingScreen(e) {
+      value: function animateLoadingScreen() {
         var _this = this;
 
         setTimeout(function () {
