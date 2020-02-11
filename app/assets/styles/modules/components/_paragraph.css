@@ -1,24 +1,24 @@
 .paragraph {
   text-align: justify;
   text-align-last: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 
   @mixin atLarge {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
-  
+
   &--last-align-left {
     text-align-last: left;
   }
   &--margin-b-tiny {
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
   &--margin-b {
     margin-bottom: 2.5em;
   }
   &--white {
     color: white;
-  }  
+  }
   &--blue {
     color: $mainColor;
   }
@@ -41,9 +41,6 @@
     font-weight: 100;
   }
   &--text-shadow {
-    text-shadow: 2px 1px 3px rgba(0,0,0,.1) ;
-  }
-  &--Mansalva {
-    font-family:  "Mansalva", sans-serif;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
   }
 }

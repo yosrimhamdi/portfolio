@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,400,600,600i,800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,400,400i,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -429,11 +428,11 @@ body, html {
   text-align: justify;
   -moz-text-align-last: center;
        text-align-last: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 @media (min-width: 1024px) {
 .paragraph {
-    font-size: .9rem
+    font-size: 0.9rem
 }
   }
 .paragraph--last-align-left {
@@ -441,7 +440,7 @@ body, html {
          text-align-last: left;
   }
 .paragraph--margin-b-tiny {
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
   }
 .paragraph--margin-b {
     margin-bottom: 2.5em;
@@ -471,10 +470,7 @@ body, html {
     font-weight: 100;
   }
 .paragraph--text-shadow {
-    text-shadow: 2px 1px 3px rgba(0,0,0,.1) ;
-  }
-.paragraph--Mansalva {
-    font-family:  "Mansalva", sans-serif;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
   }
 .icon {
   position: relative;
@@ -896,15 +892,14 @@ body, html {
   color: #7f7f7f;
 }
 .footer__upper-content {
-    padding: .7em 10px;
+    padding: 0.7em 10px;
   }
-.footer__copyright{
-    padding-top: .4em;
-    padding-bottom: .4em;
-    border-top: .5px solid rgb(214, 214, 214);
+.footer__copyright {
+    padding: 0.7em 0;
+    border-top: 0.5px solid rgb(214, 214, 214);
   }
 .footer__copyright-paragraph {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 400;
     text-align: center;
   }

@@ -3,15 +3,14 @@
   color: $darkGrey;
 
   &__upper-content {
-    padding: .7em 10px;
+    padding: 0.7em 10px;
   }
-  &__copyright{
-    padding-top: .4em;
-    padding-bottom: .4em;
-    border-top: .5px solid rgb(214, 214, 214);
+  &__copyright {
+    padding: 0.7em 0;
+    border-top: 0.5px solid rgb(214, 214, 214);
   }
   &__copyright-paragraph {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 400;
     text-align: center;
   }
