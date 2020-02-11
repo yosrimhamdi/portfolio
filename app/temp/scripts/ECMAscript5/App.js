@@ -5532,7 +5532,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
               }
 
               if ("`" === o.charAt(0)) {
-                for (; "`" !== e.substr(t + i).charAt(0) && !(t + ++i > e.length);) {
+                for (; "`" !== e.substr(t + i).charAt(0) && (i++, !(t + i > e.length));) {
                   ;
                 }
 
@@ -6153,7 +6153,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
           break;
 
         case "image":
-          ;
           if ("svg" == s.tmp.img_type) var i = e.img.obj;else i = s.tmp.img_obj;
           i && s.canvas.ctx.drawImage(i, e.x - t, e.y - t, 2 * t, 2 * t / e.img.ratio);
       }
