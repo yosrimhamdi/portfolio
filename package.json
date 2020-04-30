@@ -29,7 +29,7 @@
   "dependencies": {
     "email-validator": "^2.0.4",
     "emailjs-com": "^2.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lazysizes": "^5.2.0",
     "particles.js": "^2.0.0",
     "picturefill": "^3.0.3",
