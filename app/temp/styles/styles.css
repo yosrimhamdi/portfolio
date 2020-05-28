@@ -874,6 +874,16 @@ body, html {
     display: inline-block;
     background-color: white;
   }
+.form__input:not(:-moz-placeholder-shown) + .form__placeholder {
+      top: 0;
+      font-size: .7rem;
+      text-shadow: 0 0 1px rgba(0,0,0, .3);
+    }
+.form__input:not(:-ms-input-placeholder) + .form__placeholder {
+      top: 0;
+      font-size: .7rem;
+      text-shadow: 0 0 1px rgba(0,0,0, .3);
+    }
 .form__input:not(:placeholder-shown) + .form__placeholder {
       top: 0;
       font-size: .7rem;
