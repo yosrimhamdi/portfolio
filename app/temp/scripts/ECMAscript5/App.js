@@ -6475,12 +6475,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return t.indexOf(e) > -1;
   }
 
-  Object.deepExtend = function (e, t) {
-    for (var n in t) {
-      t[n] && t[n].constructor && t[n].constructor === Object ? (e[n] = e[n] || {}, arguments.callee(e[n], t[n])) : e[n] = t[n];
+  Object.deepExtend = function e(t, n) {
+    for (var r in n) {
+      n[r] && n[r].constructor && n[r].constructor === Object ? (t[r] = t[r] || {}, e(t[r], n[r])) : t[r] = n[r];
     }
 
-    return e;
+    return t;
   }, window.requestAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
     window.setTimeout(e, 1e3 / 60);
   }, window.cancelRequestAnimFrame = window.cancelAnimationFrame || window.webkitCancelRequestAnimationFrame || window.mozCancelRequestAnimationFrame || window.oCancelRequestAnimationFrame || window.msCancelRequestAnimationFrame || clearTimeout, window.pJSDom = [], window.particlesJS = function (e, t) {
