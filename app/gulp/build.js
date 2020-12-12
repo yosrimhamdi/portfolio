@@ -28,20 +28,8 @@ const usemin = () =>
     )
     .pipe(dest('./dist/'));
 
-const copyFolders = () => {
-  const paths = [
-    './app/**/*.*',
-    '!./app/assets/',
-    '!./app/assets/**/*.*',
-    '!./app/temp/',
-    '!./app/temp/**/*.*',
-    '!./app/gulp/',
-    '!./app/gulp/**/*.*',
-    '!./app/index.html',
-  ];
-
-  return src(paths).pipe(dest('./dist/'));
-};
+const copyParticlesConfig = () =>
+  src('./app/assets/particles.json').pipe(dest('./dist/assets'));
 
 task(
   'build',
@@ -51,7 +39,7 @@ task(
     compileStyles,
     deleteDist,
     compressImages,
-    copyFolders,
+    copyParticlesConfig,
     usemin,
     createServer.bind(this, 'dist'),
   ),
