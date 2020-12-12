@@ -13,7 +13,7 @@ import 'particles.js';
 import Typed from 'typed.js';
 
 new ProgressOnScroll();
-particlesJS.load('particles-js', '/assets/particles.json', () => 0);
+particlesJS.load('particles__container', '/assets/particles.json', () => 0);
 new UpdateVh();
 new SlideOnClick();
 new Typed('.professional-skill', {

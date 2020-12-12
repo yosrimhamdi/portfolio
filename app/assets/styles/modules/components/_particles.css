@@ -1,0 +1,34 @@
+.particles {
+  position: relative;
+  display: none;
+  @mixin half-screen;
+
+  @mixin atLarge {
+    display: block;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 29, 39, 0.76);
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}

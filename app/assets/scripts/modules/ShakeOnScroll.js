@@ -9,13 +9,13 @@ class ShakeOnScroll {
   }
   setUpWaypoint() {
     const that = this;
-      new Waypoint({
-        element: that.triggerPoint[0],
-        handler: () => {
-          this.elements.addClass("shakeOnScroll");
-        },
-        offset: '80%'
-      });
+    new Waypoint({
+      element: that.triggerPoint[0],
+      handler: () => {
+        this.elements.addClass('shakeOnScroll');
+      },
+      offset: '80%',
+    });
   }
 }
 

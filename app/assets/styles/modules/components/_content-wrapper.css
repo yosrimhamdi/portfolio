@@ -5,7 +5,7 @@
 
   height: 100vh;
 
-  &__particules-wrapper {
+  &__hero {
     @mixin atLarge {
       position: fixed;
     }

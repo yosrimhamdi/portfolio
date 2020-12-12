@@ -13,18 +13,17 @@ class SlideXOnScroll {
   }
   setWaypoint() {
     const that = this;
-    this.elements.each((index,el) => {
+    this.elements.each((index, el) => {
       new Waypoint({
-       element: el,
-       handler: () => {
-         $(el).addClass(`${that.animationClass}--is-active`);
-         setTimeout(Waypoint.refreshAll, 1);
-       },
-       offset: that.offset
+        element: el,
+        handler: () => {
+          $(el).addClass(`${that.animationClass}--is-active`);
+          setTimeout(Waypoint.refreshAll, 1);
+        },
+        offset: that.offset,
       });
-     });
+    });
   }
-
 }
 
 export default SlideXOnScroll;

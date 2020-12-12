@@ -7,10 +7,13 @@ const nested = require('postcss-nested');
 const autoprefixer = require('autoprefixer');
 const hexrgba = require('postcss-hexrgba');
 
-const compileStyles = () =>
+const compileStyles = done => {
   src('./app/assets/styles/styles.css')
     .pipe(postcss([imports, mixins, autoprefixer, nested, variables, hexrgba]))
     .pipe(dest('./app/temp/styles/'));
+
+  done();
+};
 
 module.exports = {
   compileStyles,

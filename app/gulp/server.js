@@ -8,12 +8,24 @@ const createServer = baseDir => {
       baseDir: baseDir,
     },
   });
+
+  return null;
 };
 
-const injectStyles = () => src('./app/temp/styles/styles.css').pipe(stream());
+const injectStyles = done => {
+  src('./app/temp/styles/styles.css').pipe(stream());
+
+  done();
+};
+
+const reloadBrowser = done => {
+  reload();
+
+  done();
+};
 
 module.exports = {
   injectStyles,
   createServer,
-  reloadBrowser: reload,
+  reloadBrowser,
 };

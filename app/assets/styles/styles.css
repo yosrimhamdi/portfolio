@@ -5,12 +5,11 @@
 @import './modules/base/_animations';
 @import './modules/layouts/_flexbox';
 @import './modules/layouts/_grid';
-@import './modules/components/_animated-hero';
+@import './modules/components/_particles';
 @import './modules/components/_content-wrapper';
 @import './modules/components/_avatar';
 @import './modules/components/_wrapper';
 @import './modules/components/_page-section';
-@import './modules/components/_half-screen';
 @import './modules/components/_headline';
 @import './modules/components/_paragraph';
 @import './modules/components/_icon';

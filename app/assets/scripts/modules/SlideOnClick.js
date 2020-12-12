@@ -4,7 +4,7 @@ class SlideOnClick {
   constructor() {
     this.button = $('.button-main');
     this.contentWrapper = $('.content-wrapper');
-    this.animatedHero = $('.animated-hero');
+    this.animatedHero = $('.particles');
     this.html = $('html');
     this.disableJump();
     this.initialClasses();
@@ -26,11 +26,11 @@ class SlideOnClick {
   }
   disableJump() {
     if (window.innerWidth >= 1024) {
-      this.button.attr('href','#1');
+      this.button.attr('href', '#1');
     } else {
       this.html.addClass('overflow-x-visible');
     }
   }
-};
+}
 
 export default SlideOnClick;
