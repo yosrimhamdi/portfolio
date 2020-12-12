@@ -7,7 +7,9 @@ const { compileStyles } = require('./styles');
 const eye = () => {
   createServer('app');
 
-  watch(['./app/*.html', './app/assets/particles.json'], reloadBrowser);
+  watch('./app/*.html', reloadBrowser);
+
+  watch('./app/assets/particles.json', reloadBrowser);
 
   watch('./app/assets/styles/**/*.css', series(compileStyles, injectStyles));
 

@@ -2,9 +2,10 @@
   @mixin atLarge {
     width: 150vw;
   }
+
   height: 100vh;
 
-  &__banner {
+  &__particules-wrapper {
     @mixin atLarge {
       position: fixed;
     }
