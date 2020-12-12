@@ -1,31 +1,33 @@
-const gulp  = require('gulp'),
-      clean = require('gulp-clean'),
-      imagemin = require('gulp-imagemin'),
-      gulpUsemin = require('gulp-usemin'),
-      cssnano = require('gulp-cssnano'),
-      uglify = require('gulp-uglify'),
-      rev = require('gulp-rev'),
-      scripts = require('./scripts'),
-      styles = require('./styles'),
-      server = require('./server');
+const { src, dest, series, task } = require('gulp');
+const clean = require('gulp-clean');
+const imagemin = require('gulp-imagemin');
+const gulpUsemin = require('gulp-usemin');
+const cssnano = require('gulp-cssnano');
+const uglify = require('gulp-uglify');
+const rev = require('gulp-rev');
 
-const deleteDist = () => {
-  return gulp.src('./dist', {read: false, allowEmpty: true})
-             .pipe(clean());
-};
-const compressImages = () => {
-  return gulp.src('./app/assets/images/**/*.*')
-             .pipe(imagemin())
-             .pipe(gulp.dest('./dist/assets/images/'));
-};
-const usemin = () => {
-  return gulp.src('./app/index.html')
-             .pipe(gulpUsemin({
-               css:[() => rev(), () => cssnano()],
-               js:[() => rev(), () => uglify()]
-             }))
-             .pipe(gulp.dest('./dist/'));
-};
+const { bundle, toES5 } = require('./scripts');
+const { compileStyles } = require('./styles');
+const { createServer } = require('./server');
+
+const deleteDist = () =>
+  src('./dist', { read: false, allowEmpty: true }).pipe(clean());
+
+const compressImages = () =>
+  src('./app/assets/images/**/*.*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/assets/images/'));
+
+const usemin = () =>
+  src('./app/index.html')
+    .pipe(
+      gulpUsemin({
+        css: [() => rev(), () => cssnano()],
+        js: [() => rev(), () => uglify()],
+      }),
+    )
+    .pipe(dest('./dist/'));
+
 const copyFolders = () => {
   const paths = [
     './app/**/*.*',
@@ -35,9 +37,22 @@ const copyFolders = () => {
     '!./app/temp/**/*.*',
     '!./app/gulp/',
     '!./app/gulp/**/*.*',
-    '!./app/index.html'
+    '!./app/index.html',
   ];
-  return gulp.src(paths)
-             .pipe(gulp.dest('./dist/'));
+
+  return src(paths).pipe(dest('./dist/'));
 };
-gulp.task('build', gulp.series(scripts.bundle, scripts.es5, styles.compileStyles ,deleteDist, compressImages, copyFolders, usemin, server.createServer.bind(this,'dist')));
+
+task(
+  'build',
+  series(
+    bundle,
+    toES5,
+    compileStyles,
+    deleteDist,
+    compressImages,
+    copyFolders,
+    usemin,
+    createServer.bind(this, 'dist'),
+  ),
+);

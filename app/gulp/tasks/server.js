@@ -1,22 +1,19 @@
-const gulp = require('gulp'),
-      browserSync = require('browser-sync').create();
-      
+const { src } = require('gulp');
+const { init, stream, reload } = require('browser-sync').create();
+
 const createServer = baseDir => {
-  browserSync.init({
+  init({
     notify: false,
     server: {
-      baseDir: baseDir
-    }
+      baseDir: baseDir,
+    },
   });
 };
 
-const injectStyles = () => {
-  return gulp.src('./app/temp/styles/styles.css')
-             .pipe(browserSync.stream());
-}; 
+const injectStyles = () => src('./app/temp/styles/styles.css').pipe(stream());
 
 module.exports = {
   injectStyles,
   createServer,
-  reloadBrowser: browserSync.reload
-}
+  reloadBrowser: reload,
+};

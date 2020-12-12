@@ -1,23 +1,17 @@
-const { watch, seires } = require('gulp');
+const { watch, series, task } = require('gulp');
 
-const server = require('./server'),
-  scripts = require('./scripts'),
-  styles = require('./styles');
+const { reloadBrowser, injectStyles, createServer } = require('./server');
+const { bundle, toES5 } = require('./scripts');
+const { compileStyles } = require('./styles');
 
 const eye = () => {
-  server.createServer('app');
+  createServer('app');
 
-  watch(['./app/*.html', './app/assets/particles.json'], server.reloadBrowser);
+  watch(['./app/*.html', './app/assets/particles.json'], reloadBrowser);
 
-  watch(
-    './app/assets/styles/**/*.css',
-    series(styles.compileStyles, server.injectStyles),
-  );
+  watch('./app/assets/styles/**/*.css', series(compileStyles, injectStyles));
 
-  watch(
-    './app/assets/scripts/**/*.js',
-    series(scripts.bundle, scripts.es5, server.reloadBrowser),
-  );
+  watch('./app/assets/scripts/**/*.js', series(bundle, toES5, reloadBrowser));
 };
 
-gulp.task('watch', eye);
+task('watch', eye);
