@@ -6,7 +6,7 @@ const cssnano = require('gulp-cssnano');
 const uglify = require('gulp-uglify');
 const rev = require('gulp-rev');
 
-const { bundle, toES5 } = require('./scripts');
+const { bundleJs, toES5 } = require('./scripts');
 const { compileStyles } = require('./styles');
 const { createServer } = require('./server');
 
@@ -46,7 +46,7 @@ const copyFolders = () => {
 task(
   'build',
   series(
-    bundle,
+    bundleJs,
     toES5,
     compileStyles,
     deleteDist,

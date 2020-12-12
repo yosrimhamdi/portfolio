@@ -3,15 +3,12 @@ const webpack = require('webpack-stream');
 const babel = require('gulp-babel');
 const config = require('../../webpack.config.js');
 
-const bundle = done => {
+const bundleJs = () =>
   src('./app/assets/scripts/*.js')
     .pipe(webpack(config))
     .pipe(dest('./app/temp/scripts/bundled/'));
 
-  done();
-};
-
-const toES5 = done => {
+const toES5 = () =>
   src('./app/temp/scripts/bundled/*.js')
     .pipe(
       babel({
@@ -20,10 +17,7 @@ const toES5 = done => {
     )
     .pipe(dest('./app/temp/scripts/ECMAscript5/'));
 
-  done();
-};
-
 module.exports = {
-  bundle,
+  bundleJs,
   toES5,
 };
