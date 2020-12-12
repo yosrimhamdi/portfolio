@@ -44,3 +44,4 @@ task(
     createServer.bind(this, 'dist'),
   ),
 );
+console.log(process.NODE_ENV);
