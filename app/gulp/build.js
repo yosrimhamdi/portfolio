@@ -8,10 +8,6 @@ const rev = require('gulp-rev');
 
 const { bundleJs, toES5 } = require('./scripts');
 const { compileStyles } = require('./styles');
-const { createServer } = require('./server');
-
-const deleteDist = () =>
-  src('./dist', { read: false, allowEmpty: true }).pipe(clean());
 
 const compressImages = () =>
   src('./app/assets/images/**/*.*')
@@ -37,11 +33,8 @@ task(
     bundleJs,
     toES5,
     compileStyles,
-    deleteDist,
     compressImages,
     copyParticlesConfig,
     usemin,
-    createServer.bind(this, 'dist'),
   ),
 );
-console.log(process.NODE_ENV);
