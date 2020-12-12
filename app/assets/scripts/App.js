@@ -13,7 +13,7 @@ import 'particles.js';
 import Typed from 'typed.js';
 
 new ProgressOnScroll();
-particlesJS.load('particles-js', '/particles/particles.json', () => 0);
+particlesJS.load('particles-js', '/assets/particles.json', () => 0);
 new UpdateVh();
 new SlideOnClick();
 new Typed('.professional-skill', {
@@ -21,11 +21,11 @@ new Typed('.professional-skill', {
     'web developer',
     'web expert^3000',
     'front-end engineer',
-    'front-end developer^3000'
+    'front-end developer^3000',
   ],
   loop: true,
   typeSpeed: 70,
-  backSpeed: 20
+  backSpeed: 20,
 });
 new SendEmail();
 new ShakeOnScroll();
