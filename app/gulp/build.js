@@ -1,5 +1,4 @@
 const { src, dest, series, task } = require('gulp');
-const clean = require('gulp-clean');
 const imagemin = require('gulp-imagemin');
 const gulpUsemin = require('gulp-usemin');
 const cssnano = require('gulp-cssnano');
