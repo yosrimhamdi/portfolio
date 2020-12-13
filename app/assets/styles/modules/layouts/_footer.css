@@ -5,26 +5,35 @@
   &__upper-content {
     padding: 0.7em 10px;
   }
+
   &__copyright {
     padding: 0.7em 0;
-    border-top: 0.5px solid rgb(214, 214, 214);
+    border-top: 1px solid $darkGrey;
   }
+
   &__copyright-paragraph {
     font-size: 0.8rem;
     font-weight: 400;
     text-align: center;
   }
-  &__logo {
-    width: 100px;
-    height: 100px;
-    margin-right: auto;
-    @mixin atMedium {
-      width: 120px;
-      height: 120px;
-      margin-right: 2em;
-    }
-  }
+
   &__margin-r {
     margin-right: 1em;
+  }
+
+  &__link {
+    color: inherit;
+
+    &:active {
+      color: inherit;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

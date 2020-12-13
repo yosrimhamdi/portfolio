@@ -5,23 +5,27 @@
   &--big {
     font-size: 1.5rem;
   }
+
   &--move-down-3px {
     top: 3px;
   }
   &--right-padding {
-    padding-right: .7em;
+    padding-right: 0.7em;
   }
+
   &--white {
     color: white;
   }
+
   &--color-grey {
     color: $darkGrey;
   }
+
   &--huge {
     font-size: 2.5rem;
   }
+
   &--shadow {
-    text-shadow: -3px 3px 3px rgba(#000, .2);
+    text-shadow: -3px 3px 3px rgba(#000, 0.2);
   }
 }
-
