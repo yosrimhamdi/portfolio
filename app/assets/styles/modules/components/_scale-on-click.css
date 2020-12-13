@@ -1,9 +1,8 @@
 .scale-on-click {
   transform-origin: center right;
-  transform: scale(1);
   transition: transform 340ms;
 
   &--clicked {
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 }
