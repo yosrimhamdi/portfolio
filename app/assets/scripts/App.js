@@ -42,5 +42,5 @@ new UpdateVh();
 new SendEmail();
 new ShakeOnScroll();
 new FadeInOnScroll();
-new UpdateYear();
 new LoadingBar();
+new UpdateYear();
