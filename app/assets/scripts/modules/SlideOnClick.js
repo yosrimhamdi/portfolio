@@ -9,7 +9,6 @@ class SlideOnClick {
 
     this.initialClasses();
     this.events();
-    this.disableJump();
   }
 
   events() {
@@ -24,18 +23,6 @@ class SlideOnClick {
   animate() {
     this.contentWrapper.toggleClass('slide-on-click--clicked');
     this.particles.toggleClass('scale-on-click--clicked');
-
-    if (window.innerWidth >= 1024) {
-      this.html.toggleClass('overflow-x-visible');
-    }
-  }
-
-  disableJump() {
-    if (window.innerWidth >= 1024) {
-      this.button.attr('href', '#1');
-    } else {
-      this.html.addClass('overflow-x-visible');
-    }
   }
 }
 

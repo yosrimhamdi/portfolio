@@ -13,10 +13,14 @@
   transition: all 200ms;
   z-index: 1;
   box-shadow: 0 0 8px -2px rgba(#000, 0.3);
+  border: none;
+  outline: none;
+  cursor: pointer;
 
   @mixin atLarge {
     font-size: 0.9rem;
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -29,22 +33,27 @@
     z-index: -1;
     transition: all 300ms;
   }
+
   &:hover {
     letter-spacing: 2px;
     box-shadow: 0 0 15px -2px rgba(#000, 0.3);
     transform: translateY(-2px);
+
     &::after {
       transform: scale(1.25, 1.5);
       opacity: 0;
     }
   }
+
   &:active {
     transform: translateY(-1px);
   }
+
   &--full-width {
     width: 100%;
     text-align: center;
   }
+
   &--no-t-margin {
     margin-top: 0;
   }
