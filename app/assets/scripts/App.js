@@ -1,3 +1,6 @@
+import Typed from 'typed.js';
+import './modules/particles.js';
+
 import LoadingBar from './modules/LoadingBar';
 import UpdateYear from './modules/UpdateYear';
 import FadeInOnScroll from './modules/FadeInOnScroll';
@@ -7,24 +10,13 @@ import UpdateVh from './modules/UpdateVh';
 import SlideOnClick from './modules/SlideOnClick';
 import TriggerProgressBarAnimationOnWaypoint from './modules/TriggerProgressBarAnimationOnWaypoint';
 import CreateSkill from './modules/CreateSkill';
-import './modules/particles.js';
-import Typed from 'typed.js';
-
-new CreateSkill('html', '80%');
-new CreateSkill('css', '90%');
-new CreateSkill('git', '60%');
-new CreateSkill('javascript', '75%');
-new CreateSkill('gulp', '98%');
-
-new TriggerProgressBarAnimationOnWaypoint();
-
-//eslint-disable-next-line
-particlesJS.load('particles__container', '/assets/particles.json', () => 0);
-new UpdateVh();
 
 if (window.innerWidth >= 1024) {
   new SlideOnClick();
 }
+
+//eslint-disable-next-line
+particlesJS.load('particles__container', '/assets/particles.json', () => 0);
 
 new Typed('.professional-skill', {
   strings: [
@@ -37,6 +29,16 @@ new Typed('.professional-skill', {
   typeSpeed: 70,
   backSpeed: 20,
 });
+
+new CreateSkill('html', '80%');
+new CreateSkill('css', '90%');
+new CreateSkill('git', '60%');
+new CreateSkill('javascript', '75%');
+new CreateSkill('gulp', '98%');
+
+new TriggerProgressBarAnimationOnWaypoint();
+
+new UpdateVh();
 new SendEmail();
 new ShakeOnScroll();
 new FadeInOnScroll();
