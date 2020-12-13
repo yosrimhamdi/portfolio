@@ -9,6 +9,11 @@ body {
   color: $mainGrey;
   -ms-overflow-style: none;
   overflow: hidden;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
   &::-webkit-scrollbar {
     display: none;
