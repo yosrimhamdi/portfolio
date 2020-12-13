@@ -16,8 +16,8 @@
   &::before {
     content: attr(data-inner-text);
     @mixin xy-centered;
-    width: 700%;
     font-weight: 800;
+    white-space: nowrap;
     text-align: center;
     color: rgba($mainBlack, 0.07);
     font-size: 3.2rem;
@@ -26,6 +26,7 @@
       font-size: 5rem;
     }
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -41,12 +42,15 @@
   &--white {
     color: white;
   }
+
   &--thin {
     font-weight: 200;
   }
+
   &--bold {
     font-weight: 600;
   }
+
   &--tiny {
     font-size: 0.8rem;
 
@@ -54,68 +58,83 @@
       font-size: 1rem;
     }
   }
+
   &--small {
     font-size: 1rem;
     @mixin atLarge {
       font-size: 1.2rem;
     }
   }
+
   &--small-plus {
     font-size: 0.95rem;
     @mixin atLarge {
       font-size: 1.2rem;
     }
   }
+
   &--medium {
     font-size: 1.2rem;
     @mixin atLarge {
       font-size: 1.6rem;
     }
   }
+
   &--large {
     font-size: 1.5rem;
     @mixin atLarge {
       font-size: 2rem;
     }
   }
+
   &--italic {
     font-style: italic;
   }
+
   &--margin-b-tiny {
     margin-bottom: 0.3em;
     @mixin atLarge {
       margin-bottom: 0.4em;
     }
   }
+
   &--margin-b-small {
     margin-bottom: 1em;
   }
+
   &--simple {
     text-transform: inherit;
   }
+
   &--align-left {
     text-align: left;
   }
+
   &--align-left-until-medium {
     text-align: left;
     @mixin atMedium {
       text-align: center;
     }
   }
+
   &--last-align-center {
     text-align-last: center;
   }
+
   &--no-b-line {
     &::after {
       content: none;
     }
   }
+
   &--underline {
     text-decoration: underline;
   }
+
   &--text-shadow {
     text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
   }
+
   &--capitalize {
     text-transform: capitalize;
   }
