@@ -1,8 +1,5 @@
 import LoadingBar from './modules/LoadingBar';
 import UpdateYear from './modules/UpdateYear';
-import ScrollBar from './modules/ScrollBar';
-import $ from 'jquery';
-import SlideXOnScroll from './modules/SlideXOnScroll';
 import FadeInOnScroll from './modules/FadeInOnScroll';
 import ShakeOnScroll from './modules/ShakeOnScroll';
 import SendEmail from './modules/SendEmail';
@@ -13,6 +10,8 @@ import 'particles.js';
 import Typed from 'typed.js';
 
 new ProgressOnScroll();
+
+//eslint-disable-next-line
 particlesJS.load('particles__container', '/assets/particles.json', () => 0);
 new UpdateVh();
 
@@ -34,6 +33,5 @@ new Typed('.professional-skill', {
 new SendEmail();
 new ShakeOnScroll();
 new FadeInOnScroll();
-new ScrollBar();
 new UpdateYear();
 new LoadingBar();

@@ -1,14 +1,19 @@
 class ScrollBar {
   constructor() {
     this.scrollBar = document.querySelector('.scroll-bar');
-    this.getMainContentVisibleHeight = document.querySelector('.content-wrapper__main-content').offsetHeight - window.innerHeight;
+    this.mainContent = document.querySelector('.content-wrapper__main-content');
+
     this.setEvent();
   }
+
   setEvent() {
     window.addEventListener('scroll', this.changeScrollBarWidth.bind(this));
   }
+
   changeScrollBarWidth() {
-    this.scrollBar.style.height = `${(window.scrollY*100)/this.getMainContentVisibleHeight}%`
+    const fullHeight = this.mainContent.offsetHeight - window.innerHeight;
+
+    this.scrollBar.style.width = `${(window.scrollY * 100) / fullHeight}%`;
   }
 }
 

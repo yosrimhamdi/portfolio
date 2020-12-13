@@ -12,6 +12,8 @@
   }
 
   &__main-content {
+    position: relative;
+
     @mixin atLarge {
       margin-left: 100vw;
       width: 50vw;
