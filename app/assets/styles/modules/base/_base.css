@@ -8,7 +8,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: $mainGrey;
   -ms-overflow-style: none;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &::-webkit-scrollbar {
     display: none;

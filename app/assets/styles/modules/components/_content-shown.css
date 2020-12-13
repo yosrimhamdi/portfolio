@@ -1,0 +1,7 @@
+.content-shown {
+  overflow-y: visible;
+
+  .content-wrapper {
+    left: -50vw;
+  }
+}

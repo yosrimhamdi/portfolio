@@ -1,9 +1,12 @@
 .content-wrapper {
+  position: relative;
+  left: 0;
+  height: 100vh;
+  transition: left 400ms;
+
   @mixin atLarge {
     width: 150vw;
   }
-
-  height: 100vh;
 
   &__hero {
     @mixin atLarge {

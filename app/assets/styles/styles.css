@@ -24,7 +24,7 @@
 @import './modules/components/_swiper';
 @import './modules/components/_form';
 @import './modules/layouts/_footer';
-@import './modules/components/_slide-on-click';
+@import './modules/components/_content-shown';
 @import './modules/components/_scale-on-click';
 @import './modules/components/_progress-on-scroll';
 @import './modules/components/_overflow-x-visible';

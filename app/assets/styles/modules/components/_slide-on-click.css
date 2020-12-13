@@ -1,9 +1,0 @@
-.slide-on-click {
-  position: relative;
-  left: 0;
-  transition: left 400ms;
-
-  &--clicked {
-    left: -50vw;
-  }
-}
