@@ -1,5 +1,0 @@
-.progress-on-scroll {
-  &::after {
-    animation: slide 1000ms forwards;
-  }
-}

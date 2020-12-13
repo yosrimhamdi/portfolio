@@ -1,74 +1,61 @@
-.progress-bar {
+.skill {
+  &__title {
+    text-transform: uppercase;
+    color: $mainBlack;
+    font-size: 0.9rem;
+    margin-bottom: 0.1em;
+
+    @mixin atLarge {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__percentage {
+    font-weight: 800;
+    color: $mainBlack;
+    font-size: 0.8rem;
+    @mixin atLarge {
+      font-size: 1rem;
+    }
+  }
 
   &:not(:last-child) {
     margin-bottom: 1em;
   }
-  &__bar {
+
+  &:last-child {
+    &::after {
+      content: '● ● ●';
+      color: $mainColor;
+      display: inline-block;
+      font-size: 0.3rem;
+      margin-top: 1.2em;
+
+      @mixin atMedium {
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  &__percentage-bar-container {
     width: 100%;
     height: 5px;
     background-color: rgb(235, 235, 235);
     position: relative;
     border-radius: 8px;
     overflow-x: hidden;
+  }
 
-    &::after {
-      content: '';
-      position: relative;
-      left: -100%;
-      display: block;
-      height: 100%;
-      background-color: $mainColor;
-      border-radius: inherit;
-    }
-    &--80::after {
-      width: 80%;
-    }
-    &--90::after {
-      width: 90%;
-    }
-    &--75::after {
-      width: 75%;
-    }
-    &--98::after {
-      width: 98%;
-    }
-    &--100::after {
-      width: 100%;
-    }
-    &--60::after {
-      width: 60%;
-    }
-  }
-  &__details {
-    margin-bottom: .1em;
-  }
-  &__title {
-    text-transform: uppercase;
-    color: $mainBlack;
-    font-size: .9rem;
-    @mixin atLarge {
-      font-size: 1.2rem;      
-    }
-  }
-  &__percentage {
-    font-weight: 800;
-    color: $mainBlack;
-    font-size: .8rem;
-    @mixin atLarge {
-      font-size: 1rem;      
-    }
-  }
-  &:last-child {
-    &::after {
-      content: '● ● ●';
-      color: $mainColor;
-      display: inline-block;
-      font-size: .3rem;
-      margin-top: 1.2em;
+  &__percentage-bar {
+    position: relative;
+    left: -100%;
+    height: 100%;
+    background-color: $mainColor;
+    border-radius: inherit;
+    transition: left 1000ms;
 
-      @mixin atMedium {
-        font-size: .5rem;
-      }
+    &--animated {
+      left: 0;
     }
   }
 }

@@ -3,19 +3,20 @@ import $ from 'jquery';
 
 class ProgressOnScroll {
   constructor() {
-    this.progressBars = $('.progress-bar__bar');
+    this.progressBars = $('.skill__percentage-bar');
     this.createWaypoints();
   }
   createWaypoints() {
-   this.progressBars.each(function (index,el){
-    new Waypoint({
-      element: el,
-      handler: function(direction) {
-        $(el).addClass('progress-on-scroll');
-      },
-      offset: '96%'
+    this.progressBars.each(function (index, el) {
+      //eslint-disable-next-line
+      new Waypoint({
+        element: el,
+        handler: function () {
+          $(el).addClass('skill__percentage-bar--animated');
+        },
+        offset: '96%',
+      });
     });
-   });
   }
-};
+}
 export default ProgressOnScroll;
