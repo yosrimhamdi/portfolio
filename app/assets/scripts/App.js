@@ -34,9 +34,6 @@ new Typed('.professional-skill', {
 new SendEmail();
 new ShakeOnScroll();
 new FadeInOnScroll();
-new SlideXOnScroll($('.form__group--name'), '87%', 'slideToRightOnScroll');
-new SlideXOnScroll($('.form__group--email'), '87%', 'slideToLeftOnScroll');
-new SlideXOnScroll($('.form__button'), '87%', 'slideToRightOnScroll');
 new ScrollBar();
 new UpdateYear();
 new LoadingBar();
