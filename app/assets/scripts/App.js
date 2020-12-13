@@ -6,7 +6,7 @@ import SendEmail from './modules/SendEmail';
 import UpdateVh from './modules/UpdateVh';
 import SlideOnClick from './modules/SlideOnClick';
 import ProgressOnScroll from './modules/ProgressOnScroll';
-import 'particles.js';
+import './modules/particles.js';
 import Typed from 'typed.js';
 
 new ProgressOnScroll();
