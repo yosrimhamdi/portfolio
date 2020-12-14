@@ -4,7 +4,6 @@
 @import './modules/base/_base';
 @import './modules/base/_animations';
 @import './modules/layouts/_flexbox';
-@import './modules/layouts/_grid';
 @import './modules/components/_particles';
 @import './modules/components/_content-wrapper';
 @import './modules/components/_avatar';
