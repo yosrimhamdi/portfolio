@@ -27,18 +27,6 @@
     }
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -29px;
-    display: inline-block;
-    width: 100px;
-    height: 1px;
-    background-color: $mainBlack;
-  }
-
   &--white {
     color: white;
   }
