@@ -9,6 +9,8 @@
   }
 
   &__hero {
+    width: 100vw;
+
     @mixin atLarge {
       position: fixed;
     }
