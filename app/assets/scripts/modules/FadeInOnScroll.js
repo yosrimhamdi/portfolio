@@ -2,12 +2,12 @@ import $ from 'jquery';
 
 class FadeInOnScroll {
   constructor() {
-    this.elements = $('.news__box');
+    this.elements = $('.card');
     this.setInitialClass();
     this.setWaypoints();
   }
   setInitialClass() {
-    this.elements.addClass('fadeInOnScroll');
+    this.elements.addClass('fade-in-on-scroll');
   }
   setWaypoints() {
     this.elements.each((index, el) => {
