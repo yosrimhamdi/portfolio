@@ -1,8 +1,8 @@
 .flexbox {
   display: flex;
 
-  > *:not(:last-child) {
-    margin-right: 1em;
+  & > *:not(:last-child) {
+    margin-right: 1rem;
   }
 
   &--at-large {
