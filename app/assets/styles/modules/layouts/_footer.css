@@ -21,19 +21,7 @@
     margin-right: 1em;
   }
 
-  &__link {
-    color: inherit;
-
-    &:active {
-      color: inherit;
-    }
-
-    &:visited {
-      color: inherit;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
+  &__link:hover {
+    text-decoration: underline;
   }
 }

@@ -19,3 +19,13 @@ html {
     display: none;
   }
 }
+
+a {
+  text-decoration: none;
+
+  &:visited,
+  &:active,
+  &:hover {
+    color: inherit;
+  }
+}
