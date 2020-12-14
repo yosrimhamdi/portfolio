@@ -1,4 +1,3 @@
-import '../../../../node_modules/waypoints/lib/noframework.waypoints';
 import $ from 'jquery';
 
 class ShakeOnScroll {

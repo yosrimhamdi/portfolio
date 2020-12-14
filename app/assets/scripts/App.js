@@ -1,3 +1,4 @@
+import '../../../node_modules/waypoints/lib/noframework.waypoints';
 import Typed from 'typed.js';
 import './modules/particles.js';
 

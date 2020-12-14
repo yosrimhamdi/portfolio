@@ -26,8 +26,5 @@
 @import './modules/components/_scale-on-click';
 @import './modules/components/_service';
 @import './modules/components/_shakeOnScroll';
-@import './modules/components/_slideToLeftOnScroll';
-@import './modules/components/_slideToRightOnScroll';
 @import './modules/components/_fade-in-on-scroll';
-@import './modules/components/_scroll-bar';
 @import './modules/components/_loading-screen';

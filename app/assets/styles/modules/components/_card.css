@@ -1,11 +1,14 @@
 .card {
   box-shadow: 0 0 5px rgba(#000, 0.2);
-  transition: all 200ms;
   display: block;
 
-  &--hover-effect:hover {
-    transform: scale(1.015);
-    box-shadow: 0 0 7px rgba(#000, 0.2);
+  &--hover-effect {
+    transition: all 200ms;
+
+    &:hover {
+      transform: scale(1.015);
+      box-shadow: 0 0 7px rgba(#000, 0.2);
+    }
   }
 
   &:not(:last-child) {
