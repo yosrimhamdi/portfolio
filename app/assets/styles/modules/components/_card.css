@@ -1,12 +1,10 @@
-.news {
+.card {
+  box-shadow: 0 0 5px rgba(#000, 0.2);
 
-  &__box {
-    box-shadow:0 0 5px rgba(#000, .2);
-
-    &:not(:last-child) {
-      margin-bottom: 1em;
-    }
+  &:not(:last-child) {
+    margin-bottom: 1em;
   }
+
   &__image-wrapper {
     height: 160px;
     @mixin atMedium {
@@ -18,11 +16,11 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
-  } 
+  }
   &__details {
     padding: 10px;
   }
   &__button-wrapper {
-    padding:0 3px 3px;
+    padding: 0 3px 3px;
   }
 }
