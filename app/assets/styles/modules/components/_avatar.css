@@ -1,6 +1,10 @@
 .avatar {
   position: relative;
-  order: 1;
+  text-align: center;
+  color: $mainBlack;
+  text-transform: capitalize;
+  font-family: 'Montserrat', sans-serif;
+
   @mixin half-screen;
 
   &__image {
@@ -17,6 +21,28 @@
       width: 140px;
       height: 140px;
       margin-bottom: 1.1em;
+    }
+  }
+
+  &__my-name {
+    font-weight: 400;
+    margin-bottom: 0.3em;
+    font-size: 1.5rem;
+
+    @mixin atLarge {
+      font-size: 2rem;
+      margin-bottom: 0.4em;
+    }
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 0.3em;
+    font-weight: 200;
+
+    @mixin atLarge {
+      font-size: 1.6rem;
+      margin-bottom: 0.4em;
     }
   }
 }

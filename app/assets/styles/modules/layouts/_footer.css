@@ -2,6 +2,24 @@
   background-color: $darkBlack;
   color: $darkGrey;
 
+  &__title {
+    color: white;
+    margin-bottom: 0.3em;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 2.5em;
+    font-weight: 400;
+
+    @mixin atMedium {
+      text-align: center;
+    }
+
+    @mixin atLarge {
+      margin-bottom: 0.4em;
+      font-size: 2rem;
+    }
+  }
+
   &__upper-content {
     padding: 0.7em 10px;
   }
