@@ -3,4 +3,19 @@
   padding: 1em;
   background: $gradient-5;
   flex-basis: 50%;
+  color: white;
+
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-decoration: underline;
+
+    @mixin atLarge {
+      margin-bottom: 0.4em;
+      font-size: 1rem;
+    }
+  }
 }
