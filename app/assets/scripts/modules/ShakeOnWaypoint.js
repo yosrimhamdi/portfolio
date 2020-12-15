@@ -11,7 +11,7 @@ class ShakeOnWaypoint {
     new Waypoint({
       element: that.triggerPoint[0],
       handler: () => {
-        this.elements.addClass('shakeOnScroll');
+        this.elements.addClass('shake-on-waypoint');
       },
       offset: '80%',
     });

@@ -9,7 +9,7 @@ import ShakeOnWaypoint from './modules/ShakeOnWaypoint';
 import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
 import RevealContentOnClick from './modules/RevealContentOnClick';
-import TriggerProgressBarAnimationOnWaypoint from './modules/TriggerProgressBarAnimationOnWaypoint';
+import SlideProgressBarOnWaypoint from './modules/SlideProgressBarOnWaypoint';
 import CreateSkills from './modules/CreateSkills';
 
 const { particlesJS, innerWidth } = window;
@@ -40,7 +40,7 @@ new CreateSkills({
   gulp: '98%',
 });
 
-new TriggerProgressBarAnimationOnWaypoint();
+new SlideProgressBarOnWaypoint();
 
 new UpdateVh();
 new SendSubscriptionEmail();

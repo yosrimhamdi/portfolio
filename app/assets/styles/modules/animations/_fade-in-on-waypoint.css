@@ -1,9 +1,9 @@
-.fade-in-on-scroll {
+.fade-in-on-waypoint {
   transform: translateY(30px);
   opacity: 0;
   transition: all 700ms;
 
-  &--is-active {
+  &--reached {
     transform: translateY(0);
     opacity: 1;
   }

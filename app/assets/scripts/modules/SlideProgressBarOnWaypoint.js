@@ -1,9 +1,14 @@
 import $ from 'jquery';
 
-class TriggerProgressBarAnimationOnWaypoint {
+class SlideProgressBarOnWaypoint {
   constructor() {
     this.progressBars = $('.skill__percentage-bar');
     this.createWaypoints();
+    this.setInitialClass();
+  }
+
+  setInitialClass() {
+    this.progressBars.addClass('slide-on-waypoint');
   }
 
   createWaypoints() {
@@ -12,11 +17,11 @@ class TriggerProgressBarAnimationOnWaypoint {
       new Waypoint({
         element: el,
         handler() {
-          $(el).addClass('skill__percentage-bar--animated');
+          $(el).addClass('slide-on-waypoint--reached');
         },
         offset: '96%',
       });
     });
   }
 }
-export default TriggerProgressBarAnimationOnWaypoint;
+export default SlideProgressBarOnWaypoint;

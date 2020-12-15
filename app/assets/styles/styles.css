@@ -1,9 +1,18 @@
-@import './modules/utils/_variables';
 @import './modules/utils/_mixins';
-@import './modules/base/_typography';
+@import './modules/utils/_variables';
+
 @import './modules/base/_base';
+@import './modules/base/_typography';
 @import './modules/base/_animations';
+
 @import './modules/layouts/_flexbox';
+@import './modules/layouts/_footer';
+
+@import './modules/animations/_shake-on-waypoint';
+@import './modules/animations/_content-shown';
+@import './modules/animations/_fade-in-on-waypoint';
+@import './modules/animations/_slide-on-waypoint';
+
 @import './modules/components/_particles';
 @import './modules/components/_content-wrapper';
 @import './modules/components/_avatar';
@@ -12,7 +21,6 @@
 @import './modules/components/_headline';
 @import './modules/components/_paragraph';
 @import './modules/components/_icon';
-@import './modules/components/_progress-bar';
 @import './modules/components/_background-image-section';
 @import './modules/components/_xy-centered';
 @import './modules/components/_grey-background';
@@ -21,10 +29,6 @@
 @import './modules/components/_button';
 @import './modules/components/_button-centered';
 @import './modules/components/_form';
-@import './modules/layouts/_footer';
-@import './modules/components/_content-shown';
-@import './modules/components/_scale-on-click';
 @import './modules/components/_service';
-@import './modules/components/_shakeOnScroll';
-@import './modules/components/_fade-in-on-scroll';
+@import './modules/components/_progress-bar';
 @import './modules/components/_loading-screen';

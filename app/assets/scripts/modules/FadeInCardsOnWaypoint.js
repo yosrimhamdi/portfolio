@@ -21,7 +21,7 @@ class FadeCardsInOnWaypoint {
       offset: '70%',
       element: card,
       handler() {
-        card.classList.add('fade-in-on-scroll--is-active');
+        card.classList.add('fade-in-on-waypoint--reached');
       },
     });
   }
