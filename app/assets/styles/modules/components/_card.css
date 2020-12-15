@@ -2,8 +2,8 @@
   box-shadow: 0 0 5px rgba(#000, 0.2);
   display: block;
 
-  &--hover-effect {
-    transition: all 200ms;
+  &--hoverable {
+    transition: box-shadow 200ms, transform 200ms, top 700ms, opacity 700ms;
 
     &:hover {
       transform: scale(1.015);

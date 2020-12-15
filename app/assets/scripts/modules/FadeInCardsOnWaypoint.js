@@ -11,7 +11,7 @@ class FadeCardsInOnWaypoint {
   }
 
   setInitialClass(card) {
-    card.classList.add('fade-in-on-scroll');
+    card.classList.add('fade-in-on-waypoint');
   }
 
   setWaypoints(card) {
