@@ -1,27 +1,29 @@
 class AnimateOnWaypoint {
-  constructor() {
-    this.filipingCards = document.querySelectorAll('.flipping-card');
+  constructor(selector, animationClass, offset) {
+    this.elements = document.querySelectorAll(selector);
+    this.animationClass = animationClass;
+    this.offset = offset;
 
     this.performAction(this.setInitialClass);
     this.performAction(this.setWaypoints);
   }
 
   performAction(action) {
-    this.filipingCards.forEach(action);
+    this.elements.forEach(action.bind(this));
   }
 
-  setInitialClass(card) {
-    card.classList.add('animate-f-cards-on-waypoint');
+  setInitialClass(element) {
+    element.classList.add(this.animationClass);
   }
 
-  setWaypoints(card) {
+  setWaypoints(element) {
     const { Waypoint } = window;
 
     new Waypoint({
-      offset: '70%',
-      element: card,
-      handler() {
-        card.classList.add('animate-f-cards-on-waypoint--animated');
+      offset: this.offset,
+      element,
+      handler: () => {
+        element.classList.add(`${this.animationClass}--animated`);
       },
     });
   }

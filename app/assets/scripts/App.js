@@ -5,7 +5,7 @@ import './modules/particles.js';
 import LoadingBar from './modules/LoadingBar';
 import UpdateFooterYear from './modules/UpdateFooterYear';
 import FadeInCardsOnWaypoint from './modules/FadeInCardsOnWaypoint';
-import ShakeOnWaypoint from './modules/ShakeOnWaypoint';
+import AnimateOnWaypoint from './modules/AnimateOnWaypoint';
 import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
 import RevealContentOnClick from './modules/RevealContentOnClick';
@@ -44,7 +44,7 @@ new SlideProgressBarOnWaypoint();
 
 new UpdateVh();
 new SendSubscriptionEmail();
-new ShakeOnWaypoint();
+new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
 new FadeInCardsOnWaypoint();
 new LoadingBar();
 new UpdateFooterYear();
