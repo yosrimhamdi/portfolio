@@ -1,19 +1,28 @@
-import $ from 'jquery';
-
 class ShakeOnWaypoint {
   constructor() {
-    this.elements = $('.flipping-card');
-    this.triggerPoint = $('#trigger-point');
-    this.setUpWaypoint();
+    this.filipingCards = document.querySelectorAll('.flipping-card');
+    this.triggerPoint = document.getElementById('trigger-point');
+
+    this.setWaypoint();
   }
-  setUpWaypoint() {
-    const that = this;
+
+  performAction(action) {
+    this.filipingCards.forEach(action);
+  }
+
+  shake(card) {
+    card.classList.add('shake-on-waypoint');
+  }
+
+  setWaypoint() {
+    const { Waypoint } = window;
+
     new Waypoint({
-      element: that.triggerPoint[0],
-      handler: () => {
-        this.elements.addClass('shake-on-waypoint');
-      },
       offset: '80%',
+      element: this.triggerPoint,
+      handler: () => {
+        this.performAction(this.shake);
+      },
     });
   }
 }

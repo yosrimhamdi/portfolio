@@ -1,26 +1,28 @@
-import $ from 'jquery';
-
 class SlideProgressBarOnWaypoint {
   constructor() {
-    this.progressBars = $('.skill__percentage-bar');
-    this.createWaypoints();
-    this.setInitialClass();
+    this.bars = document.querySelectorAll('.skill__percentage-bar');
+
+    this.performAction(this.setInitialClass);
+    this.performAction(this.setWaypoints);
   }
 
-  setInitialClass() {
-    this.progressBars.addClass('slide-on-waypoint');
+  performAction(action) {
+    this.bars.forEach(action);
   }
 
-  createWaypoints() {
-    this.progressBars.each(function (index, el) {
-      //eslint-disable-next-line
-      new Waypoint({
-        element: el,
-        handler() {
-          $(el).addClass('slide-on-waypoint--reached');
-        },
-        offset: '96%',
-      });
+  setInitialClass(bar) {
+    bar.classList.add('slide-on-waypoint');
+  }
+
+  setWaypoints(bar) {
+    const { Waypoint } = window;
+
+    new Waypoint({
+      offset: '96%',
+      element: bar,
+      handler() {
+        bar.classList.add('slide-on-waypoint--reached');
+      },
     });
   }
 }

@@ -1,19 +1,17 @@
-import $ from 'jquery';
-
 class RevealContentOnClick {
   constructor() {
-    this.button = $('.button-main');
-    this.body = $('body');
+    this.button = document.querySelector('.button-main');
+    this.body = document.body;
 
     this.events();
   }
 
   events() {
-    this.button.click(this.animate.bind(this));
+    this.button.addEventListener('click', this.animate.bind(this));
   }
 
   animate() {
-    this.body.toggleClass('content-shown');
+    this.body.classList.toggle('content-shown');
   }
 }
 
