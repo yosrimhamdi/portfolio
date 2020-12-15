@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class SlideOnClick {
+class RevealContentOnClick {
   constructor() {
     this.button = $('.button-main');
     this.body = $('body');
@@ -17,4 +17,4 @@ class SlideOnClick {
   }
 }
 
-export default SlideOnClick;
+export default RevealContentOnClick;

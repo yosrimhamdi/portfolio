@@ -3,17 +3,17 @@ import Typed from 'typed.js';
 import './modules/particles.js';
 
 import LoadingBar from './modules/LoadingBar';
-import UpdateYear from './modules/UpdateYear';
-import FadeInOnScroll from './modules/FadeInOnScroll';
-import ShakeOnScroll from './modules/ShakeOnScroll';
-import SendEmail from './modules/SendEmail';
+import UpdateFooterYear from './modules/UpdateFooterYear';
+import FadeInOnWaypoint from './modules/FadeInOnWaypoint';
+import ShakeOnWaypoint from './modules/ShakeOnWaypoint';
+import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
-import SlideOnClick from './modules/SlideOnClick';
+import RevealContentOnClick from './modules/RevealContentOnClick';
 import TriggerProgressBarAnimationOnWaypoint from './modules/TriggerProgressBarAnimationOnWaypoint';
 import CreateSkill from './modules/CreateSkill';
 
 if (window.innerWidth >= 1024) {
-  new SlideOnClick();
+  new RevealContentOnClick();
 }
 
 //eslint-disable-next-line
@@ -40,8 +40,8 @@ new CreateSkill('gulp', '98%');
 new TriggerProgressBarAnimationOnWaypoint();
 
 new UpdateVh();
-new SendEmail();
-new ShakeOnScroll();
-new FadeInOnScroll();
+new SendSubscriptionEmail();
+new ShakeOnWaypoint();
+new FadeInOnWaypoint();
 new LoadingBar();
-new UpdateYear();
+new UpdateFooterYear();

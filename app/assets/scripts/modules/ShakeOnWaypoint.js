@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class ShakeOnScroll {
+class ShakeOnWaypoint {
   constructor() {
     this.elements = $('.flipping-card');
     this.triggerPoint = $('#trigger-point');
@@ -18,4 +18,4 @@ class ShakeOnScroll {
   }
 }
 
-export default ShakeOnScroll;
+export default ShakeOnWaypoint;

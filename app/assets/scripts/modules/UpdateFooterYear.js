@@ -1,4 +1,4 @@
-class UpdateYear {
+class UpdateFooterYear {
   constructor() {
     this.footerYear = document.querySelector('.year');
     this.setCurrentYear();
@@ -8,4 +8,4 @@ class UpdateYear {
   }
 }
 
-export default UpdateYear;
+export default UpdateFooterYear;

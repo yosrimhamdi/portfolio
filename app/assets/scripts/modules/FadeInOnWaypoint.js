@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class FadeInOnScroll {
+class FadeInOnWaypoint {
   constructor() {
     this.elements = $('.card');
 
@@ -26,4 +26,4 @@ class FadeInOnScroll {
   }
 }
 
-export default FadeInOnScroll;
+export default FadeInOnWaypoint;
