@@ -3,7 +3,7 @@
   left: -100%;
   transition: left 1000ms;
 
-  &--reached {
+  &--animated {
     left: 0;
   }
 }

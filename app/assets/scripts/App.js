@@ -1,15 +1,13 @@
 import '../../../node_modules/waypoints/lib/noframework.waypoints';
-import Typed from 'typed.js';
 import './modules/particles.js';
+import Typed from 'typed.js';
 
 import LoadingBar from './modules/LoadingBar';
 import UpdateFooterYear from './modules/UpdateFooterYear';
-import FadeInCardsOnWaypoint from './modules/FadeInCardsOnWaypoint';
 import AnimateOnWaypoint from './modules/AnimateOnWaypoint';
 import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
 import RevealContentOnClick from './modules/RevealContentOnClick';
-import SlideProgressBarOnWaypoint from './modules/SlideProgressBarOnWaypoint';
 import CreateSkills from './modules/CreateSkills';
 
 const { particlesJS, innerWidth } = window;
@@ -17,6 +15,8 @@ const { particlesJS, innerWidth } = window;
 if (innerWidth >= 1024) {
   new RevealContentOnClick();
 }
+
+new LoadingBar();
 
 particlesJS.load('particles__container', '/assets/particles.json', () => 0);
 
@@ -40,11 +40,10 @@ new CreateSkills({
   gulp: '98%',
 });
 
-new SlideProgressBarOnWaypoint();
-
-new UpdateVh();
-new SendSubscriptionEmail();
 new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
-new FadeInCardsOnWaypoint();
-new LoadingBar();
+new AnimateOnWaypoint('.card', 'fade-in-on-waypoint', '70%');
+new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
+
+new SendSubscriptionEmail();
 new UpdateFooterYear();
+new UpdateVh();
