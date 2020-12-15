@@ -10,7 +10,7 @@ import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 import TriggerProgressBarAnimationOnWaypoint from './modules/TriggerProgressBarAnimationOnWaypoint';
-import CreateSkill from './modules/CreateSkill';
+import CreateSkills from './modules/CreateSkills';
 
 if (window.innerWidth >= 1024) {
   new RevealContentOnClick();
@@ -31,11 +31,13 @@ new Typed('.professional-skill', {
   backSpeed: 20,
 });
 
-new CreateSkill('html', '80%');
-new CreateSkill('css', '90%');
-new CreateSkill('git', '60%');
-new CreateSkill('javascript', '75%');
-new CreateSkill('gulp', '98%');
+new CreateSkills({
+  html: '80%',
+  css: '90%',
+  git: '60%',
+  javascript: '75%',
+  gulp: '98%',
+});
 
 new TriggerProgressBarAnimationOnWaypoint();
 
