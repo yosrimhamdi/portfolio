@@ -24,10 +24,11 @@
 @import './modules/components/_xy-centered';
 @import './modules/components/_grey-background';
 @import './modules/components/_flipping-card';
-@import './modules/components/_card';
 @import './modules/components/_button';
 @import './modules/components/_button-centered';
 @import './modules/components/_form';
 @import './modules/components/_service';
 @import './modules/components/_progress-bar';
 @import './modules/components/_loading-screen';
+@import './modules/components/_news';
+@import './modules/components/_project';

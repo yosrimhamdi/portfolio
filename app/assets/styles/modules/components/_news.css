@@ -1,15 +1,5 @@
-.card {
+.news {
   box-shadow: 0 0 5px rgba(#000, 0.2);
-  display: block;
-
-  &--hoverable {
-    transition: box-shadow 200ms, transform 200ms, top 700ms, opacity 700ms;
-
-    &:hover {
-      transform: scale(1.015);
-      box-shadow: 0 0 7px rgba(#000, 0.2);
-    }
-  }
 
   &:not(:last-child) {
     margin-bottom: 2.5em;
@@ -35,16 +25,11 @@
     color: $darkBlack;
     font-size: 1.3rem;
     font-weight: 500;
-    font-family: 'Montserrat';
     margin-bottom: 0.7em;
 
     &:first-letter {
       text-transform: capitalize;
     }
-  }
-
-  &__title--no-margin-bottom {
-    margin-bottom: 0;
   }
 
   &__description {

@@ -41,7 +41,7 @@ new CreateSkills({
 });
 
 new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
-new AnimateOnWaypoint('.card', 'fade-in-on-waypoint', '70%');
+new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '70%');
 new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
 
 new SendSubscriptionEmail();
