@@ -4,7 +4,7 @@ import './modules/particles.js';
 
 import LoadingBar from './modules/LoadingBar';
 import UpdateFooterYear from './modules/UpdateFooterYear';
-import FadeInOnWaypoint from './modules/FadeInOnWaypoint';
+import FadeInCardsOnWaypoint from './modules/FadeInCardsOnWaypoint';
 import ShakeOnWaypoint from './modules/ShakeOnWaypoint';
 import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
@@ -12,11 +12,12 @@ import RevealContentOnClick from './modules/RevealContentOnClick';
 import TriggerProgressBarAnimationOnWaypoint from './modules/TriggerProgressBarAnimationOnWaypoint';
 import CreateSkills from './modules/CreateSkills';
 
-if (window.innerWidth >= 1024) {
+const { particlesJS, innerWidth } = window;
+
+if (innerWidth >= 1024) {
   new RevealContentOnClick();
 }
 
-//eslint-disable-next-line
 particlesJS.load('particles__container', '/assets/particles.json', () => 0);
 
 new Typed('.professional-skill', {
@@ -44,6 +45,6 @@ new TriggerProgressBarAnimationOnWaypoint();
 new UpdateVh();
 new SendSubscriptionEmail();
 new ShakeOnWaypoint();
-new FadeInOnWaypoint();
+new FadeInCardsOnWaypoint();
 new LoadingBar();
 new UpdateFooterYear();
