@@ -3,7 +3,6 @@
 
 @import './modules/base/_base';
 @import './modules/base/_typography';
-@import './modules/base/_animations';
 
 @import './modules/layouts/_flexbox';
 @import './modules/layouts/_footer';

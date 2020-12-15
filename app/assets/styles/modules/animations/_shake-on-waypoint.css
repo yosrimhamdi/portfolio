@@ -1,3 +1,10 @@
-.shake-on-waypoint {
-  animation: shake 1500ms backwards;
+.animate-f-cards-on-waypoint {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 600ms;
+
+  &--animated {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

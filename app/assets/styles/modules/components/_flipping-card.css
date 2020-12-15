@@ -9,8 +9,8 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    transition: transform 500ms;
-    box-shadow: 0 0 5px rgba(#000, 0.2);
+    transition: transform 320ms;
+    box-shadow: 0 0 5px rgba(#000, 0.4);
   }
 
   &__front {
@@ -35,6 +35,7 @@
     position: absolute;
     top: 0;
     transform: rotateY(-180deg);
+    user-select: none;
 
     &--gradient-1 {
       background-image: $gradient-1;
@@ -60,4 +61,8 @@
   &:hover &__back {
     transform: rotateY(0);
   }
+}
+
+.test {
+  border: 1px solid red;
 }
