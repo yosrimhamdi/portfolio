@@ -10,36 +10,43 @@
   &--last-align-left {
     text-align-last: left;
   }
+
   &--margin-b-tiny {
     margin-bottom: 0.3em;
   }
+
   &--margin-b {
     margin-bottom: 2.5em;
   }
+
   &--white {
     color: white;
   }
-  &--blue {
-    color: $mainColor;
-  }
+
   &--centered {
     text-align: center;
   }
+
   &--align-left {
     text-align: left;
   }
+
   &--small {
     font-size: 1.2rem;
   }
+
   &--uppercase {
     text-transform: uppercase;
   }
+
   &--italic {
     font-style: italic;
   }
+
   &--thin {
     font-weight: 100;
   }
+
   &--text-shadow {
     text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
   }
