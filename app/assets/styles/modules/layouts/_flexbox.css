@@ -5,34 +5,8 @@
     margin-right: 1rem;
   }
 
-  &--at-large {
-    display: block;
-    @mixin atLarge {
-      display: flex;
-    }
-  }
-
-  &--align-base {
-    align-items: baseline;
-  }
-
-  &--y-centered {
-    align-items: center;
-  }
-
   &--x-centered {
     justify-content: center;
-  }
-
-  &--at-medium {
-    flex-direction: column;
-    @mixin atMedium {
-      flex-direction: row;
-    }
-  }
-
-  &__margin-l-auto {
-    margin-left: auto;
   }
 
   &--margin-b {

@@ -1,14 +1,4 @@
 .footer {
   background-color: $darkBlack;
-  color: $darkGrey;
-  padding: 1em;
-
-  &__link {
-    text-decoration: underline;
-  }
-
-  &__details {
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
+  padding: 0.7em 0;
 }
