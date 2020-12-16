@@ -3,7 +3,6 @@ import './modules/particles.js';
 import Typed from 'typed.js';
 
 import LoadingBar from './modules/LoadingBar';
-import UpdateFooterYear from './modules/UpdateFooterYear';
 import AnimateOnWaypoint from './modules/AnimateOnWaypoint';
 import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
@@ -48,5 +47,4 @@ new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
 new FlipCardsOnHover();
 
 new SendSubscriptionEmail();
-new UpdateFooterYear();
 new UpdateVh();

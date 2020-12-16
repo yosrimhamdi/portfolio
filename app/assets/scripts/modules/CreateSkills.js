@@ -4,7 +4,7 @@ class CreateSkills {
     this.skills = new Map(Object.entries(skills));
 
     // prettier-ignore
-    this.template = '<div class="skill"><div class="flexbox flexbox--align-base"><h3 class="skill__title">%TITLE%</h3><p class="skill__percentage flexbox__margin-l-auto">%PERCENTAGE%</p></div><div class="skill__percentage-bar-container"><div class="skill__percentage-bar" style="width: %PERCENTAGE%"></div></div></div>';
+    this.template = '<div class="skill"><div class="flexbox flexbox--align-base flexbox--space-between"><h3 class="skill__title">%TITLE%</h3><p class="skill__percentage">%PERCENTAGE%</p></div><div class="skill__percentage-bar-container"><div class="skill__percentage-bar" style="width: %PERCENTAGE%"></div></div></div>';
 
     this.addSkills();
   }

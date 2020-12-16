@@ -4,6 +4,15 @@
   background: $gradient-4;
   flex-basis: 50%;
   color: white;
+  margin-bottom: 0.6rem;
+
+  &:not(:last-child) {
+    margin-right: 0.6rem;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
 
   &__title {
     font-family: 'Montserrat', sans-serif;

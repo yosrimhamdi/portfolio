@@ -6,6 +6,10 @@
   height: 110px;
   color: white;
 
+  &:not(:last-child) {
+    margin-right: 1em;
+  }
+
   &:nth-child(1) {
     .flipping-card__front {
       background-color: $accent-1;

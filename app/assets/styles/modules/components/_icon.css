@@ -5,4 +5,8 @@
   &--huge {
     font-size: 2.5rem;
   }
+
+  &--margin-right {
+    margin-right: 1rem;
+  }
 }
