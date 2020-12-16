@@ -2,7 +2,9 @@
   "name": "yosrimhamdi",
   "version": "1.0.0",
   "scripts": {
-    "eslint": "eslint --init"
+    "eslint": "eslint --init",
+    "start": "gulp watch",
+    "build": " gulp build"
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",
