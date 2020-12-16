@@ -21,8 +21,7 @@
 @import './modules/components/_headline';
 @import './modules/components/_paragraph';
 @import './modules/components/_icon';
-@import './modules/components/_background-image-section';
-@import './modules/components/_xy-centered';
+@import './modules/components/_quote';
 @import './modules/components/_grey-background';
 @import './modules/components/_flipping-card';
 @import './modules/components/_button';

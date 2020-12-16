@@ -56,6 +56,10 @@
     backface-visibility: hidden;
     transition: transform 320ms;
     box-shadow: 0 0 5px rgba(#000, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__back {
@@ -66,8 +70,6 @@
   }
 
   &__details {
-    @mixin xy-centered;
-
     font-size: 1.2rem;
     text-transform: uppercase;
     text-align: center;

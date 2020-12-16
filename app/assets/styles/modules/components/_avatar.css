@@ -7,6 +7,10 @@
 
   @mixin half-screen;
 
+  &__content-wrapper {
+    @mixin xy-centered;
+  }
+
   &__image {
     border-radius: 50%;
     display: block;
