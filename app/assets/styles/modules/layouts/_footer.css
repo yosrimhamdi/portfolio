@@ -1,45 +1,14 @@
 .footer {
   background-color: $darkBlack;
   color: $darkGrey;
+  padding: 1em;
 
-  &__title {
-    color: white;
-    margin-bottom: 0.3em;
-    text-align: left;
-    font-size: 1.5rem;
-    margin-bottom: 2.5em;
-    font-weight: 400;
-
-    @mixin atMedium {
-      text-align: center;
-    }
-
-    @mixin atLarge {
-      margin-bottom: 0.4em;
-      font-size: 2rem;
-    }
-  }
-
-  &__upper-content {
-    padding: 0.7em 10px;
-  }
-
-  &__copyright {
-    padding: 0.7em 0;
-    border-top: 1px solid $darkGrey;
-  }
-
-  &__copyright-paragraph {
-    font-size: 0.8rem;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  &__margin-r {
-    margin-right: 1em;
-  }
-
-  &__link:hover {
+  &__link {
     text-decoration: underline;
+  }
+
+  &__details {
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
 }

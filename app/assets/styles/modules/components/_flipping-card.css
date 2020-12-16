@@ -59,4 +59,13 @@
     transform: rotateY(-180deg);
     user-select: none;
   }
+
+  &__details {
+    @mixin xy-centered;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+  }
 }
