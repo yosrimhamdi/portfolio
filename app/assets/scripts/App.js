@@ -9,16 +9,17 @@ import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
 import UpdateVh from './modules/UpdateVh';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 import CreateSkills from './modules/CreateSkills';
+import FlipCardsOnHover from './modules/FlipCardsOnHover';
 
 const { particlesJS, innerWidth } = window;
 
 if (innerWidth >= 1024) {
   new RevealContentOnClick();
+
+  particlesJS.load('particles__container', '/assets/particles.json', () => 0);
 }
 
 new LoadingBar();
-
-particlesJS.load('particles__container', '/assets/particles.json', () => 0);
 
 new Typed('.professional-skill', {
   strings: [
@@ -43,6 +44,8 @@ new CreateSkills({
 new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
 new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '70%');
 new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
+
+new FlipCardsOnHover();
 
 new SendSubscriptionEmail();
 new UpdateFooterYear();

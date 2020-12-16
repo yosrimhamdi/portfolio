@@ -11,6 +11,7 @@
 @import './modules/animations/_content-shown';
 @import './modules/animations/_fade-in-on-waypoint';
 @import './modules/animations/_slide-on-waypoint';
+@import './modules/animations/_flipping-card-revealed';
 
 @import './modules/components/_particles';
 @import './modules/components/_content-wrapper';
