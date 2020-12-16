@@ -37,11 +37,11 @@
 
   &:nth-child(4) {
     .flipping-card__front {
-      background-color: $accent-5;
+      background-color: $accent-4;
     }
 
     .flipping-card__back {
-      background-image: $gradient-5;
+      background-image: $gradient-4;
     }
   }
 
