@@ -1,0 +1,9 @@
+.flipping-card-revealed {
+  .flipping-card__front {
+    transform: rotateY(180deg);
+  }
+
+  .flipping-card__back {
+    transform: rotateY(0);
+  }
+}
