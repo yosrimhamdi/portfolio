@@ -5,7 +5,7 @@ class FlipCardsOnHover {
     this.setHoverEvent = this.setHoverEvent.bind(this);
     this.onCardHover = this.onCardHover.bind(this);
 
-    this.performAction(this.setHoverEvent.bind(this));
+    this.performAction(this.setHoverEvent);
   }
 
   performAction(action) {
