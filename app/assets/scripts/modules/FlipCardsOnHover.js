@@ -2,8 +2,6 @@ class FlipCardsOnHover {
   constructor() {
     this.cards = document.querySelectorAll('.flipping-card');
 
-    console.log(this.cards);
-
     this.setHoverEvent = this.setHoverEvent.bind(this);
     this.onCardHover = this.onCardHover.bind(this);
 
