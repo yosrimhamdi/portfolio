@@ -48,3 +48,9 @@
   height: 100%;
   background-color: $imageOverlay;
 }
+
+@define-mixin centralize-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

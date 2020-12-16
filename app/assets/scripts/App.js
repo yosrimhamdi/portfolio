@@ -9,6 +9,7 @@ import UpdateVh from './modules/UpdateVh';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 import CreateSkills from './modules/CreateSkills';
 import FlipCardsOnHover from './modules/FlipCardsOnHover';
+import BackToTop from './modules/BackToTop';
 
 const { particlesJS, innerWidth } = window;
 
@@ -48,3 +49,5 @@ new FlipCardsOnHover();
 
 new SendSubscriptionEmail();
 new UpdateVh();
+
+new BackToTop();
