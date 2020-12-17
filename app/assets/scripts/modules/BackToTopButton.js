@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 class BackToTop {
   constructor() {
-    this.button = document.querySelector('.back-to-top');
+    this.button = document.querySelector('.back-to-top-button');
 
     this.setEvents();
   }
@@ -14,12 +14,13 @@ class BackToTop {
   }
 
   toggleButtonVisibility = () => {
-    const isVisible = this.button.classList.contains('back-to-top--visible');
+    const className = 'back-to-top-button--visible';
+    const isVisible = this.button.classList.contains(className);
 
     if (window.scrollY >= 800 && !isVisible) {
-      this.button.classList.add('back-to-top--visible');
+      this.button.classList.add(className);
     } else if (window.scrollY < 800 && isVisible) {
-      this.button.classList.remove('back-to-top--visible');
+      this.button.classList.remove(className);
     }
   };
 
