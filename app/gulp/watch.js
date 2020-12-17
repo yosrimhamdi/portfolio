@@ -1,4 +1,4 @@
-const { watch, series, task } = require('gulp');
+const { watch, series, task, src, dest } = require('gulp');
 
 const { reloadBrowser, injectStyles, createServer } = require('./server');
 const { bundleJs } = require('./scripts');
