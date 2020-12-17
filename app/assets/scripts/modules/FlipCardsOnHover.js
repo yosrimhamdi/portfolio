@@ -2,9 +2,6 @@ class FlipCardsOnHover {
   constructor() {
     this.cards = document.querySelectorAll('.flipping-card');
 
-    this.setHoverEvent = this.setHoverEvent.bind(this);
-    this.onCardHover = this.onCardHover.bind(this);
-
     this.performAction(this.setHoverEvent);
   }
 
@@ -12,15 +9,15 @@ class FlipCardsOnHover {
     this.cards.forEach(action);
   }
 
-  setHoverEvent(card) {
+  setHoverEvent = card => {
     card.addEventListener('mouseenter', this.onCardHover);
-  }
+  };
 
-  onCardHover({ target: card }) {
+  onCardHover = ({ target: card }) => {
     card.classList.add('flipping-card-revealed');
 
     card.removeEventListener('mouseenter', this.onCardHover);
-  }
+  };
 }
 
 export default FlipCardsOnHover;
