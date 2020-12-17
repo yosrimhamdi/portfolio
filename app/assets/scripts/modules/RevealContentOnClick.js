@@ -1,6 +1,6 @@
 class RevealContentOnClick {
   constructor() {
-    this.button = document.querySelector('.button-main');
+    this.button = document.querySelector('.toggle-view-button');
     this.body = document.body;
 
     this.events();
