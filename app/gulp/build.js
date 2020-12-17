@@ -18,7 +18,7 @@ const usemin = () =>
   src('./app/index.html')
     .pipe(
       gulpUsemin({
-        html: [htmlmin({ collapseWhitespace: true })],
+        html: [htmlmin({ collapseWhitespace: true, removeComments: true })],
         css: [rev(), cssnano()],
         js: [rev(), uglify()],
       }),
