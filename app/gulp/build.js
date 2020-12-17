@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const rev = require('gulp-rev');
 
-const { bundleJs, toES5 } = require('./scripts');
+const { bundleJs } = require('./scripts');
 const { compileStyles } = require('./styles');
 
 const compressImages = () =>
@@ -30,12 +30,5 @@ const copyParticlesConfig = () =>
 
 task(
   'build',
-  series(
-    bundleJs,
-    toES5,
-    compileStyles,
-    compressImages,
-    copyParticlesConfig,
-    usemin,
-  ),
+  series(bundleJs, compileStyles, compressImages, copyParticlesConfig, usemin),
 );
