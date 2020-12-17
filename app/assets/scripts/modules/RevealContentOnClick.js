@@ -1,18 +1,17 @@
 class RevealContentOnClick {
   constructor() {
-    this.button = document.querySelector('.toggle-view-button');
-    this.body = document.body;
+    this.button = document.querySelector('#toggle-view-button');
 
-    this.events();
+    this.setEvent();
   }
 
-  events() {
-    this.button.addEventListener('click', this.animate.bind(this));
+  setEvent() {
+    this.button.addEventListener('click', this.animate);
   }
 
-  animate() {
-    this.body.classList.toggle('content-shown');
-  }
+  animate = () => {
+    document.body.classList.toggle('content-shown');
+  };
 }
 
 export default RevealContentOnClick;
