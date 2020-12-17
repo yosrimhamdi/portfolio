@@ -8,6 +8,7 @@ const rev = require('gulp-rev');
 
 const { bundleJs } = require('./scripts');
 const { compileStyles } = require('./styles');
+const { createServer } = require('./server');
 
 const compressImages = () =>
   src('./app/assets/images/**/*.*')
@@ -18,9 +19,11 @@ const usemin = () =>
   src('./app/index.html')
     .pipe(
       gulpUsemin({
-        html: [htmlmin({ collapseWhitespace: true, removeComments: true })],
-        css: [rev(), cssnano()],
-        js: [rev(), uglify()],
+        html: [
+          () => htmlmin({ collapseWhitespace: true, removeComments: true }),
+        ],
+        css: [() => rev(), () => cssnano()],
+        js: [() => rev(), () => uglify()],
       }),
     )
     .pipe(dest('./dist/'));
@@ -30,5 +33,12 @@ const copyParticlesConfig = () =>
 
 task(
   'build',
-  series(bundleJs, compileStyles, compressImages, copyParticlesConfig, usemin),
+  series(
+    bundleJs,
+    compileStyles,
+    compressImages,
+    copyParticlesConfig,
+    usemin,
+    createServer.bind(this, './dist'),
+  ),
 );
