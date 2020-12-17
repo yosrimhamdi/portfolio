@@ -3,6 +3,7 @@ const imagemin = require('gulp-imagemin');
 const gulpUsemin = require('gulp-usemin');
 const cssnano = require('gulp-cssnano');
 const uglify = require('gulp-uglify');
+const htmlmin = require('gulp-htmlmin');
 const rev = require('gulp-rev');
 
 const { bundleJs, toES5 } = require('./scripts');
@@ -17,8 +18,9 @@ const usemin = () =>
   src('./app/index.html')
     .pipe(
       gulpUsemin({
-        css: [() => rev(), () => cssnano()],
-        js: [() => rev(), () => uglify()],
+        html: [htmlmin({ collapseWhitespace: true })],
+        css: [rev(), cssnano()],
+        js: [rev(), uglify()],
       }),
     )
     .pipe(dest('./dist/'));

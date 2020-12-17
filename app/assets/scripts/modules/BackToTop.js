@@ -28,7 +28,7 @@ class BackToTop {
       scrollTop: $('.content-wrapper__main-content').offset().top,
     };
 
-    $('html, body').animate(options, 800);
+    $('html, body').animate(options, 500);
   }
 }
 
