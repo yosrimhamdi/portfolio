@@ -11,10 +11,6 @@ import CreateSkills from './modules/CreateSkills';
 import FlipCardsOnHover from './modules/FlipCardsOnHover';
 import BackToTopButton from './modules/BackToTopButton';
 
-// window.addEventListener('DOMContentLoaded', () => {
-
-// });
-
 const { particlesJS, innerWidth } = window;
 
 if (innerWidth >= 1024) {
@@ -52,6 +48,5 @@ new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
 new FlipCardsOnHover();
 
 new SendSubscriptionEmail();
-// new UpdateVh();
 
 new BackToTopButton();
