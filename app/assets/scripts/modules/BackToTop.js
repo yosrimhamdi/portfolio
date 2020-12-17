@@ -10,10 +10,10 @@ class BackToTop {
   setEvents() {
     this.button.addEventListener('click', this.backToTop);
 
-    window.addEventListener('scroll', this.toggleButtonVisibility.bind(this));
+    window.addEventListener('scroll', this.toggleButtonVisibility);
   }
 
-  toggleButtonVisibility() {
+  toggleButtonVisibility = () => {
     const isVisible = this.button.classList.contains('back-to-top--visible');
 
     if (window.scrollY >= 800 && !isVisible) {
@@ -21,7 +21,7 @@ class BackToTop {
     } else if (window.scrollY < 800 && isVisible) {
       this.button.classList.remove('back-to-top--visible');
     }
-  }
+  };
 
   backToTop() {
     const options = {
