@@ -6,9 +6,7 @@ module.exports = {
   output: {
     filename: '[name].js',
   },
-
   mode: 'development',
-
   module: {
     rules: [
       {
