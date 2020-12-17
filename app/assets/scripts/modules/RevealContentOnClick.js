@@ -6,9 +6,7 @@ class RevealContentOnClick {
   }
 
   setEvent() {
-    document.addEventListener('DOMContentLoaded', () => {
-      this.button.addEventListener('click', this.animate);
-    });
+    this.button.addEventListener('click', this.animate);
   }
 
   animate = () => {

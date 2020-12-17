@@ -11,43 +11,45 @@ import CreateSkills from './modules/CreateSkills';
 import FlipCardsOnHover from './modules/FlipCardsOnHover';
 import BackToTopButton from './modules/BackToTopButton';
 
-const { particlesJS, innerWidth } = window;
+document.addEventListener('DOMContentLoaded', () => {
+  const { particlesJS, innerWidth } = window;
 
-if (innerWidth >= 1024) {
-  new RevealContentOnClick();
+  if (innerWidth >= 1024) {
+    new RevealContentOnClick();
 
-  particlesJS.load('particles__container', '/assets/particles.json', () => 0);
-}
+    particlesJS.load('particles__container', '/assets/particles.json', () => 0);
+  }
 
-new LoadingBar();
+  new LoadingBar();
 
-new Typed('.professional-skill', {
-  strings: [
-    'web developer',
-    'web expert^3000',
-    'front-end engineer',
-    'front-end developer^3000',
-  ],
-  loop: true,
-  typeSpeed: 70,
-  backSpeed: 20,
+  new Typed('.professional-skill', {
+    strings: [
+      'web developer',
+      'web expert^3000',
+      'front-end engineer',
+      'front-end developer^3000',
+    ],
+    loop: true,
+    typeSpeed: 70,
+    backSpeed: 20,
+  });
+
+  new CreateSkills({
+    html: '80%',
+    css: '90%',
+    git: '60%',
+    javascript: '75%',
+    gulp: '98%',
+  });
+
+  new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
+  new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '70%');
+  new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
+
+  new FlipCardsOnHover();
+
+  new SendSubscriptionEmail();
+  new UpdateVh();
+
+  new BackToTopButton();
 });
-
-new CreateSkills({
-  html: '80%',
-  css: '90%',
-  git: '60%',
-  javascript: '75%',
-  gulp: '98%',
-});
-
-new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
-new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '70%');
-new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
-
-new FlipCardsOnHover();
-
-new SendSubscriptionEmail();
-new UpdateVh();
-
-new BackToTopButton();
