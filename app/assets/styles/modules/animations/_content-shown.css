@@ -4,4 +4,8 @@
   .content-wrapper {
     left: -50vw;
   }
+
+  .back-to-top {
+    display: flex;
+  }
 }
