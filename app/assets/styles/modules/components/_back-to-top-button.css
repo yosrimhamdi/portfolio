@@ -12,7 +12,10 @@
   z-index: 1;
   transition: all 100ms;
   cursor: pointer;
-  display: none;
+
+  @mixin atLarge {
+    display: none;
+  }
 
   i {
     color: $accent-1;
