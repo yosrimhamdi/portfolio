@@ -17,9 +17,9 @@ if (innerWidth >= 1024) {
   new RevealContentOnClick();
 
   particlesJS.load('particles__container', '/assets/particles.json', () => 0);
-}
 
-new LoadingBar();
+  new LoadingBar();
+}
 
 new Typed('.professional-skill', {
   strings: [

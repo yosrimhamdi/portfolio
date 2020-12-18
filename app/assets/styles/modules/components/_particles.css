@@ -1,11 +1,12 @@
 .particles {
   position: relative;
   overflow: hidden;
-
-  @mixin half-screen;
+  height: 100vh;
+  display: none;
 
   @mixin atLarge {
     display: block;
+    width: 50vw;
   }
 
   &__image {

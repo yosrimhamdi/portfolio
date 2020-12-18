@@ -1,6 +1,14 @@
 .flexbox {
   display: flex;
 
+  &--at-large {
+    display: block;
+
+    @mixin atLarge {
+      display: flex;
+    }
+  }
+
   &--space-between {
     justify-content: space-between;
   }

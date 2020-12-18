@@ -4,8 +4,11 @@
   color: $mainBlack;
   text-transform: capitalize;
   font-family: 'Montserrat', sans-serif;
+  height: 100vh;
 
-  @mixin half-screen;
+  @mixin atLarge {
+    width: 50vw;
+  }
 
   &__content-wrapper {
     @mixin xy-centered;
