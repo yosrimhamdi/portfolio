@@ -1,4 +1,3 @@
-import RevealContentOnClick from './RevealContentOnClick';
 import LoadingBar from './LoadingBar';
 
 class InitFrame {
@@ -16,8 +15,6 @@ class InitFrame {
 
   init() {
     const { particlesJS } = window;
-
-    new RevealContentOnClick();
 
     particlesJS.load('particles__container', '/assets/particles.json');
 

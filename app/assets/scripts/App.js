@@ -8,6 +8,9 @@ import CreateSkills from './modules/CreateSkills';
 import FlipCardsOnHover from './modules/FlipCardsOnHover';
 import BackToTopButton from './modules/BackToTopButton';
 import InitFrame from './modules/InitFrame';
+import RevealContentOnClick from './modules/RevealContentOnClick';
+
+new RevealContentOnClick();
 
 new InitFrame();
 
