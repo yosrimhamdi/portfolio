@@ -2,24 +2,14 @@ import '../../../node_modules/waypoints/lib/noframework.waypoints';
 import './modules/particles.js';
 import Typed from 'typed.js';
 
-import LoadingBar from './modules/LoadingBar';
 import AnimateOnWaypoint from './modules/AnimateOnWaypoint';
 import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
-// import UpdateVh from './modules/UpdateVh';
-import RevealContentOnClick from './modules/RevealContentOnClick';
 import CreateSkills from './modules/CreateSkills';
 import FlipCardsOnHover from './modules/FlipCardsOnHover';
 import BackToTopButton from './modules/BackToTopButton';
+import InitFrame from './modules/InitFrame';
 
-const { particlesJS, innerWidth } = window;
-
-if (innerWidth >= 1024) {
-  new RevealContentOnClick();
-
-  particlesJS.load('particles__container', '/assets/particles.json', () => 0);
-
-  new LoadingBar();
-}
+new InitFrame();
 
 new Typed('.professional-skill', {
   strings: [

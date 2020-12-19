@@ -1,11 +1,13 @@
 .content-shown {
-  overflow-y: visible;
+  @mixin at-large {
+    overflow-y: visible;
 
-  .content-wrapper {
-    left: -50vw;
-  }
+    .content-wrapper {
+      left: -50vw;
+    }
 
-  .back-to-top-button {
-    display: flex;
+    .back-to-top-button {
+      display: flex;
+    }
   }
 }
