@@ -10,6 +10,20 @@
     margin-right: 1em;
   }
 
+  &:last-child {
+    @mixin at-small {
+      margin-right: 1em;
+    }
+  }
+
+  &--mb-until-small {
+    margin-bottom: 1em;
+
+    @mixin at-small {
+      margin-bottom: 0;
+    }
+  }
+
   &__face {
     @mixin centralize-content;
 
@@ -33,7 +47,7 @@
     text-align: center;
   }
 
-  &:nth-child(1) {
+  &--1 {
     .flipping-card__front {
       background-color: $accent-1;
     }
@@ -42,8 +56,7 @@
       background-image: $gradient-1;
     }
   }
-
-  &:nth-child(2) {
+  &--2 {
     .flipping-card__front {
       background-color: $accent-2;
     }
@@ -52,8 +65,7 @@
       background-image: $gradient-2;
     }
   }
-
-  &:nth-child(3) {
+  &--3 {
     .flipping-card__front {
       background-color: $accent-3;
     }
@@ -62,8 +74,7 @@
       background-image: $gradient-3;
     }
   }
-
-  &:nth-child(4) {
+  &--4 {
     .flipping-card__front {
       background-color: $accent-4;
     }

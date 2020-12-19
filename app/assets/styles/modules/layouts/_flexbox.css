@@ -1,17 +1,27 @@
 .flexbox {
   display: flex;
 
+  &--at-small {
+    flex-direction: column;
+
+    @mixin at-small {
+      flex-direction: row;
+    }
+  }
+
   &--at-medium {
-    @media (max-width: 601px) {
-      flex-direction: column;
+    flex-direction: column;
+
+    @mixin at-medium {
+      flex-direction: row;
     }
   }
 
   &--at-large {
-    display: block;
+    flex-direction: column;
 
     @mixin at-large {
-      display: flex;
+      flex-direction: row;
     }
   }
 
