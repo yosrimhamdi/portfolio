@@ -14,8 +14,9 @@
   }
 
   &::before {
-    content: attr(data-inner-text);
     @mixin xy-centered;
+
+    content: attr(data-bg-text);
     font-weight: 800;
     white-space: nowrap;
     text-align: center;
