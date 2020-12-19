@@ -6,16 +6,16 @@ class RevealContentOnClick {
 
     this.isMobile = window.innerWidth < 1024;
 
-    this.setEvent();
+    this.setEvents();
   }
 
-  setEvent() {
-    this.button.addEventListener('click', this.getHandler());
+  setEvents() {
+    this.button.addEventListener('click', this.getOnButtonClick());
 
     window.addEventListener('resize', this.onWindowResize);
   }
 
-  getHandler = () => {
+  getOnButtonClick = () => {
     if (this.isMobile) {
       return this.scrollToContent;
     }
@@ -26,14 +26,14 @@ class RevealContentOnClick {
   onWindowResize = () => {
     const { innerWidth } = window;
 
-    const { isMobile, button, getHandler } = this;
+    const { isMobile, button, getOnButtonClick } = this;
 
     if ((innerWidth >= 1024 && isMobile) || (innerWidth < 1024 && !isMobile)) {
-      button.removeEventListener('click', getHandler());
+      button.removeEventListener('click', getOnButtonClick());
 
       this.isMobile = innerWidth < 1024;
 
-      button.addEventListener('click', getHandler());
+      button.addEventListener('click', getOnButtonClick());
     }
   };
 
@@ -42,11 +42,11 @@ class RevealContentOnClick {
   }
 
   scrollToContent() {
-    const option = {
+    const options = {
       scrollTop: window.innerHeight,
     };
 
-    $('html, body').animate(option, 500);
+    $('html, body').animate(options, 500);
   }
 }
 
