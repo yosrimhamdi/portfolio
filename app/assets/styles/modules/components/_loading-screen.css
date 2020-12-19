@@ -7,7 +7,7 @@
   z-index: 1;
   transition: transform 500ms ease;
 
-  @mixin atLarge {
+  @mixin at-large {
     display: block;
   }
 
@@ -19,7 +19,7 @@
     @mixin xy-centered;
     width: 60vw;
 
-    @mixin atLarge {
+    @mixin at-large {
       width: 50vw;
     }
   }
@@ -35,7 +35,7 @@
     text-align: center;
     transition: all 700ms ease;
 
-    @mixin atLarge {
+    @mixin at-large {
       font-size: 0.9rem;
     }
   }

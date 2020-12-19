@@ -1,4 +1,6 @@
-@import './modules/utils/_mixins';
+@import './modules/utils/mixins/_layout';
+@import './modules/utils/mixins/_responsive';
+@import './modules/utils/mixins/_others';
 @import './modules/utils/_variables';
 
 @import './modules/base/_base';

@@ -1,10 +1,16 @@
 .flexbox {
   display: flex;
 
+  &--at-medium {
+    @media (max-width: 601px) {
+      flex-direction: column;
+    }
+  }
+
   &--at-large {
     display: block;
 
-    @mixin atLarge {
+    @mixin at-large {
       display: flex;
     }
   }

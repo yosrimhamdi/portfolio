@@ -9,7 +9,7 @@ body {
   color: $mainGrey;
   -ms-overflow-style: none;
 
-  @mixin atLarge {
+  @mixin at-large {
     overflow: hidden;
   }
 }

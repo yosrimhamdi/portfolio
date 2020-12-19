@@ -4,14 +4,14 @@
   height: 100vh;
   transition: left 400ms;
 
-  @mixin atLarge {
+  @mixin at-large {
     width: 150vw;
   }
 
   &__hero {
     width: 100vw;
 
-    @mixin atLarge {
+    @mixin at-large {
       position: fixed;
     }
   }
@@ -19,7 +19,7 @@
   &__main-content {
     position: relative;
 
-    @mixin atLarge {
+    @mixin at-large {
       margin-left: 100vw;
       width: 50vw;
     }

@@ -11,7 +11,7 @@
     width: 100%;
     height: 160px;
 
-    @mixin atMedium {
+    @mixin at-medium {
       height: 200px;
     }
   }
@@ -36,7 +36,7 @@
     text-align: justify;
     font-size: 0.8rem;
 
-    @mixin atLarge {
+    @mixin at-large {
       font-size: 1rem;
     }
   }

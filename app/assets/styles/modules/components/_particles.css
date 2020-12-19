@@ -4,7 +4,7 @@
   height: 100vh;
   display: none;
 
-  @mixin atLarge {
+  @mixin at-large {
     display: block;
     width: 50vw;
   }

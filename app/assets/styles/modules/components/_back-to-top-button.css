@@ -13,7 +13,7 @@
   transition: all 100ms;
   cursor: pointer;
 
-  @mixin atLarge {
+  @mixin at-large {
     display: none;
   }
 

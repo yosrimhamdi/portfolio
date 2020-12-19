@@ -1,7 +1,7 @@
 .wrapper {
   padding: 0 12px;
 
-  @mixin atMedium {
+  @mixin at-medium {
     padding: 0;
     width: 90%;
     margin: auto;
