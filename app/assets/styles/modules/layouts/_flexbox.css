@@ -9,14 +9,6 @@
     }
   }
 
-  &--at-medium {
-    flex-direction: column;
-
-    @mixin at-medium {
-      flex-direction: row;
-    }
-  }
-
   &--at-large {
     flex-direction: column;
 
