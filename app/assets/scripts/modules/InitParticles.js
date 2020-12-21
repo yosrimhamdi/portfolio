@@ -1,6 +1,4 @@
-import LoadingBar from './LoadingBar';
-
-class InitFrame {
+class InitParticles {
   constructor() {
     if (window.innerWidth >= 1024) {
       this.init();
@@ -17,17 +15,16 @@ class InitFrame {
     const { particlesJS } = window;
 
     particlesJS.load('particles__container', '/assets/particles.json');
-
-    new LoadingBar();
   }
 
   onWindowResize = () => {
+    console.log('resize');
     if (window.innerWidth >= 1024) {
       this.init();
-
+      console.log('loaded');
       window.removeEventListener('resize', this.onWindowResize);
     }
   };
 }
 
-export default InitFrame;
+export default InitParticles;

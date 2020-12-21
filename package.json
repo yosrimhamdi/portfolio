@@ -40,7 +40,6 @@
     "lazysizes": "^5.2.2",
     "particles.js": "^2.0.0",
     "picturefill": "^3.0.3",
-    "preload-js": "^0.6.3",
     "typed.js": "^2.0.11",
     "waypoints": "^4.0.1"
   }
