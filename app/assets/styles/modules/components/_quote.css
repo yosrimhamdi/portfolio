@@ -16,13 +16,16 @@
     width: 100%;
     text-align: center;
     padding: 0 2em;
+    font-size: 0.82rem;
+
+    @mixin at-large {
+      font-size: 1rem;
+    }
   }
 
   &__text {
     font-weight: 400;
-    font-size: 0.82rem;
     margin-bottom: 0.35em;
-
     quotes: '“' '”';
 
     &::before {
@@ -36,6 +39,7 @@
 
   &__originator {
     quotes: '― ' ' ―';
+    text-transform: lowercase;
 
     &::before {
       content: open-quote;
