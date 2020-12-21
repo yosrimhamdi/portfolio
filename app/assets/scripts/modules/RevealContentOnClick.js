@@ -42,8 +42,10 @@ class RevealContentOnClick {
   }
 
   scrollToContent() {
+    const avatar = document.querySelector('.avatar');
+
     const options = {
-      scrollTop: window.innerHeight,
+      scrollTop: avatar.clientHeight,
     };
 
     $('html, body').animate(options, 500);
