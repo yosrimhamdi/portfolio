@@ -28,10 +28,6 @@
     margin-bottom: 0.35em;
     quotes: '“' '”';
 
-    &:first-letter {
-      text-transform: uppercase;
-    }
-
     &::before {
       content: open-quote;
     }
