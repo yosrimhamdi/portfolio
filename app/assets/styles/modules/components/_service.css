@@ -12,10 +12,6 @@
     }
   }
 
-  &__icon {
-    margin-right: 1rem;
-  }
-
   &__title {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
