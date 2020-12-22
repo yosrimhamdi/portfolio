@@ -1,7 +1,7 @@
 .wrapper {
   padding: 2.5rem 12px;
 
-  &--no-b-padding {
+  &--no-pb {
     padding-bottom: 0 !important;
   }
 
