@@ -1,51 +1,23 @@
 .button {
-  position: relative;
-  text-decoration: none;
   display: inline-block;
-  padding: 0.9em 2em;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 2px;
-  background-color: $mainColor;
-  color: white !important;
-  transition: all 200ms;
-  z-index: 1;
-  box-shadow: 0 0 8px -2px rgba(#000, 0.3);
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 0.9em 2em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background-color: $mainColor;
+  color: white;
+  box-shadow: 0 0 5px 1px rgba(#000, 0.2);
+  transition: all 300ms;
 
   @mixin at-large {
     font-size: 0.9rem;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $mainColor;
-    border-radius: inherit;
-    z-index: -1;
-    transition: all 300ms;
-  }
-
   &:hover {
-    letter-spacing: 2px;
-    box-shadow: 0 0 15px -2px rgba(#000, 0.3);
-    transform: translateY(-2px);
-
-    &::after {
-      transform: scale(1.25, 1.5);
-      opacity: 0;
-    }
-  }
-
-  &:active {
-    transform: translateY(-1px);
+    box-shadow: 0 0 15px 3px rgba(#000, 0.2);
   }
 
   &--full-width {
