@@ -37,6 +37,11 @@ new CreateSkills({
 new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
 new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '70%');
 new AnimateOnWaypoint('.skill__percentage-bar', 'slide-on-waypoint', '96%');
+new AnimateOnWaypoint(
+  '.footer__github-icon',
+  'shake-on-waypoint',
+  'bottom-in-view',
+);
 
 new FlipCardsOnHover();
 

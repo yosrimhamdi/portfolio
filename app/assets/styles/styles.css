@@ -10,6 +10,7 @@
 @import './modules/layouts/_footer';
 
 @import './modules/animations/_shake-on-waypoint';
+@import './modules/animations/_animate-f-cards-on-waypoint';
 @import './modules/animations/_content-shown';
 @import './modules/animations/_fade-in-on-waypoint';
 @import './modules/animations/_slide-on-waypoint';

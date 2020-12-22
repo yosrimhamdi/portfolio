@@ -1,4 +1,13 @@
 .footer {
   background-color: $darkBlack;
   padding: 20px 0;
+
+  &__github-icon {
+    text-shadow: -3px 3px 3px rgba(#000, 0.2);
+    font-size: 2.5rem;
+
+    &:hover {
+      color: #999999;
+    }
+  }
 }
