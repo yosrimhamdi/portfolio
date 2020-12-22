@@ -19,7 +19,6 @@
     text-align: center;
 
     @mixin at-large {
-      padding: 0 2rem;
       font-size: 1rem;
     }
   }
