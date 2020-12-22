@@ -1,8 +1,8 @@
 .wrapper {
-  padding: 3.5em 12px;
+  padding: 2.5em 12px;
 
   &--no-b-padding {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
   }
 
   @mixin at-medium {
@@ -10,5 +10,9 @@
     padding-right: 0;
     width: 90%;
     margin: auto;
+  }
+
+  @mixin at-large {
+    padding: 3.5em 12px;
   }
 }
