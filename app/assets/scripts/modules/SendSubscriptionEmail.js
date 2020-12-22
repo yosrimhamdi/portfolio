@@ -21,7 +21,7 @@ class SendSubscriptionEmail {
   }
   event() {
     const that = this;
-    this.button.click(function (e) {
+    this.button.click(function () {
       that.getUserData();
       if (validate(that.userInfo.to_email) && that.userInfo.to_name) {
         that.button.text('submitting...');
