@@ -16,6 +16,7 @@
     width: 100%;
     font-size: 0.82rem;
     padding: 0 2rem;
+    text-align: center;
 
     @mixin at-large {
       padding: 0 2rem;
@@ -27,12 +28,6 @@
     font-weight: 400;
     margin-bottom: 0.35em;
     quotes: '“' '”';
-    text-align: justify;
-    text-align-last: center;
-
-    @mixin at-large {
-      text-align: center;
-    }
 
     &::before {
       content: open-quote;
@@ -46,7 +41,6 @@
   &__originator {
     quotes: '― ' ' ―';
     text-transform: lowercase;
-    text-align: center;
 
     &::before {
       content: open-quote;
