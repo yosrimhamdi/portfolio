@@ -10,7 +10,7 @@
 
   @mixin at-large {
     font-size: 2rem;
-    margin-bottom: 1.7em;
+    margin-bottom: 3.5rem;
   }
 
   &::before {
