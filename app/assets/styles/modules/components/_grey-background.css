@@ -1,4 +1,7 @@
 .grey-background {
   background-color: $bgGrey;
 
+  &--padding {
+    padding: 2.5em 0;
+  }
 }

@@ -1,8 +1,13 @@
 .wrapper {
-  padding: 0 12px;
+  padding: 3.5em 12px;
+
+  &--no-b-padding {
+    padding-bottom: 0;
+  }
 
   @mixin at-medium {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 90%;
     margin: auto;
   }
