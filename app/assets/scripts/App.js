@@ -44,3 +44,7 @@ new FlipCardsOnHover();
 new SendSubscriptionEmail();
 
 new BackToTopButton();
+
+if (window.innerWidth < 1024) {
+  document.querySelector('.avatar').style.height = `${window.innerHeight}px`;
+}
