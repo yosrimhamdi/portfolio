@@ -3,7 +3,7 @@ import './modules/particles.js';
 import Typed from 'typed.js';
 
 import AnimateOnWaypoint from './modules/AnimateOnWaypoint';
-import SendSubscriptionEmail from './modules/SendSubscriptionEmail';
+import SendSubscriptionEmail from './modules/email/SendSubscriptionEmail';
 import CreateSkills from './modules/CreateSkills';
 import FlipCardsOnHover from './modules/FlipCardsOnHover';
 import BackToTopButton from './modules/BackToTopButton';
