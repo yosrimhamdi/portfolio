@@ -14,9 +14,6 @@ const { createServer } = require('./server');
 const removePrevDistFolder = () =>
   src('./dist', { allowEmpty: true }).pipe(clean());
 
-const copyParticlesConfig = () =>
-  src('./src/assets/particles.json').pipe(dest('./dist/assets'));
-
 const compressImages = () =>
   src('./src/assets/images/**/*.*')
     .pipe(imagemin())
@@ -35,10 +32,7 @@ const usemin = () =>
     )
     .pipe(dest('./dist/'));
 
-task(
-  'build',
-  series(bundleJs, compileStyles, compressImages, copyParticlesConfig, usemin),
-);
+task('build', series(bundleJs, compileStyles, compressImages, usemin));
 
 task(
   'build:test',
@@ -47,7 +41,6 @@ task(
     bundleJs,
     compileStyles,
     compressImages,
-    copyParticlesConfig,
     usemin,
     createServer.bind(this, './dist'),
   ),
