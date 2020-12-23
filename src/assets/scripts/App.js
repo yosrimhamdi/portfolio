@@ -32,8 +32,12 @@ new CreateSkills({
   gulp: '98%',
 });
 
-new AnimateOnWaypoint('.flipping-card', 'animate-f-cards-on-waypoint', '70%');
-new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '70%');
+new AnimateOnWaypoint(
+  '.flipping-card',
+  'animate-f-cards-on-waypoint',
+  'bottom-in-view',
+);
+new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '90%');
 new AnimateOnWaypoint(
   '.skill__percentage-bar',
   'slide-on-waypoint',
