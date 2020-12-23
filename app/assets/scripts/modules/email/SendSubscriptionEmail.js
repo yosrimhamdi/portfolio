@@ -12,36 +12,29 @@ class SendSubscriptionEmail {
 
     emailjs.init(userId);
 
-    this.setEvent();
-  }
-
-  setEvent() {
     this.button.addEventListener('click', this.onButtonClick);
   }
 
   onButtonClick = e => {
     e.preventDefault();
 
-    const mail = {
+    const user = {
       to_name: this.input.name.value,
       to_email: this.input.email.value,
-      message_html: `you have just submitted to our website.`,
     };
 
-    if (isEmail(mail.to_email) && mail.to_name) {
-      this.sendMailToUser(template_id, mail);
-      this.sendMailToMe();
+    if (isEmail(user.to_email) && user.to_name) {
+      this.sendMail(template_id, {
+        ...user,
+        message_html: 'you have just submitted to our website.',
+      });
+      this.sendMail(template_id_me, user);
 
       this.clearInputs();
     }
   };
 
-  clearInputs() {
-    this.input.name.value = '';
-    this.input.email.value = '';
-  }
-
-  async sendMailToUser(template, mail) {
+  async sendMail(template, mail) {
     this.button.textContent = 'submitting...';
 
     try {
@@ -60,8 +53,9 @@ class SendSubscriptionEmail {
     }, 5000);
   }
 
-  sendMailToMe() {
-    this.sendMailToUser(template_id_me);
+  clearInputs() {
+    this.input.name.value = '';
+    this.input.email.value = '';
   }
 }
 
