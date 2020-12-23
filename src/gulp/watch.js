@@ -5,20 +5,19 @@ const { bundleJs } = require('./scripts');
 const { compileStyles } = require('./styles');
 
 const eye = () => {
-  const options = { ignoreInitial: false };
   createServer('src');
 
   watch('./src/*.html', reloadBrowser);
 
   watch(
     './src/assets/styles/**/*.css',
-    options,
+    { ignoreInitial: false },
     series(compileStyles, injectStyles),
   );
 
   watch(
     './src/assets/scripts/**/*.js',
-    options,
+    { ignoreInitial: false },
     series(bundleJs, reloadBrowser),
   );
 };
