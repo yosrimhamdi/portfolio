@@ -10,6 +10,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.1",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.10.1",
     "autoprefixer": "^9.8.0",
     "babel-eslint": "^10.1.0",
@@ -34,7 +35,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.12.10",
     "emailjs-com": "^2.4.1",
     "jquery": "^3.5.1",
     "lazysizes": "^5.2.2",
