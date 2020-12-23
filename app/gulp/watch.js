@@ -8,11 +8,19 @@ const eye = () => {
   const options = { ignoreInitial: false };
   createServer('app');
 
-  watch(['./app/*.html', './app/assets/particles.json'], reloadBrowser);
+  watch('./app/*.html', reloadBrowser);
 
-  watch('./app/assets/styles/**/*.css', options, series(compileStyles, injectStyles));
+  watch(
+    './app/assets/styles/**/*.css',
+    options,
+    series(compileStyles, injectStyles),
+  );
 
-  watch('./app/assets/scripts/**/*.js', options, series(bundleJs, reloadBrowser));
+  watch(
+    './app/assets/scripts/**/*.js',
+    options,
+    series(bundleJs, reloadBrowser),
+  );
 };
 
 task('watch', eye);

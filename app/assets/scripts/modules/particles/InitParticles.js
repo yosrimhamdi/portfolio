@@ -1,3 +1,4 @@
+import config from './config';
 import './particles';
 
 class InitParticles {
@@ -16,7 +17,7 @@ class InitParticles {
   init() {
     const { particlesJS } = window;
 
-    particlesJS.load('particles__container', '/assets/particles.json');
+    particlesJS('particles__container', config);
   }
 
   onWindowResize = () => {
