@@ -4,8 +4,8 @@
   color: $mainBlack;
   text-transform: capitalize;
   font-family: 'Montserrat', sans-serif;
-  height: 100vh;
-  height: var(--height);
+  height: var(--height, 100vh);
+  transition: height 300ms;
 
   @mixin at-large {
     height: 100vh;
