@@ -18,10 +18,8 @@ class InitParticles {
   }
 
   onWindowResize = () => {
-    console.log('resize');
     if (window.innerWidth >= 1024) {
       this.init();
-      console.log('loaded');
       window.removeEventListener('resize', this.onWindowResize);
     }
   };
