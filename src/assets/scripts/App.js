@@ -12,7 +12,7 @@ new RevealContentOnClick();
 
 new InitParticles();
 
-new Typed('.professional-skill', {
+new Typed('.avatar__job-title', {
   strings: [
     'web developer',
     'web expert^3000',

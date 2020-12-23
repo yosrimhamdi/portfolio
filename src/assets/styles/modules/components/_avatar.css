@@ -51,8 +51,10 @@
     font-size: 1.2rem;
     margin-bottom: 1em;
     font-weight: 200;
+    min-height: 21px;
 
     @mixin at-large {
+      min-height: 31px;
       font-size: 1.6rem;
     }
   }
