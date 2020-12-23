@@ -55,4 +55,10 @@
     width: 100%;
     object-fit: cover;
   }
+
+  &__image--bottom-at-large {
+    @mixin at-large {
+      object-position: center bottom;
+    }
+  }
 }
