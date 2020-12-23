@@ -7,6 +7,7 @@ const createServer = baseDir => {
     server: {
       baseDir: baseDir,
     },
+    ghostMode: false,
   });
 };
 
