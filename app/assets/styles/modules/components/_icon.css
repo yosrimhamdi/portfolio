@@ -9,8 +9,4 @@
   &--mr {
     margin-right: 1rem;
   }
-
-  &--haverable:hover {
-    color: #999999;
-  }
 }

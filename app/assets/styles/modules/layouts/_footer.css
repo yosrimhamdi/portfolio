@@ -1,4 +1,8 @@
 .footer {
   background-color: $darkBlack;
   padding: 20px 0;
+
+  &__github-link:hover {
+    color: #999999;
+  }
 }
