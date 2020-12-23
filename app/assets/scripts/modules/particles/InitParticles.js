@@ -1,3 +1,5 @@
+import './particles';
+
 class InitParticles {
   constructor() {
     if (window.innerWidth >= 1024) {

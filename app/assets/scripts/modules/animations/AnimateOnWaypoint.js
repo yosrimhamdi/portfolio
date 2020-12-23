@@ -1,3 +1,5 @@
+import '../../../../../node_modules/waypoints/lib/noframework.waypoints';
+
 class AnimateOnWaypoint {
   constructor(selector, animationClass, offset) {
     this.elements = document.querySelectorAll(selector);

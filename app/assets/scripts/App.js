@@ -1,13 +1,11 @@
-import '../../../node_modules/waypoints/lib/noframework.waypoints';
-import './modules/particles.js';
 import Typed from 'typed.js';
 
-import AnimateOnWaypoint from './modules/AnimateOnWaypoint';
+import FlipCardsOnHover from './modules/animations/FlipCardsOnHover';
+import AnimateOnWaypoint from './modules/animations/AnimateOnWaypoint';
 import SendSubscriptionEmail from './modules/email/SendSubscriptionEmail';
+import InitParticles from './modules/particles/InitParticles';
+import BackToTopOnClick from './modules/BackToTopOnClick';
 import CreateSkills from './modules/CreateSkills';
-import FlipCardsOnHover from './modules/FlipCardsOnHover';
-import BackToTopButton from './modules/BackToTopButton';
-import InitParticles from './modules/InitParticles';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 
 new RevealContentOnClick();
@@ -47,7 +45,7 @@ new FlipCardsOnHover();
 
 new SendSubscriptionEmail();
 
-new BackToTopButton();
+new BackToTopOnClick();
 
 document.documentElement.style.setProperty(
   '--height',
