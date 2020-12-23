@@ -11,7 +11,7 @@ const createServer = baseDir => {
   });
 };
 
-const injectStyles = () => src('./app/temp/styles/styles.css').pipe(stream());
+const injectStyles = () => src('./src/temp/styles/styles.css').pipe(stream());
 
 const reloadBrowser = done => {
   reload();

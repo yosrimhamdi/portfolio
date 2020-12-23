@@ -15,15 +15,15 @@ const removePrevDistFolder = () =>
   src('./dist', { allowEmpty: true }).pipe(clean());
 
 const copyParticlesConfig = () =>
-  src('./app/assets/particles.json').pipe(dest('./dist/assets'));
+  src('./src/assets/particles.json').pipe(dest('./dist/assets'));
 
 const compressImages = () =>
-  src('./app/assets/images/**/*.*')
+  src('./src/assets/images/**/*.*')
     .pipe(imagemin())
     .pipe(dest('./dist/assets/images/'));
 
 const usemin = () =>
-  src('./app/index.html')
+  src('./src/index.html')
     .pipe(
       gulpUsemin({
         html: [

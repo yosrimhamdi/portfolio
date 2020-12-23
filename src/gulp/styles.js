@@ -8,9 +8,9 @@ const autoprefixer = require('autoprefixer');
 const hexrgba = require('postcss-hexrgba');
 
 const compileStyles = () =>
-  src('./app/assets/styles/styles.css')
+  src('./src/assets/styles/styles.css')
     .pipe(postcss([imports, mixins, autoprefixer, nested, variables, hexrgba]))
-    .pipe(dest('./app/temp/styles/'));
+    .pipe(dest('./src/temp/styles/'));
 
 module.exports = {
   compileStyles,

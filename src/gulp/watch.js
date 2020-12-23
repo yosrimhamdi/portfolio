@@ -6,18 +6,18 @@ const { compileStyles } = require('./styles');
 
 const eye = () => {
   const options = { ignoreInitial: false };
-  createServer('app');
+  createServer('src');
 
-  watch('./app/*.html', reloadBrowser);
+  watch('./src/*.html', reloadBrowser);
 
   watch(
-    './app/assets/styles/**/*.css',
+    './src/assets/styles/**/*.css',
     options,
     series(compileStyles, injectStyles),
   );
 
   watch(
-    './app/assets/scripts/**/*.js',
+    './src/assets/scripts/**/*.js',
     options,
     series(bundleJs, reloadBrowser),
   );

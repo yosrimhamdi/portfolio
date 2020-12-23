@@ -1,2 +1,2 @@
-require('./app/gulp/watch');
-require('./app/gulp/build');
+require('./src/gulp/watch');
+require('./src/gulp/build');
