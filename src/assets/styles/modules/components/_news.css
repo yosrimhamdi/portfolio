@@ -24,7 +24,7 @@
     text-align: center;
     color: $darkBlack;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 0.7em;
 
     &:first-letter {

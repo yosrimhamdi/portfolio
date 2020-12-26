@@ -4,6 +4,7 @@
     color: $mainBlack;
     font-size: 0.9rem;
     margin-bottom: 0.1em;
+    font-weight: 700;
 
     @mixin at-large {
       font-size: 1.2rem;
