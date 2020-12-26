@@ -23,7 +23,7 @@
     font-family: inherit;
     border-radius: 2px;
     border: 1px solid transparent;
-    transition: all 100ms;
+    transition: border-color 100ms;
 
     &:focus {
       border-color: $mainColor;
@@ -47,7 +47,7 @@
     top: 50%;
     transform: translateY(-50%);
     margin-left: 0.7rem;
-    transition: all 100ms;
+    transition: color 100ms, font-size 100ms, top 100ms;
     display: inline-block;
     background-color: white;
   }
