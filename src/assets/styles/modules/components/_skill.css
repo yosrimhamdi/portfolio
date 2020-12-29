@@ -1,10 +1,9 @@
 .skill {
-  font-weight: 500;
-
   &__title {
     text-transform: uppercase;
     color: $mainBlack;
     font-size: 0.9rem;
+    font-weight: 700;
     margin-bottom: 0.1em;
 
     @mixin at-large {
@@ -14,6 +13,7 @@
 
   &__percentage {
     color: $mainBlack;
+    font-weight: 800;
     font-size: 0.8rem;
 
     @mixin at-large {
