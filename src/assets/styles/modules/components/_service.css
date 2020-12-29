@@ -13,15 +13,13 @@
   }
 
   &__title {
-    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    margin-bottom: 0.3em;
-    font-weight: 600;
+    margin-bottom: 0.4em;
+    font-weight: 500;
     font-size: 0.8rem;
     text-decoration: underline;
 
     @mixin at-large {
-      margin-bottom: 0.4em;
       font-size: 1rem;
     }
   }
