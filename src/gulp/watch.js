@@ -5,8 +5,6 @@ const { bundleJs } = require('./scripts');
 const { compileStyles } = require('./styles');
 
 const eye = () => {
-  createServer('src');
-
   watch('./src/*.html', reloadBrowser);
 
   watch(
@@ -20,6 +18,8 @@ const eye = () => {
     { ignoreInitial: false },
     series(bundleJs, reloadBrowser),
   );
+
+  createServer('src');
 };
 
 task('watch', eye);
