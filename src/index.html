@@ -197,11 +197,21 @@
             target="_blank"
             class="project"
           >
-            <img
-              data-src="./assets/images/projects/parallax/parallax.jpg"
-              alt="parallax website"
-              class="project__image lazyload"
-            />
+            <picture>
+              <source
+                media="(min-width: 720px)"
+                data-srcset="./assets/images/projects/parallax/parallax-1000w-100q.jpg"
+              />
+              <source
+                media="(min-width: 530px)"
+                data-srcset="./assets/images/projects/parallax/parallax-720w-100q.jpg"
+              />
+              <img
+                data-src="./assets/images/projects/parallax/parallax-530w-100q.jpg"
+                alt="my parallax portfolio"
+                class="project__image lazyload"
+              />
+            </picture>
             <div class="project__description-wrapper">
               <h1 class="project__description">
                 a stunning parallax scrolling website
