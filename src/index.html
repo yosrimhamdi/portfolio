@@ -171,11 +171,21 @@
             target="_blank"
             class="project"
           >
-            <img
-              data-src="./assets/images/projects/devconnector/devconnector.png"
-              alt="devconnector web app"
-              class="project__image lazyload"
-            />
+            <picture>
+              <source
+                media="(min-width: 720px)"
+                data-srcset="./assets/images/projects/devconnector/devconnector-1000w-100q.jpg"
+              />
+              <source
+                media="(min-width: 530px)"
+                data-srcset="./assets/images/projects/devconnector/devconnector-720w-100q.jpg"
+              />
+              <img
+                data-src="./assets/images/projects/devconnector/devconnector-530w-100q.jpg"
+                alt="devconnector web app"
+                class="project__image lazyload"
+              />
+            </picture>
             <div class="project__description-wrapper">
               <h1 class="project__description">
                 a full stack web app using node & react
