@@ -26,7 +26,7 @@ new Typed('.avatar__job-title', {
 
 new CreateSkills({
   'html, css, js': '100%',
-  'postcss, sass': '100%',
+  'sass, postcss': '100%',
   'react, redux': '90%',
   'gulp, webpack': '100%',
   'node, express': '85%',
