@@ -4,8 +4,7 @@
   color: $mainBlack;
   text-transform: capitalize;
   font-family: 'Montserrat', sans-serif;
-  height: var(--height, 100vh);
-  transition: height 300ms;
+  height: 100vh;
 
   @mixin at-large {
     height: 100vh;
@@ -13,9 +12,15 @@
   }
 
   &__content-wrapper {
-    @mixin xy-centered;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
     width: 100%;
+
+    @mixin at-large {
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__image {

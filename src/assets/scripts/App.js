@@ -64,5 +64,3 @@ new FlipCardsOnHover();
 new SendSubscriptionEmail();
 
 new BackToTopOnClick();
-
-document.documentElement.style.setProperty('--height', `${innerHeight}px`);
