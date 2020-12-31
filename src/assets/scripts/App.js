@@ -32,7 +32,7 @@ new CreateSkills({
   'node, express': '85%',
   mongodb: '100%',
   'mysql, oracle': '100%',
-  'git, github': '99%',
+  'git, github': '95%',
   'npm, yarn': '100%',
 });
 
