@@ -2,7 +2,7 @@
   position: relative;
   left: 0;
   height: 100vh;
-  transition: left 900ms cubic-bezier(0.22, 0.67, 0.14, 1.01);
+  transition: left 900ms cubic-bezier(0.45, 0.43, 0.1, 0.98);
 
   @mixin at-large {
     width: 150vw;
