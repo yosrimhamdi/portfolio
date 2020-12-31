@@ -27,7 +27,6 @@
     font-weight: 400;
     margin-bottom: 0.35em;
     quotes: '“' '”';
-    text-transform: capitalize;
 
     &::before {
       content: open-quote;
