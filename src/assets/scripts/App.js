@@ -25,11 +25,15 @@ new Typed('.avatar__job-title', {
 });
 
 new CreateSkills({
-  html: '80%',
-  css: '90%',
-  git: '60%',
-  javascript: '75%',
-  gulp: '98%',
+  'html, css, js': '100%',
+  'postcss, sass': '100%',
+  'react, redux': '90%',
+  'gulp, webpack': '100%',
+  'node, express': '85%',
+  mongodb: '100%',
+  'mysql, oracle': '100%',
+  'git, github': '99%',
+  'npm, yarn': '100%',
 });
 
 new AnimateOnWaypoint(
