@@ -41,7 +41,7 @@ const { innerWidth, innerHeight } = window;
 new AnimateOnWaypoint(
   '.news, .project',
   'fade-in-on-waypoint',
-  innerWidth < 1024 ? innerHeight - 10 : innerHeight - 15,
+  innerHeight - (innerWidth < 1024 ? 10 : 15),
 );
 new AnimateOnWaypoint(
   '.flipping-card',
