@@ -1,5 +1,5 @@
 .service {
-  box-shadow: 0 0 4px 2px rgba(#000, 0.1);
+  box-shadow: 0 0 4px 1px rgba(#000, 0.22);
   padding: 1em;
   background: $gradient-4;
   flex-basis: 50%;

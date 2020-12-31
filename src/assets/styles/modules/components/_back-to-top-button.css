@@ -10,7 +10,8 @@
   background-color: white;
   box-shadow: 0 0 5px 1px rgba(#000, 0.2);
   z-index: 1;
-  transition: transform 100ms, box-shadow 100ms, bottom 100ms;
+  transition: transform 100ms, box-shadow 100ms, bottom 300ms;
+  transition-timing-function: linear;
   cursor: pointer;
 
   @mixin at-large {

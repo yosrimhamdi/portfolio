@@ -10,7 +10,7 @@
 
   &:hover {
     transform: scale(1.015);
-    box-shadow: 0 0 10px rgba(#000, 0.2);
+    box-shadow: 0 0 10px 3px rgba(#000, 0.2);
 
     &::before {
       opacity: 1;
