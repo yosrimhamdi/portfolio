@@ -11,8 +11,10 @@ class CreateSkills {
 
   addSkills() {
     this.skills.forEach((percentage, skill) => {
-      // prettier-ignore
-      this.container.insertAdjacentHTML( 'beforeend', this.getHTMLSkill(skill, percentage));
+      this.container.insertAdjacentHTML(
+        'beforeend',
+        this.getHTMLSkill(skill, percentage),
+      );
     });
   }
 

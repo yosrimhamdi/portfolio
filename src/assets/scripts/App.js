@@ -36,10 +36,12 @@ new CreateSkills({
   'npm, yarn': '100%',
 });
 
+const { innerWidth, innerHeight } = window;
+
 new AnimateOnWaypoint(
   '.news, .project',
   'fade-in-on-waypoint',
-  window.innerHeight - 15,
+  innerWidth < 1024 ? innerHeight - 10 : innerHeight - 15,
 );
 new AnimateOnWaypoint(
   '.flipping-card',
@@ -63,7 +65,4 @@ new SendSubscriptionEmail();
 
 new BackToTopOnClick();
 
-document.documentElement.style.setProperty(
-  '--height',
-  `${window.innerHeight}px`,
-);
+document.documentElement.style.setProperty('--height', `${innerHeight}px`);
