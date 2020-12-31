@@ -37,11 +37,15 @@ new CreateSkills({
 });
 
 new AnimateOnWaypoint(
+  '.news, .project',
+  'fade-in-on-waypoint',
+  window.innerHeight - 15,
+);
+new AnimateOnWaypoint(
   '.flipping-card',
   'animate-f-cards-on-waypoint',
   'bottom-in-view',
 );
-new AnimateOnWaypoint('.news, .project', 'fade-in-on-waypoint', '90%');
 new AnimateOnWaypoint(
   '.skill__percentage-bar',
   'slide-on-waypoint',

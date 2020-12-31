@@ -1,10 +1,10 @@
 .fade-in-on-waypoint {
   position: relative;
-  top: 30px;
+  top: 15px;
   opacity: 0;
 
   &--animated {
-    animation: fade-in 700ms forwards;
+    animation: fade-in 500ms forwards;
   }
 }
 
