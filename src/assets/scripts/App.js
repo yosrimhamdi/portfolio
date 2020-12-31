@@ -14,10 +14,10 @@ new InitParticles();
 
 new Typed('.avatar__job-title', {
   strings: [
+    'full stack developer',
+    'javascript engineer^2000',
     'web developer',
-    'web expert^3000',
-    'front-end engineer',
-    'front-end developer^3000',
+    'database administrator^4000',
   ],
   loop: true,
   typeSpeed: 70,
