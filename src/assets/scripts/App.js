@@ -8,6 +8,8 @@ import BackToTopOnClick from './modules/BackToTopOnClick';
 import CreateSkills from './modules/CreateSkills';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 
+fetch('https://devtie.herokuapp.com/');
+
 new RevealContentOnClick();
 
 new InitParticles();
