@@ -1,8 +1,12 @@
 const { watch, series, task } = require('gulp');
 
-const { reloadBrowser, injectStyles, createServer } = require('./server');
-const { bundleJs } = require('./scripts');
-const { compileStyles } = require('./styles');
+const {
+  reloadBrowser,
+  injectStyles,
+  createServer,
+} = require('./modules/server');
+const { bundleJs } = require('./modules/scripts');
+const { compileStyles } = require('./modules/styles');
 
 const eye = () => {
   watch('./src/*.html', reloadBrowser);

@@ -7,9 +7,9 @@ const htmlmin = require('gulp-htmlmin');
 const rev = require('gulp-rev');
 const clean = require('gulp-clean');
 
-const { bundleJs } = require('./scripts');
-const { compileStyles } = require('./styles');
-const { createServer } = require('./server');
+const { bundleJs } = require('./modules/scripts');
+const { compileStyles } = require('./modules/styles');
+const { createServer } = require('./modules/server');
 
 const removePrevDistFolder = () =>
   src('./dist', { allowEmpty: true }).pipe(clean());
