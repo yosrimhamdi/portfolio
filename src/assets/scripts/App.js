@@ -32,8 +32,7 @@ new CreateSkills({
   'react, redux': '90%',
   'gulp, webpack': '100%',
   'node, express': '85%',
-  mongodb: '100%',
-  'mysql, oracle': '100%',
+  'mysql, mongodb': '100%',
   'git, github': '95%',
   'npm, yarn': '100%',
 });
