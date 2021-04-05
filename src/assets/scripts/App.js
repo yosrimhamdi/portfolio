@@ -8,7 +8,7 @@ import BackToTopOnClick from './modules/BackToTopOnClick';
 import CreateSkills from './modules/CreateSkills';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 
-fetch('https://cors-anywhere.herokuapp.com/https://devtie.herokuapp.com/');
+fetch('https://devtie.herokuapp.com/');
 
 new RevealContentOnClick();
 
