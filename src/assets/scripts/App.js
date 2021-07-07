@@ -35,7 +35,6 @@ new CreateSkills({
   'php': '70%',
   'mysql, mongodb': '100%',
   'git, github': '95%',
-  'npm, yarn': '100%',
 });
 
 const { innerWidth, innerHeight } = window;
