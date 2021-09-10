@@ -29,12 +29,13 @@ new Typed('.avatar__job-title', {
 new CreateSkills({
   'html, css, js': '100%',
   'sass, postcss': '100%',
-  'react, redux': '90%',
+  'react, redux': '100%',
   'gulp, webpack': '100%',
   'node, express': '85%',
-  'php': '70%',
+  'php, laravel': '70%',
   'mysql, mongodb': '100%',
-  'git, github': '95%',
+  'git, github': '90%',
+  'wordpress': '40%'
 });
 
 const { innerWidth, innerHeight } = window;
