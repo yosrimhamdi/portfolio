@@ -27,15 +27,14 @@ new Typed('.avatar__job-title', {
 });
 
 new CreateSkills({
+  'php, symfony': '95%',
+  'mysql, mongodb, mariadb': '100%',
+  'react, redux': '100%',
+  'node.js, express.js': '95%',
+  'git, github, gitlab': '90%',
   'html, css, js': '100%',
   'sass, postcss': '100%',
-  'react, redux': '100%',
   'gulp, webpack': '100%',
-  'node, express': '85%',
-  'php, laravel': '70%',
-  'mysql, mongodb': '100%',
-  'git, github': '90%',
-  'wordpress': '40%'
 });
 
 const { innerWidth, innerHeight } = window;
@@ -43,22 +42,22 @@ const { innerWidth, innerHeight } = window;
 new AnimateOnWaypoint(
   '.news, .project',
   'fade-in-on-waypoint',
-  innerHeight - (innerWidth < 1024 ? 10 : 15),
+  innerHeight - (innerWidth < 1024 ? 10 : 15)
 );
 new AnimateOnWaypoint(
   '.flipping-card',
   'animate-f-cards-on-waypoint',
-  'bottom-in-view',
+  'bottom-in-view'
 );
 new AnimateOnWaypoint(
   '.skill__percentage-bar',
   'slide-on-waypoint',
-  'bottom-in-view',
+  'bottom-in-view'
 );
 new AnimateOnWaypoint(
   '.footer__github-link',
   'shake-on-waypoint',
-  'bottom-in-view',
+  'bottom-in-view'
 );
 
 new FlipCardsOnHover();
