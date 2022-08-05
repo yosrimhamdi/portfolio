@@ -27,13 +27,13 @@ new Typed('.avatar__job-title', {
 
 new CreateSkills({
   'php, symfony': '95%',
-  'mysql, mongodb, mariadb': '100%',
-  'react, redux': '100%',
   'node.js, express.js': '95%',
+  'react, redux': '100%',
   'git, github, gitlab': '90%',
-  'html, css, js': '100%',
-  'sass, postcss': '100%',
+  'mysql, mongodb, mariadb': '100%',
   'gulp, webpack': '100%',
+  'sass, postcss': '100%',
+  'html, css, js': '100%',
 });
 
 const { innerWidth, innerHeight } = window;
