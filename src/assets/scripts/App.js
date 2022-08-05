@@ -16,10 +16,9 @@ new InitParticles();
 
 new Typed('.avatar__job-title', {
   strings: [
-    'full stack developer',
-    'javascript engineer^2000',
-    'web developer',
-    'database administrator^4000',
+    'PHP / symfony developer',
+    'full stack javascript developer^2000',
+    'web integrator',
   ],
   loop: true,
   typeSpeed: 70,
