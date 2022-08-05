@@ -2,11 +2,15 @@
   background-color: $darkBlack;
   padding: 20px 0;
 
-  &__github-link {
+  &__link {
     color: $mainGrey;
 
     &:hover {
       color: #999999;
+    }
+
+    &:first-child {
+      margin-right: 1em;
     }
   }
 }

@@ -53,11 +53,7 @@ new AnimateOnWaypoint(
   'slide-on-waypoint',
   'bottom-in-view'
 );
-new AnimateOnWaypoint(
-  '.footer__github-link',
-  'shake-on-waypoint',
-  'bottom-in-view'
-);
+new AnimateOnWaypoint('.footer__link', 'shake-on-waypoint', 'bottom-in-view');
 
 new FlipCardsOnHover();
 
