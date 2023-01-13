@@ -13,7 +13,7 @@ new RevealContentOnClick();
 new InitParticles();
 
 new Typed('.avatar__job-title', {
-  strings: ['Web Developer', 'Full Stack JS Developer^2000', 'Web Expert'],
+  strings: ['Full Stack JS Developer', 'Web Developer^2000', 'Web Expert'],
   loop: true,
   typeSpeed: 70,
   backSpeed: 20,
