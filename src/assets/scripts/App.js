@@ -8,32 +8,26 @@ import BackToTopOnClick from './modules/BackToTopOnClick';
 import CreateSkills from './modules/CreateSkills';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 
-fetch('https://devtie.herokuapp.com/');
-
 new RevealContentOnClick();
 
 new InitParticles();
 
 new Typed('.avatar__job-title', {
-  strings: [
-    'PHP / symfony developer',
-    'full stack javascript developer^2000',
-    'web integrator',
-  ],
+  strings: ['Web Developer', 'Full Stack JS Developer^2000', 'Web Expert'],
   loop: true,
   typeSpeed: 70,
   backSpeed: 20,
 });
 
 new CreateSkills({
+  'react, redux': '99%',
+  'node.js, express.js': '99%',
+  'git, github, gitlab': '99%',
+  'mongodb, mysql': '95%',
+  'webpack, gulp': '99%',
+  'sass, postcss': '99%',
   'php, symfony': '95%',
-  'node.js, express.js': '95%',
-  'react, redux': '100%',
-  'git, github, gitlab': '90%',
-  'mysql, mongodb, mariadb': '100%',
-  'gulp, webpack': '100%',
-  'sass, postcss': '100%',
-  'html, css, js': '100%',
+  'html, css, js': '99%',
 });
 
 const { innerWidth, innerHeight } = window;
