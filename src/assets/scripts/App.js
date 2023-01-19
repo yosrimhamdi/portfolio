@@ -8,6 +8,8 @@ import BackToTopOnClick from './modules/BackToTopOnClick';
 import CreateSkills from './modules/CreateSkills';
 import RevealContentOnClick from './modules/RevealContentOnClick';
 
+fetch('https://devconnector-gz6i.onrender.com');
+
 new RevealContentOnClick();
 
 new InitParticles();
